@@ -1,0 +1,16 @@
+{
+  "sumber": "Katalog USGS 1976-2025, M >= 5, lintang -11..6, bujur 95..141",
+  "m_min": 5.5,
+  "m_maks": 9.2,
+  "nilai_b": 1.04611286,
+  "galat_baku_b": 0.01946467,
+  "frekuensi": {
+    "distribusi": "binomial negatif",
+    "rata": 59.05661312,
+    "ukuran": 11.84616106,
+    "rata_empiris": 59.06,
+    "varians_empiris": 383.64938776
+  },
+  "jumlah_episenter": 2953,
+  "deklasterisasi_porsi_tersisa": 0.49729181
+}

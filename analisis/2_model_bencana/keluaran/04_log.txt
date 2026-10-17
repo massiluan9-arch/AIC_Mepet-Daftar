@@ -1,0 +1,259 @@
+Warning messages:
+1: package 'data.table' was built under R version 4.4.3 
+2: package 'ggplot2' was built under R version 4.4.3 
+3: package 'jsonlite' was built under R version 4.4.3 
+Uji balik (miliar rupiah; eta = residu antar-gempa dalam simpangan baku):
+              kejadian   eta klaim_industri mmi_maks_titik  titik_terdekat
+                <char> <num>          <num>          <num>          <char>
+ 1:        Lombok 2018     0         364.40       5.867657         Mataram
+ 2:        Lombok 2018     1         364.40       6.490009         Mataram
+ 3: Palu-Donggala 2018     0        1058.62       6.408751            Palu
+ 4: Palu-Donggala 2018     1        1058.62       7.031691            Palu
+ 5:        Majene 2021     0         202.65       5.715170          Mamuju
+ 6:        Majene 2021     1         202.65       6.378169          Mamuju
+ 7:       Cianjur 2022     0          26.44       4.511971 Bekasi-Karawang
+ 8:       Cianjur 2022     1          26.44       5.124158 Bekasi-Karawang
+ 9:        Bawean 2024     0          16.71       4.220160 Surabaya-Gresik
+10:        Bawean 2024     1          16.71       4.805681 Surabaya-Gresik
+         klaim     aulady        pager
+         <num>      <num>        <num>
+ 1:  52.204725  21.292389 7.304180e-04
+ 2: 203.027424  77.070698 1.054244e-01
+ 3:  39.988653  29.868978 2.738425e-02
+ 4:  76.086620 114.624910 1.310555e+00
+ 5:   8.456414   2.925562 3.200157e-05
+ 6:  15.805743  11.396955 8.935827e-03
+ 7:   0.000000   0.000000 5.565662e-10
+ 8: 931.337497   0.000000 5.986270e-06
+ 9:   0.000000   0.000000 1.502456e-12
+10:   0.000000   0.000000 3.961732e-08
+Skenario (fraksi nilai pertanggungan):
+                              skenario   eta mmi_maks_titik           titik
+                                <char> <num>          <num>          <char>
+ 1: Megathrust Jawa bagian barat M 8,7     0           7.36       Tangerang
+ 2: Megathrust Jawa bagian barat M 8,7     1           7.99       Tangerang
+ 3:                Sesar Lembang M 6,8     0           7.44         Bandung
+ 4:                Sesar Lembang M 6,8     1           8.24         Bandung
+ 5:               Sesar Surabaya M 6,5     0           7.22 Surabaya-Gresik
+ 6:               Sesar Surabaya M 6,5     1           8.01 Surabaya-Gresik
+ 7:          Megathrust Mentawai M 8,9     0           7.79          Padang
+ 8:          Megathrust Mentawai M 8,9     1           8.49          Padang
+ 9:   Gempa dangkal dekat Timika M 7,5     0           6.87          Timika
+10:   Gempa dangkal dekat Timika M 7,5     1           7.53          Timika
+    klaim aulady pager
+    <num>  <num> <num>
+ 1: 0.343  0.671 0.013
+ 2: 0.624  2.969 0.173
+ 3: 0.111  0.220 0.007
+ 4: 0.231  1.602 0.128
+ 5: 0.073  0.149 0.003
+ 6: 0.155  1.051 0.073
+ 7: 0.032  0.074 0.004
+ 8: 0.112  0.375 0.033
+ 9: 0.065  0.085 0.001
+10: 0.122  0.389 0.015
+  potongan 1/20 selesai (10 detik)
+  potongan 2/20 selesai (20 detik)
+  potongan 3/20 selesai (30 detik)
+  potongan 4/20 selesai (41 detik)
+  potongan 5/20 selesai (50 detik)
+  potongan 6/20 selesai (61 detik)
+  potongan 7/20 selesai (71 detik)
+  potongan 8/20 selesai (80 detik)
+  potongan 9/20 selesai (90 detik)
+  potongan 10/20 selesai (102 detik)
+  potongan 11/20 selesai (113 detik)
+  potongan 12/20 selesai (122 detik)
+  potongan 13/20 selesai (132 detik)
+  potongan 14/20 selesai (143 detik)
+  potongan 15/20 selesai (153 detik)
+  potongan 16/20 selesai (164 detik)
+  potongan 17/20 selesai (175 detik)
+  potongan 18/20 selesai (185 detik)
+  potongan 19/20 selesai (195 detik)
+  potongan 20/20 selesai (205 detik)
+Kejadian tersimulasi: 5900096 (59.0 per tahun); yang menimbulkan intensitas >= V di salah satu titik: 444459 (4.44 per tahun)
+Ukuran risiko, persen nilai pertanggungan awal:
+     kurva                      strategi aal_permil var_99 var_99_5 tvar_99_5
+    <char>                        <char>      <num>  <num>    <num>     <num>
+ 1:  klaim                      S0_dasar     0.2135  0.149    0.194     0.315
+ 2: aulady                      S0_dasar     0.1876  0.235    0.443     1.821
+ 3:  pager                      S0_dasar     0.0161  0.014    0.037     0.269
+ 4:  klaim                        S1_rs5     0.1744  0.122    0.159     0.260
+ 5: aulady                        S1_rs5     0.1649  0.204    0.390     1.677
+ 6:  pager                        S1_rs5     0.0140  0.012    0.031     0.236
+ 7:  klaim                       S2_rs10     0.1217  0.085    0.111     0.184
+ 8: aulady                       S2_rs10     0.1310  0.155    0.316     1.437
+ 9:  pager                       S2_rs10     0.0108  0.008    0.023     0.186
+10:  klaim                    S3_batas20     0.1513  0.105    0.137     0.220
+11: aulady                    S3_batas20     0.1015  0.130    0.231     0.785
+12:  pager                    S3_batas20     0.0094  0.010    0.024     0.152
+13:  klaim                    S4_batas10     0.0918  0.064    0.083     0.132
+14: aulady                    S4_batas10     0.0565  0.071    0.132     0.404
+15:  pager                    S4_batas10     0.0052  0.006    0.014     0.083
+16:  klaim                S5_akumulasi10     0.1697  0.107    0.139     0.225
+17: aulady                S5_akumulasi10     0.1516  0.199    0.382     1.381
+18:  pager                S5_akumulasi10     0.0130  0.013    0.034     0.212
+19:  klaim                     S6_koas50     0.1647  0.101    0.133     0.225
+20: aulady                     S6_koas50     0.1569  0.200    0.390     1.506
+21:  pager                     S6_koas50     0.0141  0.013    0.034     0.233
+22:  klaim                     S7_paketA     0.0892  0.056    0.073     0.117
+23: aulady                     S7_paketA     0.0637  0.090    0.144     0.467
+24:  pager                     S7_paketA     0.0060  0.007    0.017     0.094
+25:  klaim                     S8_paketB     0.0727  0.042    0.055     0.092
+26: aulady                     S8_paketB     0.0554  0.080    0.129     0.401
+27:  pager                     S8_paketB     0.0055  0.006    0.016     0.085
+28:  klaim                    S9_batas50     0.2070  0.144    0.188     0.305
+29: aulady                    S9_batas50     0.1633  0.217    0.375     1.448
+30:  pager                    S9_batas50     0.0148  0.014    0.035     0.246
+31:  klaim                   S10_batas40     0.1985  0.138    0.180     0.291
+32: aulady                   S10_batas40     0.1498  0.201    0.342     1.283
+33:  pager                   S10_batas40     0.0138  0.013    0.033     0.227
+34:  klaim                   S11_batas30     0.1821  0.127    0.165     0.266
+35: aulady                   S11_batas30     0.1303  0.171    0.297     1.067
+36:  pager                   S11_batas30     0.0121  0.012    0.030     0.198
+37:  klaim                   S12_batas25     0.1691  0.118    0.153     0.246
+38: aulady                   S12_batas25     0.1174  0.151    0.267     0.936
+39:  pager                   S12_batas25     0.0109  0.011    0.028     0.177
+40:  klaim                   S13_batas15     0.1268  0.088    0.114     0.183
+41: aulady                   S13_batas15     0.0817  0.102    0.187     0.610
+42:  pager                   S13_batas15     0.0076  0.008    0.020     0.122
+43:  klaim            S14_batas20_akum10     0.1203  0.076    0.098     0.157
+44: aulady            S14_batas20_akum10     0.0820  0.113    0.187     0.577
+45:  pager            S14_batas20_akum10     0.0076  0.009    0.022     0.119
+46:  klaim             S15_batas20_akum5     0.0843  0.047    0.061     0.095
+47: aulady             S15_batas20_akum5     0.0597  0.091    0.145     0.355
+48:  pager             S15_batas20_akum5     0.0054  0.008    0.020     0.078
+49:  klaim             S16_batas10_akum5     0.0512  0.029    0.037     0.057
+50: aulady             S16_batas10_akum5     0.0332  0.049    0.076     0.179
+51:  pager             S16_batas10_akum5     0.0030  0.005    0.011     0.043
+52:  klaim             S17_batas20_besar     0.1625  0.113    0.147     0.237
+53: aulady             S17_batas20_besar     0.1170  0.153    0.269     0.967
+54:  pager             S17_batas20_besar     0.0106  0.010    0.027     0.173
+55:  klaim      S18_batas20_besar_akum10     0.1292  0.081    0.106     0.169
+56: aulady      S18_batas20_besar_akum10     0.0945  0.131    0.218     0.717
+57:  pager      S18_batas20_besar_akum10     0.0086  0.010    0.024     0.136
+58:  klaim                     S19_akum5     0.1190  0.067    0.087     0.137
+59: aulady                     S19_akum5     0.1098  0.159    0.310     0.889
+60:  pager                     S19_akum5     0.0091  0.011    0.029     0.138
+61:  klaim              S20_zona_batas20     0.1706  0.112    0.145     0.232
+62: aulady              S20_zona_batas20     0.1295  0.199    0.365     0.954
+63:  pager              S20_zona_batas20     0.0114  0.013    0.034     0.179
+64:  klaim              S21_zona_batas10     0.1294  0.079    0.101     0.159
+65: aulady              S21_zona_batas10     0.0995  0.161    0.297     0.652
+66:  pager              S21_zona_batas10     0.0085  0.011    0.029     0.126
+67:  klaim        S22_zona_besar_batas20     0.1783  0.119    0.154     0.247
+68: aulady        S22_zona_besar_batas20     0.1399  0.204    0.382     1.108
+69:  pager        S22_zona_besar_batas20     0.0122  0.013    0.034     0.195
+70:  klaim       S23_zona_batas20_akum10     0.1395  0.084    0.108     0.171
+71: aulady       S23_zona_batas20_akum10     0.1099  0.169    0.322     0.769
+72:  pager       S23_zona_batas20_akum10     0.0096  0.012    0.031     0.146
+73:  klaim S24_zona_batas10_luar_batas30     0.1197  0.074    0.095     0.151
+74: aulady S24_zona_batas10_luar_batas30     0.0811  0.128    0.206     0.484
+75:  pager S24_zona_batas10_luar_batas30     0.0073  0.010    0.025     0.109
+76:  klaim              S25_zona_batas15     0.1536  0.098    0.126     0.201
+77: aulady              S25_zona_batas15     0.1163  0.182    0.336     0.810
+78:  pager              S25_zona_batas15     0.0101  0.012    0.032     0.155
+     kurva                      strategi aal_permil var_99 var_99_5 tvar_99_5
+    <char>                        <char>      <num>  <num>    <num>     <num>
+       gb
+    <num>
+ 1: 0.003
+ 2: 0.015
+ 3: 0.003
+ 4: 0.003
+ 5: 0.014
+ 6: 0.002
+ 7: 0.002
+ 8: 0.013
+ 9: 0.002
+10: 0.002
+11: 0.009
+12: 0.002
+13: 0.001
+14: 0.006
+15: 0.001
+16: 0.002
+17: 0.015
+18: 0.003
+19: 0.002
+20: 0.014
+21: 0.003
+22: 0.001
+23: 0.006
+24: 0.001
+25: 0.001
+26: 0.005
+27: 0.001
+28: 0.003
+29: 0.013
+30: 0.003
+31: 0.003
+32: 0.013
+33: 0.002
+34: 0.003
+35: 0.012
+36: 0.002
+37: 0.003
+38: 0.011
+39: 0.002
+40: 0.002
+41: 0.008
+42: 0.001
+43: 0.002
+44: 0.008
+45: 0.002
+46: 0.001
+47: 0.005
+48: 0.001
+49: 0.000
+50: 0.003
+51: 0.001
+52: 0.002
+53: 0.010
+54: 0.002
+55: 0.002
+56: 0.008
+57: 0.002
+58: 0.001
+59: 0.015
+60: 0.002
+61: 0.002
+62: 0.014
+63: 0.002
+64: 0.001
+65: 0.012
+66: 0.002
+67: 0.003
+68: 0.014
+69: 0.003
+70: 0.002
+71: 0.012
+72: 0.002
+73: 0.001
+74: 0.005
+75: 0.001
+76: 0.002
+77: 0.012
+78: 0.002
+       gb
+    <num>
+     kurva        provinsi bobot porsi_aal porsi_ekor aal_per_mil_provinsi
+    <char>          <char> <num>     <num>      <num>                <num>
+ 1: aulady           PAPUA  12.5      29.7       43.7               0.4451
+ 2: aulady      JAWA BARAT  21.9      18.7       23.3               0.1601
+ 3: aulady         JAKARTA  15.4       8.5        9.3               0.1031
+ 4: aulady  SUMATERA UTARA   3.1       4.6        5.2               0.2801
+ 5: aulady          BANTEN   9.3       5.5        3.7               0.1104
+ 6: aulady      JAWA TIMUR  10.1       1.7        2.4               0.0316
+ 7: aulady SULAWESI TENGAH   2.1       6.7        2.2               0.6049
+ 8: aulady    MALUKU UTARA   0.8       4.3        2.1               1.0564
+ 9:  klaim      JAWA BARAT  21.9      21.1       32.7               0.2058
+10:  klaim           PAPUA  12.5      20.1       23.0               0.3427
+11:  klaim         JAKARTA  15.4      14.0       20.2               0.1938
+12:  klaim          BANTEN   9.3      10.6        9.9               0.2421
+13:  klaim      JAWA TIMUR  10.1       2.9        3.3               0.0618
+14:  klaim     JAWA TENGAH   4.3       1.3        1.9               0.0635
+15:  klaim  SUMATERA UTARA   3.1       3.3        1.4               0.2278
+16:  klaim  SUMATERA BARAT   1.1       3.5        0.9               0.6592
+selesai 04

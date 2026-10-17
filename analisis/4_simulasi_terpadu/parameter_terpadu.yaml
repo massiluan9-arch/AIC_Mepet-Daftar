@@ -1,0 +1,112 @@
+# Parameter simulasi neraca terpadu PT Aktu Proteksi.
+# Satuan: per 100 premi dicatat lini harta benda setahun, kecuali disebut lain.
+# status: data = dihitung dari publikasi resmi; regulasi = bunyi peraturan; asumsi = pilihan penulis (selalu diuji).
+# Parameter investasi, MMBR, dan neraca dasar tetap dibaca dari analisis/3_investasi_mmbr/parameter/.
+
+meta:
+  jumlah_tahun: 100000
+  benih_pasangan: 20261013          # mengacak pasangan tahun bencana dan tahun pasar (keduanya saling bebas)
+  ambang_peluang: 0.005             # P(R < 100%) paling besar 0,5% setahun (Solvency II, keyakinan 99,5%)
+  # Rev. 2: kendala peluang (C1, C2) lolos hanya bila batas atas selang Clopper-Pearson eksak tidak melebihi ambang.
+  aturan_peluang: batas_atas        # batas_atas | titik
+  tingkat_selang: 0.95
+  profil_acuan: K70                 # Rev. 2: sama dengan alokasi yang direkomendasikan (kantong likuiditas)
+  strategi_acuan: S0_dasar
+
+bencana:
+  eksposur_per_premi:
+    nilai: 139.16
+    rentang: [122.0, 187.6]
+    status: data
+    sumber: "MAIPARK (2025) eksposur gempa berjalan 2024; OJK (2025) Tabel 2.10.4. 1_olah_data/data/besaran_industri.json"
+  tarif_gempa_per_mil:
+    nilai: 1.3498
+    status: data
+    sumber: "MAIPARK (2025): premi gempa dibagi eksposur, tahun penutupan 2020-2024"
+  kurva_dasar: campuran            # campuran berbobot kemungkinan; pembanding: aulady, klaim, pager
+  porsi_klaim_belum_dibayar_akhir_tahun:
+    nilai: 0.0
+    uji: 0.5
+    status: asumsi
+    catatan: "Klaim bencana yang masih berupa cadangan klaim pada akhir tahun menambah MMBR sebesar fck = 20%."
+
+# Premi gempa yang tetap diterima pada tiap strategi = porsi eksposur ditahan x skala premi syarat polis.
+# Skala loss limit: SEOJK 6/2017 Lampiran III Tabel III.B (batas 20% nilai -> 70% premi; 10% -> 60%).
+# Risiko sendiri di atas 2,5%: tabel tarif tidak memberi potongan premi, jadi premi tetap (dicatat sebagai risiko pemasaran).
+skala_premi_syarat:
+  rs2_5: {nilai: 1.00, status: regulasi}
+  rs5: {nilai: 1.00, status: regulasi}
+  rs10: {nilai: 1.00, status: regulasi}
+  batas20: {nilai: 0.70, status: regulasi}
+  batas10: {nilai: 0.60, status: regulasi}
+  rs5_batas20: {nilai: 0.70, status: regulasi}
+  batas50: {nilai: 0.85, status: regulasi}
+  batas40: {nilai: 0.8220, status: regulasi}
+  batas30: {nilai: 0.7812, status: regulasi}
+  batas25: {nilai: 0.75, status: regulasi}
+  batas15: {nilai: 0.65, status: regulasi}
+  # batas20_besar: batas 20% hanya untuk risiko di atas Rp50 miliar; skalanya dihitung mesin dari
+  # porsi eksposur risiko besar (2_model_bencana/keluaran/04_meta.json).
+
+underwriting:
+  rasio_klaim_non_bencana:
+    rata: 0.4501
+    simpangan: 0.0578
+    sebaran: lognormal
+    status: data
+    sumber: "OJK, Key Indicator 2024: rasio klaim harta benda 2011-2024 (neto), 14 tahun"
+    uji_rata: 0.2950               # rasio klaim pos langsung bruto 2024 (Tabel 2.10.4)
+    uji_pengali_simpangan: 2.0
+    catatan: "Deret neto dipakai karena satu-satunya deret panjang. Bagi perusahaan tanpa reasuransi ini pilihan hati-hati: rasio bruto 2024 lebih rendah (29,5%)."
+  komisi:
+    nilai: 0.0800
+    uji: 0.15
+    status: data
+    sumber: "OJK Tabel 2.10.4: komisi pos langsung dibagi premi dicatat 2024. Uji 15% = batas biaya akuisisi SEOJK 6/2017 Bagian VII"
+  beban_usaha:
+    nilai: 16.97
+    simpangan: 0.80
+    status: data
+    sumber: "OJK, Statistik Asuransi Juli 2025: jumlah beban usaha dibagi premi penutupan langsung. Simpangan dari deret rasio beban manajemen 2011-2024"
+    catatan: "Dianggap tetap terhadap premi yang dilepas (tidak ikut turun dalam setahun)."
+  pajak:
+    nilai: 0.22
+    status: regulasi
+    sumber: "UU 7/2021: tarif pajak penghasilan badan 22%. Dikenakan hanya bila laba; rugi tidak menghasilkan aset pajak."
+
+# Kanal likuiditas: klaim satu kejadian terbesar dibayar dari kas, lalu aset dicairkan menurut urutan termurah.
+likuiditas:
+  urutan_cair: [deposito, sbn, reksadana_saham, saham, korporasi]
+  potongan_harga:
+    deposito: {nilai: 0.005, status: asumsi, catatan: "Penalti pencairan sebelum jatuh tempo"}
+    sbn: {nilai: 0.005, status: asumsi, catatan: "Selisih jual-beli atau biaya repo (POJK 26/2025 Pasal 8)"}
+    reksadana_saham: {nilai: 0.01, status: asumsi, catatan: "Biaya pelunasan unit"}
+    saham: {nilai: 0.03, status: asumsi, catatan: "Dampak harga penjualan cepat"}
+    korporasi: {nilai: 0.05, status: asumsi, catatan: "Pasar sekunder tipis; arah didukung Ellul dkk. (2011)"}
+  pengali_uji: 2.0
+  siap_cair: [kas_dan_bank, deposito, sbn]
+  catatan: "Batas waktu bayar 30 hari sejak kesepakatan (POJK 69/2016 Pasal 40). Aset siap cair = kas, deposito, SBN."
+
+# Rev. 4: skenario banjir historis untuk matriks skenario (4_simulasi_terpadu/kode/matriks_skenario.py).
+# Kerugian per 100 premi = 100 x klaim properti / premi langsung harta benda nasional tahun yang sama.
+skenario_banjir:
+  nama: "Banjir Jabodetabek Januari 2020"
+  klaim_properti_triliun:
+    nilai: 1.008
+    status: data
+    sumber: "AAUI melalui Kontan, 15 Januari 2020: Jakarta Rp406 miliar + Bodetabek Rp602 miliar (estimasi sementara 40 perusahaan). Artikel menulis total Rp1,08 triliun, tetapi rinciannya dan total properti+kendaraan Rp1,155 triliun konsisten dengan Rp1,008 triliun."
+  premi_langsung_harta_benda_triliun:
+    nilai: 17.927284
+    status: data
+    sumber: "OJK, Statistik Perasuransian Indonesia 2020, Tabel 2.10.4 (lini harta benda), premi dicatat pos langsung, hlm. 82"
+  catatan: "Skenario ditambahkan di atas tahun berklaim rata-rata; rasio klaim historis sudah memuat rata-rata klaim banjir, jadi uji ini sedikit menghitung dua kali (konservatif)."
+
+target_solvabilitas:
+  utama: [1.20, 1.50, 2.00, 3.3152]
+  kisi: {awal: 1.00, akhir: 8.00, langkah: 0.05}
+  catatan: "120% = target internal minimum (POJK 26/2025 Pasal 3); 331,52% = rasio industri asuransi umum Agustus 2026."
+
+sensitivitas:
+  korelasi_bencana_pasar: 0.25
+  panjang_blok_bulan: [3, 12]
+  tenor_sbn: [2, 10]

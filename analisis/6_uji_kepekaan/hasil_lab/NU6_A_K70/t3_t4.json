@@ -1,0 +1,439 @@
+{
+ "varian": "NU6_A_K70",
+ "profil_acuan": "K70",
+ "jumlah_tahun": 100000,
+ "bobot_kurva": {
+  "klaim": 0.19797414,
+  "aulady": 0.76100742,
+  "pager": 0.04101844
+ },
+ "S21_pada_160": {
+  "C1": {
+   "peluang": 0.00448,
+   "jumlah_pelanggaran": 448,
+   "selang95_bawah": 0.004075511412334111,
+   "selang95_atas": 0.004913628586557594
+  },
+  "C2": {
+   "peluang": 0.00553,
+   "jumlah_pelanggaran": 553,
+   "selang95_bawah": 0.0050797617016437886,
+   "selang95_atas": 0.006009271526016018
+  },
+  "C3_rasio_setelah_megathrust": 0.7206867637093172,
+  "lolos_C1": true,
+  "lolos_C2": false,
+  "lolos_C3": false,
+  "target_C1": 1.45,
+  "target_C2": 1.8,
+  "target_C3": 1.9,
+  "target_perlu": 1.9,
+  "ekuitas": 30.60772426054632,
+  "premi_dilepas": 5.035014224819179,
+  "L_rata": 1.6498105044667954,
+  "L_var_99_5": 39.56012439260026,
+  "L_tvar_99_5": 93.9811312692,
+  "defisit_harapan": 0.19047048744512765,
+  "klaim_kejadian_var_99_5": 38.40760544740143,
+  "kerugian_megathrust": 48.394500024383696
+ },
+ "terpilih": {
+  "strategi": "S0_dasar",
+  "keterangan": "Polis standar: risiko sendiri 2,5%",
+  "target": 2.75,
+  "C1": {
+   "peluang": 0.00314,
+   "jumlah_pelanggaran": 314,
+   "selang95_bawah": 0.0028027194609519315,
+   "selang95_atas": 0.003506587234954679
+  },
+  "C2": {
+   "peluang": 0.00396,
+   "jumlah_pelanggaran": 396,
+   "selang95_bawah": 0.0035801920770744417,
+   "selang95_atas": 0.004369007237236045
+  },
+  "C3_rasio_setelah_megathrust": 1.0101069951069221,
+  "target_C1": 1.75,
+  "target_C2": 2.15,
+  "target_C3": 2.75,
+  "ekuitas": 52.9948836085176,
+  "mmbr": 19.27086676673366,
+  "laba_bersih": 27.40532007165138,
+  "premi_dilepas": 0.0,
+  "L_rata": 2.4417686782730357,
+  "L_var_99_5": 48.49078558100019,
+  "L_tvar_99_5": 201.46446499032,
+  "defisit_harapan": 0.6236738059993164,
+  "nilai_bersih": 19.892311396544777,
+  "klaim_kejadian_var_99_5": 47.34495884020007,
+  "kerugian_megathrust": 71.03047288397677,
+  "kantong_likuiditas": {
+   "K80": {
+    "kas": 7.27,
+    "deposito": 24.64017097475846,
+    "kas_dan_deposito": 31.910170974758458,
+    "klaim_kejadian_var_99_5": 47.34495884020007,
+    "cakupan": 0.6739930027706327
+   },
+   "K75": {
+    "kas": 7.27,
+    "deposito": 30.890452152958332,
+    "kas_dan_deposito": 38.16045215295833,
+    "klaim_kejadian_var_99_5": 47.34495884020007,
+    "cakupan": 0.806008772375502
+   },
+   "K70": {
+    "kas": 7.27,
+    "deposito": 37.17746508255528,
+    "kas_dan_deposito": 44.44746508255528,
+    "klaim_kejadian_var_99_5": 47.34495884020007,
+    "cakupan": 0.9388003743455668
+   }
+  },
+  "kepekaan": [
+   {
+    "kasus": "Dasar",
+    "peluang_sekarang": 0.00654,
+    "peluang_terpilih": 0.00314,
+    "target_minimum_terpilih": 1.75
+   },
+   {
+    "kasus": "Kurva Aulady & Fujimi saja",
+    "peluang_sekarang": 0.00788,
+    "peluang_terpilih": 0.00396,
+    "target_minimum_terpilih": 2.15
+   },
+   {
+    "kasus": "Eksposur per premi 188",
+    "peluang_sekarang": 0.00921,
+    "peluang_terpilih": 0.00463,
+    "target_minimum_terpilih": 2.55
+   },
+   {
+    "kasus": "Biaya akuisisi 15% premi",
+    "peluang_sekarang": 0.00832,
+    "peluang_terpilih": 0.00365,
+    "target_minimum_terpilih": 2.05
+   },
+   {
+    "kasus": "Simpangan rasio klaim dua kali",
+    "peluang_sekarang": 0.01292,
+    "peluang_terpilih": 0.0033,
+    "target_minimum_terpilih": 2.05
+   },
+   {
+    "kasus": "Separuh klaim bencana masih cadangan",
+    "peluang_sekarang": 0.00732,
+    "peluang_terpilih": 0.00362,
+    "target_minimum_terpilih": 1.95
+   },
+   {
+    "kasus": "Korelasi bencana dan pasar 0,25",
+    "peluang_sekarang": 0.00699,
+    "peluang_terpilih": 0.00335,
+    "target_minimum_terpilih": 1.8
+   },
+   {
+    "kasus": "Data pasar 2000-2026",
+    "peluang_sekarang": 0.00662,
+    "peluang_terpilih": 0.00309,
+    "target_minimum_terpilih": 1.7
+   },
+   {
+    "kasus": "SBN tenor 10 tahun",
+    "peluang_sekarang": 0.00664,
+    "peluang_terpilih": 0.00317,
+    "target_minimum_terpilih": 1.75
+   },
+   {
+    "kasus": "Gabungan berat",
+    "peluang_sekarang": 0.01309,
+    "peluang_terpilih": 0.00632,
+    "target_minimum_terpilih": 3.45
+   }
+  ],
+  "skenario": [
+   {
+    "skenario": "Gempa dangkal dekat Timika M 7,5",
+    "eta": 0,
+    "strategi": "S0_dasar",
+    "target": 1.2,
+    "kerugian": 9.39610327776089,
+    "rasio_akhir": 2.2840829164697087,
+    "kekurangan_kas": 0.0
+   },
+   {
+    "skenario": "Gempa dangkal dekat Timika M 7,5",
+    "eta": 1,
+    "strategi": "S0_dasar",
+    "target": 1.2,
+    "kerugian": 40.291549702321255,
+    "rasio_akhir": 0.9625616075403555,
+    "kekurangan_kas": 0.0
+   },
+   {
+    "skenario": "Megathrust Jawa bagian barat M 8,7",
+    "eta": 0,
+    "strategi": "S0_dasar",
+    "target": 1.2,
+    "kerugian": 71.03047288397677,
+    "rasio_akhir": -0.6564824713507496,
+    "kekurangan_kas": 0.0
+   },
+   {
+    "skenario": "Megathrust Jawa bagian barat M 8,7",
+    "eta": 1,
+    "strategi": "S0_dasar",
+    "target": 1.2,
+    "kerugian": 312.41699702877446,
+    "rasio_akhir": -13.314731581099986,
+    "kekurangan_kas": 211.78863061871445
+   },
+   {
+    "skenario": "Megathrust Mentawai M 8,9",
+    "eta": 0,
+    "strategi": "S0_dasar",
+    "target": 1.2,
+    "kerugian": 8.101787019113571,
+    "rasio_akhir": 2.3372576145118407,
+    "kekurangan_kas": 0.0
+   },
+   {
+    "skenario": "Megathrust Mentawai M 8,9",
+    "eta": 1,
+    "strategi": "S0_dasar",
+    "target": 1.2,
+    "kerugian": 42.401176796050635,
+    "rasio_akhir": 0.8514458331006978,
+    "kekurangan_kas": 0.0
+   },
+   {
+    "skenario": "Sesar Lembang M 6,8",
+    "eta": 0,
+    "strategi": "S0_dasar",
+    "target": 1.2,
+    "kerugian": 23.701104248177604,
+    "rasio_akhir": 1.6963872107159355,
+    "kekurangan_kas": 0.0
+   },
+   {
+    "skenario": "Sesar Lembang M 6,8",
+    "eta": 1,
+    "strategi": "S0_dasar",
+    "target": 1.2,
+    "kerugian": 174.14824107081347,
+    "rasio_akhir": -6.068417412581584,
+    "kekurangan_kas": 73.51987466075343
+   },
+   {
+    "skenario": "Sesar Surabaya M 6,5",
+    "eta": 0,
+    "strategi": "S0_dasar",
+    "target": 1.2,
+    "kerugian": 15.723717742555602,
+    "rasio_akhir": 2.024124049195547,
+    "kekurangan_kas": 0.0
+   },
+   {
+    "skenario": "Sesar Surabaya M 6,5",
+    "eta": 1,
+    "strategi": "S0_dasar",
+    "target": 1.2,
+    "kerugian": 111.78363919516505,
+    "rasio_akhir": -2.8000470923704195,
+    "kekurangan_kas": 11.155272785105012
+   }
+  ],
+  "enam_teratas": [
+   {
+    "strategi": "S0_dasar",
+    "target": 2.75,
+    "nilai_bersih": 19.892311396544777,
+    "ekuitas": 52.9948836085176
+   },
+   {
+    "strategi": "S5_akumulasi10",
+    "target": 2.0,
+    "nilai_bersih": 18.942589614873675,
+    "ekuitas": 38.35729997974477
+   },
+   {
+    "strategi": "S21_zona_batas10",
+    "target": 1.9,
+    "nilai_bersih": 18.800784690274018,
+    "ekuitas": 36.41620001416959
+   },
+   {
+    "strategi": "S22_zona_besar_batas20",
+    "target": 2.6,
+    "nilai_bersih": 18.54459359602541,
+    "ekuitas": 50.05611658973993
+   },
+   {
+    "strategi": "S25_zona_batas15",
+    "target": 2.3,
+    "nilai_bersih": 18.392783806716757,
+    "ekuitas": 44.19549035524756
+   },
+   {
+    "strategi": "S6_koas50",
+    "target": 2.05,
+    "nilai_bersih": 18.382661847854195,
+    "ekuitas": 39.32877913249618
+   }
+  ]
+ },
+ "sekarang": {
+  "target": 1.2,
+  "ekuitas": 22.89750392970859,
+  "mmbr": 19.081253274757167,
+  "laba_bersih_rata": 25.924858593843187,
+  "peluang_di_bawah_100": 0.00654,
+  "peluang_aulady": 0.00788,
+  "rasio_setelah_megathrust": -0.6564824713507496,
+  "defisit_harapan": 0.721334354147279,
+  "L_rata": 2.4417686782730357,
+  "L_var_99_5": 48.49078558100019,
+  "L_tvar_99_5": 201.46446499032,
+  "nilai_bersih": 22.226848728833794
+ },
+ "modal_saja": {
+  "target": 2.75,
+  "ekuitas": 52.9948836085176,
+  "mmbr": 19.27086676673366,
+  "laba_bersih_rata": 27.40532007165138,
+  "peluang_di_bawah_100": 0.00314,
+  "peluang_aulady": 0.00396,
+  "rasio_setelah_megathrust": 1.0101069951069255,
+  "defisit_harapan": 0.6236738059993164,
+  "L_tvar_99_5": 201.46446499032,
+  "nilai_bersih": 19.892311396544777
+ },
+ "aturan_batas_atas": {
+  "jumlah_pelanggaran_terbanyak": 456,
+  "peluang_titik_setara": 0.00456,
+  "keterangan": "batas atas selang Clopper-Pearson 95% dua sisi tidak melebihi ambang 0,5%",
+  "terpilih": {
+   "strategi": "S0_dasar",
+   "target": 2.75,
+   "ekuitas": 52.99488360851754,
+   "nilai_bersih": 19.892311396544784,
+   "target_C1": 1.9,
+   "target_C2": 2.45,
+   "target_C3": 2.75
+  },
+  "tiga_teratas": [
+   {
+    "strategi": "S0_dasar",
+    "target_perlu_batas_atas": 2.75,
+    "ekuitas_batas_atas": 52.99488360851754,
+    "nilai_bersih_batas_atas": 19.892311396544784
+   },
+   {
+    "strategi": "S5_akumulasi10",
+    "target_perlu_batas_atas": 2.2,
+    "ekuitas_batas_atas": 42.24694039385889,
+    "nilai_bersih_batas_atas": 18.638541633989906
+   },
+   {
+    "strategi": "S21_zona_batas10",
+    "target_perlu_batas_atas": 2.05,
+    "ekuitas_batas_atas": 39.32877913249618,
+    "nilai_bersih_batas_atas": 18.57248683680925
+   }
+  ],
+  "strategi_terpilih_titik": {
+   "strategi": "S0_dasar",
+   "target_titik": 2.75,
+   "target_batas_atas": 2.75,
+   "target_C1_batas_atas": 1.9,
+   "target_C2_batas_atas": 2.45
+  },
+  "S0_dasar": {
+   "target_C1_titik": 1.75,
+   "target_C2_titik": 2.15,
+   "target_C1_batas_atas": 1.9,
+   "target_C2_batas_atas": 2.45
+  }
+ },
+ "kestabilan_terpilih": {
+  "C1_campuran": {
+   "peluang_penuh": 0.00314,
+   "paruh": [
+    0.00312,
+    0.00316
+   ],
+   "sepuluh_kelompok": [
+    0.0025,
+    0.0027,
+    0.003,
+    0.0039,
+    0.0035,
+    0.0026,
+    0.0035,
+    0.0038,
+    0.0028,
+    0.0031
+   ],
+   "simpangan_baku_kelompok": 0.0005059644256269406,
+   "galat_baku_dari_kelompok": 0.00015999999999999996,
+   "galat_baku_binomial": 0.00017692202802364662,
+   "kelompok_di_atas_ambang": 0,
+   "target_minimum_bagian": {
+    "paruh_1": 1.65,
+    "paruh_2": 1.8,
+    "kelima_1": 1.45,
+    "kelima_2": 1.75,
+    "kelima_3": 1.6,
+    "kelima_4": 2.1,
+    "kelima_5": 1.55
+   }
+  },
+  "C2_aulady": {
+   "peluang_penuh": 0.00396,
+   "paruh": [
+    0.00386,
+    0.00406
+   ],
+   "sepuluh_kelompok": [
+    0.0028,
+    0.0033,
+    0.0045,
+    0.0045,
+    0.0042,
+    0.0034,
+    0.004,
+    0.005,
+    0.0034,
+    0.0045
+   ],
+   "simpangan_baku_kelompok": 0.0007011102306738616,
+   "galat_baku_dari_kelompok": 0.0002217105219775452,
+   "galat_baku_binomial": 0.0001986030815470898,
+   "kelompok_di_atas_ambang": 0,
+   "target_minimum_bagian": {
+    "paruh_1": 2.1,
+    "paruh_2": 2.25,
+    "kelima_1": 1.85,
+    "kelima_2": 2.5,
+    "kelima_3": 1.95,
+    "kelima_4": 2.45,
+    "kelima_5": 2.0
+   }
+  },
+  "C1_berstrata": {
+   "peluang": 0.0031203156753999996,
+   "galat_baku": 0.0001570190733274527,
+   "selang95_normal": [
+    0.002812558291678192,
+    0.003428073059121807
+   ],
+   "peluang_per_kurva": {
+    "aulady": 0.00396,
+    "klaim": 0.00045,
+    "pager": 0.00043
+   }
+  }
+ }
+}

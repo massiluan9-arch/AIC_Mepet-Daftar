@@ -1,0 +1,147 @@
+# Parameter regulasi untuk model investasi dan MMBR PT Aktu Proteksi.
+# Setiap angka disalin dari teks peraturan di referensi/regulasi dan diberi rujukan pasal.
+# Jangan mengubah nilai di berkas ini tanpa membuka teks peraturannya.
+
+meta:
+  dibaca_pada: 2026-10-11
+  berkas_sumber:
+    POJK_26_2025: referensi/regulasi/POJK_26_2025_pengelolaan_aset_liabilitas.pdf
+    SEOJK_24_2017: referensi/regulasi/SEOJK_24_2017_pedoman_MMBR.pdf
+  status_berlaku:
+    POJK_26_2025: "Berlaku sejak diundangkan (ditetapkan 10 November 2025); mencabut POJK 71/POJK.05/2016 (Pasal 86, Pasal 87)."
+    SEOJK_24_2017: "Peraturan pelaksana POJK 71/2016; tetap berlaku sepanjang tidak bertentangan (POJK 26/2025 Pasal 85). Juga satu-satunya rujukan pada brief kasus."
+
+solvabilitas:
+  minimum:
+    nilai: 1.00
+    dasar: "POJK 26/2025 Pasal 3 ayat (1) huruf a"
+  target_internal_minimum:
+    nilai: 1.20
+    dasar: "POJK 26/2025 Pasal 3 ayat (1) huruf b"
+    catatan: "Ditetapkan tiap tahun dengan memperhitungkan profil risiko dan hasil stress test; OJK dapat memerintahkan target lebih tinggi (ayat 2)."
+  definisi_tingkat_solvabilitas: "Aset Yang Diperkenankan dikurangi Liabilitas (POJK 26/2025 Pasal 1 angka 12)"
+  modul_mmbr: [kredit, likuiditas, pasar, asuransi, operasional]
+  dasar_modul: "POJK 26/2025 Pasal 4 ayat (1); SEOJK 24/2017 Lampiran I angka 5"
+
+# POJK 26/2025 Pasal 15: pembatasan atas AYD dalam bentuk investasi, sebagai porsi dari jumlah investasi.
+batas_ayd_investasi:
+  dasar: "POJK 26/2025 Pasal 15"
+  sbn:
+    total: null
+    dasar: "Penjelasan Pasal 15 ayat (1): SBN dan surat berharga BI tidak diatur batasannya, seluruhnya diperhitungkan sebagai AYD"
+  deposito:
+    per_pihak: 0.20
+    total: null
+    dasar: "Pasal 15 ayat (1) huruf a (per Bank)"
+  korporasi:
+    per_pihak: 0.20
+    total: 0.50
+    dasar: "Pasal 15 ayat (1) huruf e (per emiten; seluruhnya)"
+  saham:
+    per_pihak: 0.10
+    total: 0.40
+    dasar: "Pasal 15 ayat (1) huruf h (per emiten; seluruhnya)"
+  reksadana_saham:
+    per_pihak: 0.20
+    total: 0.50
+    dasar: "Pasal 15 ayat (1) huruf i (per Manajer Investasi; seluruhnya)"
+  gabungan:
+    anggota: [korporasi, saham, reksadana_saham]
+    total: 0.80
+    dasar: "Pasal 15 ayat (4): jenis pada ayat (1) huruf d sampai m seluruhnya paling tinggi 80%"
+    urutan_potong: [korporasi, reksadana_saham, saham]
+    catatan_urutan: "Peraturan tidak menyebut jenis mana yang dikeluarkan lebih dulu. Model memotong jenis berfaktor risiko terendah dulu, sehingga MMBR tidak terbantu oleh pemotongan (pilihan hati-hati)."
+  perlakuan_kelebihan:
+    aturan: "Porsi di atas batas tidak diperhitungkan sebagai AYD."
+    status: tafsir
+    dasar: "Judul Pasal 15 (pembatasan atas AYD), Penjelasan Pasal 15 ayat (1), dan Pasal 15 tidak termasuk daftar pasal bersanksi pada Pasal 36. Pasal 20 ayat (5) memakai perlakuan yang sama untuk batas per pihak."
+  satu_pihak_bukan_terkait:
+    nilai: 0.25
+    dasar: "Pasal 16 ayat (1) huruf b; SBN dikecualikan (Pasal 19 ayat 4)"
+    dipakai_model: false
+
+ketentuan_terkait:
+  prinsip_kehati_hatian:
+    isi: "Penempatan investasi memperhatikan keamanan, imbal hasil yang optimal, kebutuhan likuiditas, dan profil Liabilitas Perusahaan."
+    dasar: "POJK 26/2025 Pasal 5 ayat (1) dan penjelasannya"
+  dasar_penilaian_investasi:
+    isi: "Mengacu pada standar akuntansi keuangan yang berlaku."
+    dasar: "POJK 26/2025 Pasal 5 ayat (5)"
+  peringkat_obligasi_korporasi:
+    isi: "Harus berperingkat investment grade."
+    dasar: "POJK 26/2025 Pasal 6 ayat (2)"
+  repo_sbn_untuk_likuiditas:
+    isi: "Perusahaan dapat menjual SBN dengan janji beli kembali untuk menjaga likuiditas."
+    dasar: "POJK 26/2025 Pasal 8"
+  kecukupan_investasi:
+    isi: "AYD investasi ditambah kas dan bank paling sedikit sebesar cadangan teknis retensi sendiri, liabilitas pembayaran klaim retensi sendiri, dan liabilitas lain kepada pemegang polis."
+    dasar: "POJK 26/2025 Pasal 34"
+  cadangan_bencana:
+    isi: "Dihitung berdasarkan manfaat asuransi retensi sendiri dengan memperhitungkan kemungkinan terjadinya risiko bencana."
+    dasar: "POJK 26/2025 Pasal 28 ayat (7)"
+  dana_jaminan:
+    isi: "Paling rendah 20% ekuitas minimum; bagi asuransi umum disesuaikan menjadi 1% Premi Neto ditambah 0,25% premi reasuransi bila lebih besar. Wajib berupa deposito atau SBN berjatuh tempo paling singkat 1 tahun."
+    porsi_premi_neto: 0.01
+    jenis_diizinkan: [deposito, sbn]
+    dasar: "POJK 26/2025 Pasal 55 dan Pasal 56 ayat (4)"
+  tagihan_premi_ayd:
+    isi: "Diakui sebagai AYD bila umur tagihan paling lama 2 bulan."
+    dasar: "POJK 26/2025 Pasal 25 ayat (2) huruf b"
+  dac_ayd:
+    isi: "Biaya akuisisi ditangguhkan diakui sebagai AYD hanya untuk PAYDI."
+    dasar: "POJK 26/2025 Pasal 25 ayat (2) huruf j"
+  porsi_minimum_sbn:
+    isi: "Asuransi umum menempatkan paling rendah 20% investasi pada SBN; sampai separuhnya dapat dipenuhi obligasi BUMN/BUMD infrastruktur."
+    nilai: 0.20
+    dasar: "POJK 1/POJK.05/2016 jo. POJK 36/POJK.05/2016 jo. POJK 56/POJK.05/2017"
+    status: belum_terkonfirmasi
+    catatan: "Teks peraturan tidak ada di folder regulasi. Pencarian 11 Oktober 2026 hanya menemukan sumber 2016-2019; status berlaku pada 2026 belum dipastikan. Dilaporkan sebagai uji bersyarat, tidak dipakai untuk menggugurkan profil."
+
+# SEOJK 24/SEOJK.05/2017, Lampiran, Romawi I angka 6 huruf e.
+klaster_peringkat:
+  AAA: 1
+  AA: 2
+  A: 3
+  BBB: 4
+  di_bawah_BBB_atau_tanpa_peringkat: 5
+
+# SEOJK 24/SEOJK.05/2017, Lampiran, Romawi II.
+faktor_risiko:
+  kredit:
+    dasar: "SEOJK 24/2017 Lampiran II angka 1"
+    sbn: 0.0
+    kas_dan_bank: 0.0
+    deposito_kategori_khusus_lps: 0.0
+    deposito_per_klaster: {1: 0.012, 2: 0.021, 3: 0.030, 4: 0.045, 5: 0.090}
+    korporasi_per_klaster: {1: 0.016, 2: 0.028, 3: 0.040, 4: 0.060, 5: 0.120}
+    tagihan_premi_langsung: 0.08
+    tagihan_hasil_investasi: 0.02
+    catatan_deposito: "Kategori khusus (0%) hanya sampai jumlah maksimum yang dijamin LPS per bank. Untuk penempatan institusi porsinya dapat diabaikan, sehingga model memakai faktor menurut peringkat bank."
+  likuiditas:
+    dasar: "SEOJK 24/2017 Lampiran II angka 2"
+    faktor: 0.04
+    rumus: "RL = jumlah atas kelompok jatuh tempo dari 4% x max(L_i - AYD_i, 0)"
+    batas_kelompok_tahun: [1, 3, 5, 10]
+    nama_kelompok: ["<1", "1-3", "3-5", "5-10", ">=10"]
+    aturan_efek_nilai_pasar: "Efek yang diperdagangkan dan dinilai berdasarkan nilai pasar diklasifikasikan jatuh tempo kurang dari 1 tahun (huruf c)."
+    aturan_dimiliki_hingga_jatuh_tempo: "AYD yang dimiliki sampai jatuh tempo diklasifikasikan sesuai sisa umurnya (huruf d)."
+  pasar:
+    dasar: "SEOJK 24/2017 Lampiran II angka 3"
+    saham_idx30_atau_jii: 0.15
+    saham_bursa_indonesia_lain: 0.20
+    reksadana_surat_utang_pemerintah: 0.0
+    reksadana_surat_utang_swasta_pasar_uang: 0.06
+    reksadana_ekuitas: 0.16
+    perubahan_tingkat_bunga:
+      rumus: "PTB = 15% x max(CP_rf - CP_0, 0), hanya atas cadangan premi produk berjangka lebih dari 1 tahun"
+      berlaku_untuk_kasus: false
+      alasan: "Polis harta benda berjangka 1 tahun membentuk CAPYBMP, bukan cadangan premi; SEOJK tidak membebani risiko suku bunga atas obligasi."
+  asuransi:
+    dasar: "SEOJK 24/2017 Lampiran II angka 4 huruf b angka 2) sampai 5)"
+    harta_benda: {fcp: 0.25, fck: 0.20, fcb: 0.25}
+    rumus: "RA = fcp x (CAPYBMP - AR) + fck x (CK - AR) + fcb x (CARB - AR); AR = aset reasuransi"
+  operasional:
+    dasar: "SEOJK 24/2017 Lampiran II angka 5"
+    faktor_bua: 0.01
+    faktor_dac: 0.50
+    rumus: "RO = 1% x (BUA - BPL) + 50% x DAC"

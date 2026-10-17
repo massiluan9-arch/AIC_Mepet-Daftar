@@ -1,0 +1,15 @@
+﻿wilayah,indikator,nilai,sumber,dipakai_untuk
+Bantul,rumah roboh/rusak total,46753,"Bappenas et al. 2006, Preliminary Damage and Loss Assessment (World Bank doc 407120)",proksi usia bangunan (rumah dibangun ulang pasca-2006 = 'baru') & validasi vulnerability
+Bantul,rumah rusak,33137,"Bappenas et al. 2006, Preliminary DaLA",proksi usia bangunan (rumah dibangun ulang pasca-2006 = 'baru') & validasi vulnerability
+DIY,rumah roboh/rusak total,88249,"Bappenas et al. 2006, Preliminary DaLA",proksi usia bangunan (rumah dibangun ulang pasca-2006 = 'baru') & validasi vulnerability
+DIY,rumah rusak,98343,"Bappenas et al. 2006, Preliminary DaLA",proksi usia bangunan (rumah dibangun ulang pasca-2006 = 'baru') & validasi vulnerability
+DIY+Jateng,rumah roboh/rusak total,156662,"Bappenas et al. 2006, Preliminary DaLA",proksi usia bangunan (rumah dibangun ulang pasca-2006 = 'baru') & validasi vulnerability
+DIY+Jateng,rumah rusak,202031,"Bappenas et al. 2006, Preliminary DaLA",proksi usia bangunan (rumah dibangun ulang pasca-2006 = 'baru') & validasi vulnerability
+DIY+Jateng,nilai kerusakan+kerugian perumahan (Rp triliun),15.3,"Bappenas et al. 2006, Preliminary DaLA",proksi usia bangunan (rumah dibangun ulang pasca-2006 = 'baru') & validasi vulnerability
+DIY+Jateng,"biaya rekonstruksi rumah baru (Rp/m2, 2006)",1.000.000-1.200.000,"Bappenas et al. 2006, Preliminary DaLA",proksi usia bangunan (rumah dibangun ulang pasca-2006 = 'baru') & validasi vulnerability
+Bantul,"rumah rusak total (data BPBD, dikutip media)",71763,"BPBD Bantul via hasil pencarian web (angka final, beda dari DaLA preliminary)",proksi usia bangunan (rumah dibangun ulang pasca-2006 = 'baru') & validasi vulnerability
+Bantul,"rumah rusak berat (data BPBD, dikutip media)",71372,BPBD Bantul via hasil pencarian web,proksi usia bangunan (rumah dibangun ulang pasca-2006 = 'baru') & validasi vulnerability
+Bantul,"rumah rusak ringan (data BPBD, dikutip media)",66359,BPBD Bantul via hasil pencarian web,proksi usia bangunan (rumah dibangun ulang pasca-2006 = 'baru') & validasi vulnerability
+Bantul,persen rumah rusak,~90%,BEE 2024 mengutip Bappenas 2006,proksi usia bangunan (rumah dibangun ulang pasca-2006 = 'baru') & validasi vulnerability
+Bantul,persen rumah perlu rekonstruksi total,>30%,BEE 2024 mengutip Bappenas 2006,proksi usia bangunan (rumah dibangun ulang pasca-2006 = 'baru') & validasi vulnerability
+Pleret,bangunan roboh,8309,Geoenvironmental Disasters 2017 mengutip BPS Bantul 2010,proksi usia bangunan (rumah dibangun ulang pasca-2006 = 'baru') & validasi vulnerability

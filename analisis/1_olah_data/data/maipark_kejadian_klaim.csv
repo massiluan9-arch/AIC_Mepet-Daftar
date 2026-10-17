@@ -1,0 +1,17 @@
+kejadian,tanggal,jenis,magnitudo,mmi_maks,kedalaman_km,eksposur_terdampak_miliar,klaim_incurred_miliar,rasio
+Pariaman,30-Sep-09,gempa,7.6,VIII,71.0,43998.28,1086.08,0.024700000000000003
+Donggala,28-Sep-18,gempa,7.7,VIII,10.0,21675.31,1058.62,0.048799999999999996
+Aceh,26-Dec-04,gempa,9.0,IX,30.0,24362.49,865.83,0.0355
+Lombok,05-Aug-18,gempa,7.0,VII,15.0,63787.23,364.4,0.005699999999999999
+Yogya,27-May-06,gempa,5.9,IX,12.5,11585.64,319.26,0.0276
+Kelud,13-Feb-14,erupsi,,,,1614.88,216.51,0.1341
+Majene,15-Jan-21,gempa,6.2,VII,18.0,41059.19,202.65,0.0049
+Anak Krakatau,22-Dec-18,erupsi,,,,570.02,49.78,0.0873
+Bengkulu,12-Sep-07,gempa,7.9,VIII,10.0,7323.26,48.9,0.0067
+Bima,09-Nov-09,gempa,6.7,VI,28.0,27330.48,43.04,0.0016
+Padang,16-Aug-09,gempa,6.9,VI,32.0,27445.32,42.78,0.0016
+Merapi,25-Oct-10,erupsi,,,,1060.68,27.5,0.0259
+Cianjur,21-Nov-22,gempa,5.6,VI,10.0,89356.9,26.44,0.0003
+Tasikmalaya,02-Sep-09,gempa,7.3,VII,30.0,42847.61,24.36,0.0006
+Padang,06-Mar-07,gempa,5.8,VIII,51.0,8560.08,22.79,0.0027
+Bawean,22-Mar-24,gempa,6.5,IV,10.0,35230.2,16.71,0.0005

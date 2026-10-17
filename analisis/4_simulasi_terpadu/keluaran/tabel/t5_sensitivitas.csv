@@ -1,0 +1,19 @@
+kasus,label,peluang_S0_dasar,target_minimum_S0_dasar,peluang_S3_batas20,target_minimum_S3_batas20,peluang_S7_paketA,target_minimum_S7_paketA
+dasar,Dasar,0.00709,1.9,0.00464,1.15,0.00329,1.0
+kurva_aulady,Kurva Aulady & Fujimi saja,0.00837,2.35,0.00546,1.35,0.004,1.05
+kurva_klaim,Kurva klaim MAIPARK saja,0.00209,1.0,0.0016,1.0,0.00055,1.0
+kurva_pager,Kurva PAGER saja,0.00083,1.0,0.00062,1.0,0.00052,1.0
+E_rendah,Eksposur per premi 122,0.00631,1.6,0.00384,1.0,0.00277,1.0
+E_tinggi,Eksposur per premi 188,0.01023,2.8,0.00745,1.7,0.00563,1.35
+klaim_bruto_2024,"Rasio klaim non-bencana 29,5% (pos langsung 2024)",0.00484,1.15,0.00286,1.0,0.00203,1.0
+klaim_simpangan_x2,Simpangan rasio klaim dua kali,0.01372,2.2,0.01638,1.9,0.01845,1.85
+komisi_15,Biaya akuisisi 15% premi,0.00919,2.25,0.00663,1.45,0.00526,1.25
+jendela_panjang,Data pasar 2000-2026,0.00719,1.9,0.00472,1.15,0.00333,1.0
+blok_3,Panjang blok 3 bulan,0.00717,1.9,0.0046,1.15,0.0033,1.0
+blok_12,Panjang blok 12 bulan,0.00717,1.9,0.00466,1.15,0.00329,1.0
+tenor_2,SBN tenor 2 tahun,0.00711,1.9,0.00461,1.15,0.00317,1.0
+tenor_10,SBN tenor 10 tahun,0.00724,1.95,0.0049,1.2,0.00367,1.0
+klaim_belum_dibayar,Separuh klaim bencana masih cadangan akhir tahun,0.00793,2.2,0.00516,1.25,0.00374,1.0
+potongan_x2,Potongan jual paksa dua kali,0.00712,1.95,0.00467,1.15,0.00329,1.0
+korelasi,"Korelasi bencana dan pasar 0,25",0.00784,2.0,0.00517,1.25,0.00366,1.0
+gabungan_berat,"Gabungan berat: kurva Aulady, eksposur tinggi, akuisisi 15%",0.01428,3.75,0.01198,2.35,0.01053,1.8

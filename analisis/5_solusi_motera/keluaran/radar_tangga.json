@@ -1,0 +1,315 @@
+{
+ "meta": {
+  "profil": "K70",
+  "strategi": "S0_dasar",
+  "jumlah_tahun": 100000,
+  "ambang": 0.005,
+  "aturan_peluang": "batas_atas",
+  "catatan": "tahun_statis = tambahan ekuitas dibagi laba bersih harapan setahun; bukan simulasi multitahun. Indikator likuiditas hijau bila kas, deposito, dan nominal SBN menutup klaim satu kejadian 1 dalam 200 tahun; cakupan kas dan deposito saja dilaporkan terpisah."
+ },
+ "tangga": [
+  {
+   "target": 1.2,
+   "profil": "K70",
+   "ekuitas": 22.89750392970859,
+   "mmbr": 19.081253274757167,
+   "investasi": 93.8275039297086,
+   "laba_bersih_rata": 25.802608060848435,
+   "defisit_harapan": 0.7619608553342307,
+   "C1": {
+    "jumlah_pelanggaran": 709,
+    "jumlah_tahun": 100000,
+    "peluang": 0.00709,
+    "selang_bawah": 0.006579309843955681,
+    "selang_atas": 0.007629584511533005,
+    "tingkat_selang": 0.95
+   },
+   "C2": {
+    "jumlah_pelanggaran": 837,
+    "jumlah_tahun": 100000,
+    "peluang": 0.00837,
+    "selang_bawah": 0.007814637524192614,
+    "selang_atas": 0.008954153400295633,
+    "tingkat_selang": 0.95
+   },
+   "rasio_setelah_megathrust": -1.2221204193813826,
+   "klaim_kejadian_var_99_5": 52.117707790400445,
+   "kas_dan_deposito": 35.41825117891258,
+   "kas_deposito_sbn": 101.09750392970858,
+   "cakupan_kas_deposito": 0.6795819056615583,
+   "cakupan_kas_deposito_sbn": 1.9397918330615784,
+   "peluang_klaim_kejadian_melebihi_kas_deposito": 0.00226,
+   "lolos": {
+    "peluang_campuran": false,
+    "peluang_aulady": false,
+    "megathrust": false,
+    "likuiditas": true
+   },
+   "jumlah_indikator_lolos": 1,
+   "lampu": "kuning",
+   "nama": "Sekarang",
+   "tambahan_ekuitas": 0.0,
+   "tahun_statis": 0.0,
+   "tahun_statis_laba_di_target": 0.0
+  },
+  {
+   "target": 2.05,
+   "profil": "K70",
+   "ekuitas": 39.32877913249618,
+   "mmbr": 19.184770308534727,
+   "investasi": 110.25877913249619,
+   "laba_bersih_rata": 26.611007683558604,
+   "defisit_harapan": 0.6963843748874706,
+   "C1": {
+    "jumlah_pelanggaran": 456,
+    "jumlah_tahun": 100000,
+    "peluang": 0.00456,
+    "selang_bawah": 0.004151845914605826,
+    "selang_atas": 0.0049972854040614125,
+    "tingkat_selang": 0.95
+   },
+   "C2": {
+    "jumlah_pelanggaran": 550,
+    "jumlah_tahun": 100000,
+    "peluang": 0.0055,
+    "selang_bawah": 0.005051004257024025,
+    "selang_atas": 0.005978031837192,
+    "tingkat_selang": 0.95
+   },
+   "rasio_setelah_megathrust": -0.30513219553445087,
+   "klaim_kejadian_var_99_5": 52.117707790400445,
+   "kas_dan_deposito": 40.34763373974886,
+   "kas_deposito_sbn": 117.52877913249618,
+   "cakupan_kas_deposito": 0.7741636278789008,
+   "cakupan_kas_deposito_sbn": 2.25506424045272,
+   "peluang_klaim_kejadian_melebihi_kas_deposito": 0.00194,
+   "lolos": {
+    "peluang_campuran": true,
+    "peluang_aulady": false,
+    "megathrust": false,
+    "likuiditas": true
+   },
+   "jumlah_indikator_lolos": 2,
+   "lampu": "kuning",
+   "nama": "Anak tangga 1: lolos pada kurva campuran (C1)",
+   "tambahan_ekuitas": 16.43127520278759,
+   "tahun_statis": 0.6368067586051338,
+   "tahun_statis_laba_di_target": 0.6174615932691463
+  },
+  {
+   "target": 2.6,
+   "profil": "K70",
+   "ekuitas": 50.05611658973993,
+   "mmbr": 19.252352534515364,
+   "investasi": 120.98611658973994,
+   "laba_bersih_rata": 27.138757747570565,
+   "defisit_harapan": 0.6633559366608667,
+   "C1": {
+    "jumlah_pelanggaran": 369,
+    "jumlah_tahun": 100000,
+    "peluang": 0.00369,
+    "selang_bawah": 0.00332365605694289,
+    "selang_atas": 0.004085576412796023,
+    "tingkat_selang": 0.95
+   },
+   "C2": {
+    "jumlah_pelanggaran": 449,
+    "jumlah_tahun": 100000,
+    "peluang": 0.00449,
+    "selang_bawah": 0.004085051421348661,
+    "selang_atas": 0.0049240874866605545,
+    "tingkat_selang": 0.95
+   },
+   "rasio_setelah_megathrust": 0.2882131257782696,
+   "klaim_kejadian_var_99_5": 52.117707790400445,
+   "kas_dan_deposito": 43.56583497692198,
+   "kas_deposito_sbn": 128.25611658973992,
+   "cakupan_kas_deposito": 0.8359123381275483,
+   "cakupan_kas_deposito_sbn": 2.4608932746148784,
+   "peluang_klaim_kejadian_melebihi_kas_deposito": 0.00178,
+   "lolos": {
+    "peluang_campuran": true,
+    "peluang_aulady": true,
+    "megathrust": false,
+    "likuiditas": true
+   },
+   "jumlah_indikator_lolos": 3,
+   "lampu": "kuning",
+   "nama": "Anak tangga 2: lolos pada kurva terberat (C2)",
+   "tambahan_ekuitas": 27.158612660031338,
+   "tahun_statis": 1.052553005339039,
+   "tahun_statis_laba_di_target": 1.0007316072697745
+  },
+  {
+   "target": 3.3,
+   "profil": "K70",
+   "ekuitas": 63.81889145331439,
+   "mmbr": 19.33905801615588,
+   "investasi": 134.7488914533144,
+   "laba_bersih_rata": 27.815807695893554,
+   "defisit_harapan": 0.627187462855066,
+   "C1": {
+    "jumlah_pelanggaran": 287,
+    "jumlah_tahun": 100000,
+    "peluang": 0.00287,
+    "selang_bawah": 0.002547929976897786,
+    "selang_atas": 0.0032214174428339412,
+    "tingkat_selang": 0.95
+   },
+   "C2": {
+    "jumlah_pelanggaran": 352,
+    "jumlah_tahun": 100000,
+    "peluang": 0.00352,
+    "selang_bawah": 0.0031623903291898175,
+    "selang_atas": 0.003906864026284795,
+    "tingkat_selang": 0.95
+   },
+   "rasio_setelah_megathrust": 1.0433798983580957,
+   "klaim_kejadian_var_99_5": 52.117707790400445,
+   "kas_dan_deposito": 47.69466743599432,
+   "kas_deposito_sbn": 142.01889145331438,
+   "cakupan_kas_deposito": 0.9151336361108958,
+   "cakupan_kas_deposito_sbn": 2.724964267892703,
+   "peluang_klaim_kejadian_melebihi_kas_deposito": 0.0016,
+   "lolos": {
+    "peluang_campuran": true,
+    "peluang_aulady": true,
+    "megathrust": true,
+    "likuiditas": true
+   },
+   "jumlah_indikator_lolos": 4,
+   "lampu": "hijau",
+   "nama": "Anak tangga 3: tahan skenario megathrust (C3)",
+   "tambahan_ekuitas": 40.9213875236058,
+   "tahun_statis": 1.5859399726998076,
+   "tahun_statis_laba_di_target": 1.4711558251694061
+  }
+ ],
+ "kantong_likuiditas_di_puncak": {
+  "K80": {
+   "kas_dan_deposito": 34.030391425152615,
+   "cakupan_kas_deposito": 0.6529525734710203,
+   "cakupan_kas_deposito_sbn": 2.70679512025176,
+   "klaim_kejadian_var_99_5": 52.117707790400445
+  },
+  "K75": {
+   "kas_dan_deposito": 40.83843870048591,
+   "cakupan_kas_deposito": 0.7835808678448429,
+   "cakupan_kas_deposito_sbn": 2.7158476610518654,
+   "klaim_kejadian_var_99_5": 52.117707790400445
+  },
+  "K70": {
+   "kas_dan_deposito": 47.69466743599432,
+   "cakupan_kas_deposito": 0.9151336361108958,
+   "cakupan_kas_deposito_sbn": 2.724964267892703,
+   "klaim_kejadian_var_99_5": 52.117707790400445
+  }
+ },
+ "ekonomi": {
+  "biaya_modal": 0.13,
+  "horizon_tahun": 5,
+  "anuitas": 3.5172312615427064,
+  "tambahan_ekuitas_miliar": 409.213875236058,
+  "biaya_modal_atas_tambahan_ekuitas_miliar": 53.19780378068755,
+  "tambahan_laba_bersih_miliar": 20.13199635045119,
+  "defisit_dihindari_miliar": 1.3477339247916476,
+  "biaya_radar_awal_miliar": 4.5,
+  "biaya_radar_tahunan_miliar": 2.8,
+  "biaya_keamanan_bersih_per_tahun_miliar": 35.86580743023636,
+  "biaya_keamanan_terhadap_premi": 0.03586580743023636,
+  "nilai_kini_biaya_radar_miliar": 14.348247532319578,
+  "npv_alternatif_batas_terhadap_tangga_perusahaan_miliar": -17.74903206334237,
+  "npv_alternatif_batas_terhadap_tangga_diperluas_miliar": -1.2472435906813484,
+  "premi_dilepas_alternatif_batas_miliar": 50.3501422481917,
+  "kerugian_dialihkan_rata_alternatif_batas_miliar": 10.3202879431824,
+  "kerugian_dialihkan_ekor_alternatif_batas_miliar": 1231.62880012479
+ },
+ "struktural": [
+  {
+   "kasus": "dasar (Varian A, K70, nu 3, MAIPARK Desember 2024, E 139,16)",
+   "target_C1": 2.05,
+   "target_C2": 2.6,
+   "target_C3": 3.3,
+   "target_puncak": 3.3,
+   "ekuitas": 63.81889145331439,
+   "tahun_statis": 1.5859399726998076
+  },
+  {
+   "kasus": "presisi Beta nu 1,5",
+   "target_C1": 2.2,
+   "target_C2": 2.75,
+   "target_C3": 3.65,
+   "target_puncak": 3.65,
+   "ekuitas": 70.74687064037545,
+   "tahun_statis": 1.8544391558336715
+  },
+  {
+   "kasus": "presisi Beta nu 6",
+   "target_C1": 1.9,
+   "target_C2": 2.45,
+   "target_C3": 2.75,
+   "target_puncak": 2.75,
+   "ekuitas": 52.99488360851754,
+   "tahun_statis": 1.1664471904480533
+  },
+  {
+   "kasus": "eksposur MAIPARK Juni 2025 saja",
+   "target_C1": 1.85,
+   "target_C2": 2.55,
+   "target_C3": 3.3,
+   "target_puncak": 3.3,
+   "ekuitas": 63.81889145331439,
+   "tahun_statis": 1.5859399726998076
+  },
+  {
+   "kasus": "eksposur dan tabel klaim MAIPARK Juni 2025",
+   "target_C1": 1.0,
+   "target_C2": 2.55,
+   "target_C3": 1.85,
+   "target_puncak": 2.55,
+   "ekuitas": 49.0777820181211,
+   "tahun_statis": 1.0146368935525216
+  },
+  {
+   "kasus": "E dasar tahun penutupan 2024 = 166.6 (kerugian dan premi naik bersama)",
+   "target_C1": 2.6,
+   "target_C2": 3.2,
+   "target_C3": 4.05,
+   "target_puncak": 4.05,
+   "ekuitas": 78.70295176426521,
+   "tahun_statis": 2.162783223422789
+  },
+  {
+   "kasus": "premi gempa 22.83 per 100 premi dengan E 139,16",
+   "target_C1": 2.05,
+   "target_C2": 2.6,
+   "target_C3": 3.3,
+   "target_puncak": 3.3,
+   "ekuitas": 63.81889145331439,
+   "tahun_statis": 1.5859399726998076
+  }
+ ],
+ "muatan": [
+  {
+   "faktor": 1.0,
+   "target_puncak": 3.3,
+   "tahun_statis": 1.5859399726998076
+  },
+  {
+   "faktor": 1.07,
+   "target_puncak": 3.55,
+   "tahun_statis": 1.777601514816168
+  },
+  {
+   "faktor": 1.25,
+   "target_puncak": 4.25,
+   "tahun_statis": 2.3175540604619673
+  },
+  {
+   "faktor": 1.5,
+   "target_puncak": 5.25,
+   "tahun_statis": 3.09745870214629
+  }
+ ],
+ "kerugian_megathrust": 81.76958842742228
+}

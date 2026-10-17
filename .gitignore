@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# R
+.Rhistory
+.RData
+Rplots.pdf
+
+# Office dan sistem
+~$*
+.DS_Store
+Thumbs.db

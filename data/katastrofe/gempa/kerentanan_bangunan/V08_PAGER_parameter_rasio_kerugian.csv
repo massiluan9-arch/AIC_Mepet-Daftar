@@ -1,0 +1,4 @@
+﻿negara,theta,beta,bentuk_fungsi,sumber_parameter,sumber_asli,catatan
+Indonesia,10.211,0.103,rasio kerugian r(MMI) = Phi( ln(MMI/theta) / beta ),"Mestav Sarica & Pan (2022), Supplementary Table 3, doi:10.1038/s43247-022-00430-9","Jaiswal & Wald (2013), Earthquake Spectra 29(1):309-324, doi:10.1193/1.4000104","Rasio terhadap eksposur ekonomi total (alfa x PDB per kapita x penduduk; alfa Indonesia 17,25), bukan terhadap nilai pertanggungan bangunan"
+Filipina,10.426,0.1,idem,idem,idem,pembanding
+Turki,9.461,0.1,idem,idem,idem,pembanding

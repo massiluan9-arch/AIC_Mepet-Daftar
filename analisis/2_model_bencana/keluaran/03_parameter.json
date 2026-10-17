@@ -1,0 +1,14 @@
+{
+  "kurva_utama": "logit pecahan atas rasio klaim MAIPARK",
+  "a": -11.74438999,
+  "b": 0.94567741,
+  "mmi_min": 5,
+  "jumlah_kejadian": 13,
+  "pseudo_r2": 0.61411965,
+  "a_tanpa_tsunami": -12.57202645,
+  "b_tanpa_tsunami": 1.00521935,
+  "presisi_beta": 3,
+  "risiko_sendiri_standar": 0.025,
+  "porsi_klaim_erupsi": 0.06653381,
+  "catatan": "Rasio dihitung terhadap nilai pertanggungan polis yang mengajukan klaim, jadi berlaku sebagai batas atas bagi seluruh eksposur pada intensitas yang sama."
+}

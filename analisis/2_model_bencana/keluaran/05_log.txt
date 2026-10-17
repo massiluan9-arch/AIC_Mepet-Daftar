@@ -1,0 +1,111 @@
+Warning messages:
+1: package 'data.table' was built under R version 4.4.3 
+2: package 'ggplot2' was built under R version 4.4.3 
+3: package 'jsonlite' was built under R version 4.4.3 
+Warning messages:
+1: package 'extRemes' was built under R version 4.4.3 
+2: package 'Lmoments' was built under R version 4.4.3 
+Pengalaman klaim gempa: 21 tahun 0.0982 per mil (rentang 0.1104 sampai 0.0863); 5 tahun 0.0219 per mil
+    kurva aal_permil median_21  p5_21 p95_21 persentil_amati_21
+   <char>      <num>     <num>  <num>  <num>              <num>
+1:  klaim     0.2135    0.2008 0.1181 0.3453              0.013
+2: aulady     0.1876    0.0849 0.0280 0.5121              0.571
+3:  pager     0.0161    0.0012 0.0000 0.0443              0.974
+   persentil_amati_5 bobot
+               <num> <num>
+1:             0.002 0.178
+2:             0.228 0.784
+3:             0.939 0.038
+   pertumbuhan pengalaman_permil      klaim    aulady      pager
+         <num>             <num>      <num>     <num>      <num>
+1:      0.1000        0.08632315 0.07644492 0.8770086 0.04654652
+2:      0.1451        0.09824941 0.18087862 0.7805196 0.03860180
+3:      0.2000        0.11043097 0.31771052 0.6474924 0.03479705
+                         strategi aal_permil var_99 var_99_5 var_99_9 tvar_99_5
+                           <char>      <num>  <num>    <num>    <num>     <num>
+ 1:                      S0_dasar     0.1856  0.205    0.383    1.656     1.511
+ 2:                        S1_rs5     0.1608  0.175    0.335    1.461     1.388
+ 3:                       S2_rs10     0.1248  0.131    0.261    1.138     1.185
+ 4:                    S3_batas20     0.1066  0.123    0.203    0.884     0.660
+ 5:                    S4_batas10     0.0608  0.068    0.117    0.486     0.344
+ 6:                S5_akumulasi10     0.1498  0.170    0.323    1.260     1.156
+ 7:                     S6_koas50     0.1529  0.168    0.325    1.328     1.253
+ 8:                     S7_paketA     0.0660  0.081    0.129    0.509     0.394
+ 9:                     S8_paketB     0.0566  0.068    0.116    0.437     0.340
+10:                    S9_batas50     0.1649  0.193    0.325    1.449     1.200
+11:                   S10_batas40     0.1528  0.180    0.295    1.290     1.065
+12:                   S11_batas30     0.1347  0.158    0.259    1.135     0.891
+13:                   S12_batas25     0.1222  0.142    0.234    1.020     0.784
+14:                   S13_batas15     0.0868  0.099    0.166    0.707     0.516
+15:            S14_batas20_akum10     0.0859  0.104    0.163    0.646     0.489
+16:             S15_batas20_akum5     0.0621  0.078    0.130    0.424     0.307
+17:             S16_batas10_akum5     0.0353  0.044    0.067    0.214     0.156
+18:             S17_batas20_besar     0.1208  0.141    0.232    0.990     0.809
+19:      S18_batas20_besar_akum10     0.0974  0.118    0.193    0.763     0.605
+20:                     S19_akum5     0.1081  0.131    0.255    0.854     0.759
+21:              S20_zona_batas20     0.1328  0.168    0.314    1.022     0.823
+22:              S21_zona_batas10     0.1022  0.136    0.247    0.719     0.579
+23:        S22_zona_besar_batas20     0.1423  0.174    0.324    1.112     0.946
+24:       S23_zona_batas20_akum10     0.1120  0.145    0.282    0.816     0.673
+25: S24_zona_batas10_luar_batas30     0.0854  0.111    0.182    0.545     0.423
+26:              S25_zona_batas15     0.1195  0.157    0.291    0.880     0.708
+                         strategi aal_permil var_99 var_99_5 var_99_9 tvar_99_5
+                           <char>      <num>  <num>    <num>    <num>     <num>
+       gb
+    <num>
+ 1: 0.015
+ 2: 0.013
+ 3: 0.013
+ 4: 0.008
+ 5: 0.004
+ 6: 0.015
+ 7: 0.015
+ 8: 0.005
+ 9: 0.004
+10: 0.012
+11: 0.011
+12: 0.009
+13: 0.009
+14: 0.006
+15: 0.006
+16: 0.004
+17: 0.002
+18: 0.008
+19: 0.006
+20: 0.014
+21: 0.013
+22: 0.010
+23: 0.014
+24: 0.012
+25: 0.004
+26: 0.012
+       gb
+    <num>
+Warning message:
+In log(z) : NaNs produced
+Warning message:
+In ks.test.default(lebih - ambang, function(q) pevd(q, scale = par_gp[["scale"]],  :
+  ties should not be present for the one-sample Kolmogorov-Smirnov test
+        ambang jumlah_di_atas        skala    bentuk ks_statistik      ks_p
+         <num>          <int>        <num>     <num>        <num>     <num>
+1: 0.000540829           5000 0.0004193636 0.8896436  0.009058218 0.8065467
+   var_99_5_empiris var_99_5_gpd var_99_9_empiris var_99_9_gpd
+              <num>        <num>            <num>        <num>
+1:      0.003825783  0.003725547       0.01655681   0.01537512
+                                                     sumber premi_murni_permil
+                                                     <char>              <num>
+1:                                                    klaim         0.21354042
+2:                                                   aulady         0.18755621
+3:                                                    pager         0.01606910
+4:                                                 campuran         0.18562875
+5: Anwar dkk. (2025), hunian nasional, tanpa risiko sendiri         0.39940000
+6:            Pengalaman klaim industri 2004-2024 (MAIPARK)         0.09824941
+        pml_100      pml_250    pml_1000 rasio_klaim_terhadap_tarif
+          <num>        <num>       <num>                      <num>
+1: 0.0014899116 0.0021140602 0.003592279                 0.15820153
+2: 0.0023489249 0.0053373573 0.021391224                 0.13895111
+3: 0.0001402272 0.0004814229 0.002376925                 0.01190480
+4: 0.0020461168 0.0045514462 0.016556814                 0.13752315
+5: 0.0048000000 0.0092000000 0.023700000                         NA
+6:           NA           NA          NA                 0.07278813
+selesai 05

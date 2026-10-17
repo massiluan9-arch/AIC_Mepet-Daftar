@@ -1,0 +1,6 @@
+﻿tipe,MMI50,k,c0,rmse,catatan
+UM,8.774,1.931,0.0,0.0131,Fit kurva logistik tugas dosen (c0=0) ke titik damage ratio Aulady & Fujimi (2019); usulan awal MMI50 & k per material. Penalti usia/soft story tetap perlu judgement.
+RCLRFM,8.976,2.411,0.0,0.0109,Fit kurva logistik tugas dosen (c0=0) ke titik damage ratio Aulady & Fujimi (2019); usulan awal MMI50 & k per material. Penalti usia/soft story tetap perlu judgement.
+CM,8.891,2.736,0.0,0.0137,Fit kurva logistik tugas dosen (c0=0) ke titik damage ratio Aulady & Fujimi (2019); usulan awal MMI50 & k per material. Penalti usia/soft story tetap perlu judgement.
+RCMRFM,8.393,4.025,0.0,0.003,Fit kurva logistik tugas dosen (c0=0) ke titik damage ratio Aulady & Fujimi (2019); usulan awal MMI50 & k per material. Penalti usia/soft story tetap perlu judgement.
+TF,9.057,1.844,0.0,0.0125,Fit kurva logistik tugas dosen (c0=0) ke titik damage ratio Aulady & Fujimi (2019); usulan awal MMI50 & k per material. Penalti usia/soft story tetap perlu judgement.

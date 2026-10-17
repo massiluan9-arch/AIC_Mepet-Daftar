@@ -1,0 +1,108 @@
+# Parameter model hasil investasi.
+# status: data = terbaca dari berkas di folder data/; asumsi = pilihan penulis yang perlu dipertahankan atau diganti.
+
+meta:
+  tanggal_kondisi_awal: 2026-10-09
+  cakrawala_tahun: 1
+  catatan: "Kondisi awal = keadaan pasar terakhir yang tersedia. Imbal hasil dihitung sebelum pajak dan biaya transaksi."
+
+kondisi_awal:
+  kurva:
+    berkas: data/ekonomi_pasar/pasar_riwayat/kurva_imbal_hasil_PHEI_2026-10-09.csv
+    status: data
+    sumber: "PHEI lewat Pusat Data Kontan, 9 Oktober 2026"
+  bunga_deposito_1_bulan:
+    nilai: 0.0508
+    status: data
+    sumber: "Bank Indonesia, SEKI Tabel I.28, deposito rupiah bank umum 1 bulan, Agustus 2026"
+  inflasi_tahunan:
+    nilai: 0.0328
+    status: data
+    sumber: "BPS, September 2026 (data/ekonomi_pasar/indikator_bersumber.csv)"
+  bi_rate:
+    nilai: 0.0575
+    status: data
+    sumber: "Bank Indonesia, RDG 22-23 September 2026"
+
+instrumen:
+  sbn:
+    tenor_dasar: 5
+    tenor_uji: [2, 10]
+    status_tenor: asumsi
+    catatan: "Brief tidak menyebut tenor. Tenor diperlakukan sebagai keputusan dan diuji pada 2, 5, dan 10 tahun."
+  korporasi:
+    tenor: 3
+    peringkat_dasar: AA
+    peringkat_uji: [AAA]
+    jumlah_emiten: 10
+    peluang_gagal_bayar_setahun: {AAA: 0.001, AA: 0.003}
+    tingkat_kerugian_saat_gagal: 0.60
+    status: asumsi
+    catatan: "Peluang gagal bayar dan tingkat kerugian belum bersumber: studi gagal bayar Pefindo tidak dapat diakses. Uji banding memakai tiga kali peluang dasar. Jumlah emiten mengikuti batas 20% per emiten (paling sedikit 3 emiten pada porsi 50%)."
+  deposito:
+    tenor_bulan: 1
+    status: asumsi
+    catatan: "Digulirkan tiap bulan agar siap cair."
+  saham:
+    proksi: lq45
+    imbal_dividen: 0.03
+    status_dividen: asumsi
+    catatan: "IDX30 tidak tersedia; LQ45 dipakai sebagai proksi saham unggulan. Indeksnya indeks harga, jadi imbal dividen ditambahkan sebagai asumsi."
+  reksadana_saham:
+    proksi: ihsg
+    dividen_dikurangi_biaya: 0.0
+    status: asumsi
+    catatan: "Dividen diasumsikan habis untuk biaya pengelolaan."
+
+selisih_kredit:
+  beta_bps_per_persen_saham: 0.0
+  beta_uji: 2.0
+  status: asumsi
+  catatan: "Riwayat selisih imbal hasil per peringkat tidak tersedia terbuka. Dasar: selisih tetap (risiko obligasi korporasi kurang-taksir). Uji banding: selisih melebar 2 bps tiap 1% penurunan saham setahun."
+
+bootstrap:
+  jumlah_tahun: 100000
+  panjang_blok_bulan: 6
+  panjang_blok_uji: [3, 12]
+  benih: 20261011
+  jumlah_kelompok_galat_baku: 20
+  jendela_bersama: ["2012-02", "2024-12"]
+  jendela_panjang: ["2000-02", "2026-10"]
+  catatan: "Jendela bersama dibatasi deret imbal hasil SBN 10 tahun (OECD, Jan 2012 - Des 2024). Jendela panjang menambah bulan saham 2000-2011 dan 2025-2026; perubahan imbal hasil pada bulan-bulan itu diimputasi dari regresi atas imbal hasil saham ditambah residu teracak."
+
+klasifikasi_akuntansi:
+  dasar: nilai_wajar
+  uji: dimiliki_hingga_jatuh_tempo
+  catatan: "Nilai wajar: perubahan harga obligasi masuk Tingkat Solvabilitas. Dimiliki hingga jatuh tempo: hanya kupon dan kerugian gagal bayar yang masuk."
+
+likuiditas:
+  potongan_repo_sbn: 0.10
+  status: asumsi
+  catatan: "Potongan harga saat SBN direpokan (Pasal 8 POJK 26/2025). Besarnya mengikuti kontrak; 10% adalah asumsi."
+
+# Skenario deterministik: guncangan setahun yang diterapkan serentak pada semua profil.
+skenario:
+  ulangan_2026:
+    label: "Ulangan 2026"
+    dy_bps: 100
+    saham: -0.30
+    selisih_bps: 50
+    dasar: "BI-Rate naik 100 bps sejak awal 2026; IHSG -30,18% sampai 2 Oktober 2026. Pelebaran selisih 50 bps adalah asumsi."
+  pengetatan_tajam:
+    label: "Pengetatan tajam"
+    dy_bps: 226
+    saham: -0.19
+    selisih_bps: 100
+    dasar: "Persentil 95 kenaikan imbal hasil 10 tahun dalam 12 bulan (2012-2024) dan persentil 5 imbal hasil LQ45 12 bulan pada jendela yang sama. Selisih 100 bps asumsi."
+  ekstrem_gabungan:
+    label: "Ekstrem gabungan"
+    dy_bps: 355
+    saham: -0.59
+    selisih_bps: 200
+    dasar: "Kenaikan imbal hasil 12 bulan terbesar pada data (2012-2024) digabung penurunan LQ45 12 bulan terbesar sejak 2000 (terjadi pada 2008). Kedua puncak tidak pernah terjadi bersamaan; selisih 200 bps asumsi."
+  pelonggaran:
+    label: "Pelonggaran"
+    dy_bps: -100
+    saham: 0.15
+    selisih_bps: -20
+    dasar: "Skenario pembanding arah berlawanan; seluruhnya asumsi."

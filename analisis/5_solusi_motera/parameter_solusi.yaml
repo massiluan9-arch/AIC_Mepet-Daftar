@@ -1,0 +1,68 @@
+# Parameter perancangan solusi dan analisis biaya-manfaat.
+# status: data, regulasi, atau asumsi (asumsi selalu diuji).
+
+kendala:
+  C1: "P(R < 100%) paling besar 0,5% setahun pada kurva kerentanan campuran"
+  C2: "P(R < 100%) paling besar 0,5% setahun pada kurva Aulady & Fujimi saja (kurva dengan bobot terbesar)"
+  C3: "Rasio akhir paling rendah 100% setelah skenario megathrust Jawa bagian barat M 8,7 dengan guncangan median"
+  target_paling_rendah: 1.20        # POJK 26/2025 Pasal 3
+
+skenario_uji:
+  nama: "Megathrust Jawa bagian barat M 8,7"
+  eta: 0
+  kurva: campuran
+
+# Strategi yang tidak dijadikan calon, beserta alasannya.
+dikecualikan:
+  S1_rs5: "Tabel tarif gempa SEOJK 6/2017 tidak memberi potongan premi untuk risiko sendiri di atas 2,5%, jadi sulit dipasarkan"
+  S2_rs10: "Sama dengan S1"
+  S7_paketA: "Memuat risiko sendiri 5%"
+  S8_paketB: "Memuat risiko sendiri 5%"
+
+biaya_modal:
+  nilai: 0.13
+  uji: [0.10, 0.16]
+  status: asumsi
+  catatan: "Imbal hasil yang dituntut pemegang saham. Patokan: SBN 10 tahun 7,16% ditambah premi risiko ekuitas sekitar 6 poin."
+
+skala_rupiah:
+  premi_harta_benda_miliar: 1000.0
+  status: asumsi
+  catatan: "Pada premi Rp1 triliun, ekuitas untuk rasio 120% sekitar Rp228 miliar, dekat dengan ekuitas minimum Rp250 miliar (POJK 23/2023). Premi harta benda terbesar di industri Rp2,2 triliun; median Rp177 miliar (OJK 2024)."
+
+horizon_tahun: 5
+
+# Rev. 4: MOTERA (Modal Terpicu untuk Resiliensi Asuransi), dihitung 5_solusi_motera/kode/motera.py.
+motera:
+  target_inti: {nilai: 2.05, status: hasil, catatan: "Rasio awal terkecil yang lolos C1 pada polis standar (radar_tangga.json, anak tangga 1)"}
+  target_formal_peralihan: {nilai: 1.50, status: pilihan penelitian, catatan: "Pasal 3 ayat (3) POJK 26/2025: target internal harus dipenuhi setiap saat, jadi target formal dinaikkan bertahap"}
+  komitmen_peralihan: {nilai: 45.0, status: hasil, catatan: "Per 100 premi; dibulatkan ke atas dari kebutuhan agar rasio kembali ke 100% setelah megathrust pada rasio 120%"}
+  komitmen_tetap: {nilai: 30.0, status: hasil, catatan: "Per 100 premi; dibulatkan ke atas dari kebutuhan pada rasio 205%"}
+  pemicu_kerugian: {nilai: 20.0, status: asumsi, catatan: "Estimasi kerugian satu kejadian per 100 premi; dalam simulasi juga mewakili pemicu parametrik BMKG karena katalog tahunan tidak menyimpan lokasi kejadian"}
+  pemicu_rasio: {nilai: 1.20, status: regulasi, catatan: "Target internal paling rendah POJK 26/2025 Pasal 3"}
+  biaya_operasional_miliar: {nilai: 1.0, status: asumsi, catatan: "Notaris, bank kustodian, skrip pemicu, uji pencairan tahunan; pada skala premi Rp1 triliun"}
+  bulan_laporan: [0.0, 0.25, 0.5, 0.75, 1.0]
+  porsi_jaminan_sbn: {nilai: [0.0, 1.0], status: asumsi, catatan: "Rentang: komitmen tanpa jaminan sampai dijamin penuh SBN milik pemegang saham"}
+  rev6:
+    target_pemulihan: {nilai: 1.20, status: regulasi, catatan: "Komitmen diukur agar rasio kembali ke target internal 120% (POJK 26/2025 Pasal 3 ayat 3), bukan hanya ke 100%"}
+    jadwal: bulanan
+    potongan_jaminan_sbn: {nilai: 0.10, status: asumsi, catatan: "Sama dengan potongan repo SBN pada analisis/3_investasi_mmbr/parameter/pasar.yaml"}
+    imbalan_komitmen: {nilai: [0.0, 0.005, 0.01], status: asumsi, catatan: "Per tahun atas rata-rata komitmen; perlu konsultasi OJK karena Pasal 52"}
+    biaya_modal_uji: [0.10, 0.13, 0.16]
+    bunga_pinjaman_per_bi_rate: {nilai: 0.2, status: regulasi, catatan: "Paling tinggi 1/5 suku bunga BI (Pasal 32 huruf b angka 3)"}
+  opsi:
+    O3_proksi: S22_zona_besar_batas20
+    O4_kenaikan_tarif_zona: 0.15
+    O6_profil: K80
+
+# Rp miliar, pada skala premi di atas. Semua asumsi; diuji dua kali lipat.
+biaya_implementasi:
+  awal:
+    mesin_akumulasi_dan_geokode: {nilai: 4.0, catatan: "Geokode polis, basis data eksposur, mesin simulasi berbasis data terbuka"}
+    penyesuaian_produk_dan_pelaporan: {nilai: 1.5, catatan: "Klausul first loss, pembaruan pedoman underwriting, pelaporan produk"}
+    pelatihan_dan_sosialisasi: {nilai: 0.5, catatan: "Underwriter, pemasaran, pialang"}
+  tahunan:
+    tim_manajemen_eksposur: {nilai: 1.8, catatan: "Tiga orang: aktuaris, analis bahaya, analis data"}
+    data_dan_komputasi: {nilai: 0.6, catatan: "Pembaruan katalog, data MAIPARK, komputasi"}
+    validasi_independen: {nilai: 0.4, catatan: "Telaah model tahunan"}
+  pengali_uji: 2.0

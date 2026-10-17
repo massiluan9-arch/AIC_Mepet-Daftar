@@ -1,0 +1,34 @@
+# Tiga profil risiko pada studi kasus AIC 2026 (tabel Latar Belakang; dokumen lomba tidak disertakan di repo).
+# Ketentuan C.5 brief: jawaban soal 1 wajib memilih salah satu profil dan tidak boleh keluar dari rentangnya.
+# Varian di bawah adalah titik ujung dan titik tengah rentang; semuanya berada di dalam rentang brief.
+
+instrumen:
+  sbn: "SBN (obligasi pemerintah)"
+  deposito: "Deposito dan instrumen pasar uang"
+  korporasi: "Obligasi korporasi"
+  saham: "Saham publik"
+  reksadana_saham: "Reksa dana saham"
+
+profil:
+  Konservatif:
+    rentang_brief: "SBN 70%-80%; deposito dan instrumen pasar uang 20%-30%; total selalu 100%"
+    varian:
+      K80: {label: "Konservatif 80/20", bobot: {sbn: 0.80, deposito: 0.20}}
+      K75: {label: "Konservatif 75/25", bobot: {sbn: 0.75, deposito: 0.25}}
+      K70: {label: "Konservatif 70/30", bobot: {sbn: 0.70, deposito: 0.30}}
+  Moderat:
+    rentang_brief: "Obligasi korporasi 40%-60%; SBN 30%-50% (berbanding terbalik, total keduanya 90%); reksa dana saham tetap 10%"
+    varian:
+      M40: {label: "Moderat 40/50/10", bobot: {korporasi: 0.40, sbn: 0.50, reksadana_saham: 0.10}}
+      M50: {label: "Moderat 50/40/10", bobot: {korporasi: 0.50, sbn: 0.40, reksadana_saham: 0.10}}
+      M60: {label: "Moderat 60/30/10", bobot: {korporasi: 0.60, sbn: 0.30, reksadana_saham: 0.10}}
+  Agresif:
+    rentang_brief: "Saham publik 20%-40%; obligasi korporasi 60%-80% (berbanding terbalik, total 100%)"
+    varian:
+      A20: {label: "Agresif 20/80", bobot: {saham: 0.20, korporasi: 0.80}}
+      A30: {label: "Agresif 30/70", bobot: {saham: 0.30, korporasi: 0.70}}
+      A40: {label: "Agresif 40/60", bobot: {saham: 0.40, korporasi: 0.60}}
+
+# Varian yang dipakai sebagai neraca pembanding pada uji "neraca yang sama".
+varian_acuan: K75
+urutan_varian: [K80, K75, K70, M40, M50, M60, A20, A30, A40]

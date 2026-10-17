@@ -1,0 +1,15 @@
+# Python 3.11; versi yang dipakai saat repositori diuji (15 Oktober 2026)
+numpy==2.4.6
+pandas==3.0.5
+scipy==1.17.1
+matplotlib==3.11.1
+PyYAML==6.0.3
+openpyxl==3.1.5
+pymupdf==1.28.2
+# penyusunan naskah (laporan/kode)
+python-docx==1.2.0
+lxml==6.1.3
+pillow==12.3.0
+latex2mathml==3.81.1
+# opsional, hanya Windows: Excel dan Word lewat COM
+pywin32==312; sys_platform == "win32"

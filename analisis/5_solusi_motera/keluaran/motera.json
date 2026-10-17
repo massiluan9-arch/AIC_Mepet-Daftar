@@ -1,0 +1,2589 @@
+{
+ "meta": {
+  "batas_pelanggaran": 456,
+  "jumlah_tahun": 100000,
+  "friksi_modal": 0.08089547804410324,
+  "friksi_jaminan": 0.06704548467192722,
+  "biaya_modal": 0.13,
+  "skala_miliar_per_unit": 10.0,
+  "rasio_setara": 3.578487499999282,
+  "L_megathrust": 81.76958842742228,
+  "parameter": {
+   "target_inti": {
+    "nilai": 2.05,
+    "status": "hasil",
+    "catatan": "Rasio awal terkecil yang lolos C1 pada polis standar (radar_tangga.json, anak tangga 1)"
+   },
+   "target_formal_peralihan": {
+    "nilai": 1.5,
+    "status": "pilihan penelitian",
+    "catatan": "Pasal 3 ayat (3) POJK 26/2025: target internal harus dipenuhi setiap saat, jadi target formal dinaikkan bertahap"
+   },
+   "komitmen_peralihan": {
+    "nilai": 45.0,
+    "status": "hasil",
+    "catatan": "Per 100 premi; dibulatkan ke atas dari kebutuhan agar rasio kembali ke 100% setelah megathrust pada rasio 120%"
+   },
+   "komitmen_tetap": {
+    "nilai": 30.0,
+    "status": "hasil",
+    "catatan": "Per 100 premi; dibulatkan ke atas dari kebutuhan pada rasio 205%"
+   },
+   "pemicu_kerugian": {
+    "nilai": 20.0,
+    "status": "asumsi",
+    "catatan": "Estimasi kerugian satu kejadian per 100 premi; dalam simulasi juga mewakili pemicu parametrik BMKG karena katalog tahunan tidak menyimpan lokasi kejadian"
+   },
+   "pemicu_rasio": {
+    "nilai": 1.2,
+    "status": "regulasi",
+    "catatan": "Target internal paling rendah POJK 26/2025 Pasal 3"
+   },
+   "biaya_operasional_miliar": {
+    "nilai": 1.0,
+    "status": "asumsi",
+    "catatan": "Notaris, bank kustodian, skrip pemicu, uji pencairan tahunan; pada skala premi Rp1 triliun"
+   },
+   "bulan_laporan": [
+    0.0,
+    0.25,
+    0.5,
+    0.75,
+    1.0
+   ],
+   "porsi_jaminan_sbn": {
+    "nilai": [
+     0.0,
+     1.0
+    ],
+    "status": "asumsi",
+    "catatan": "Rentang: komitmen tanpa jaminan sampai dijamin penuh SBN milik pemegang saham"
+   },
+   "rev6": {
+    "target_pemulihan": {
+     "nilai": 1.2,
+     "status": "regulasi",
+     "catatan": "Komitmen diukur agar rasio kembali ke target internal 120% (POJK 26/2025 Pasal 3 ayat 3), bukan hanya ke 100%"
+    },
+    "jadwal": "bulanan",
+    "potongan_jaminan_sbn": {
+     "nilai": 0.1,
+     "status": "asumsi",
+     "catatan": "Sama dengan potongan repo SBN pada analisis/3_investasi_mmbr/parameter/pasar.yaml"
+    },
+    "imbalan_komitmen": {
+     "nilai": [
+      0.0,
+      0.005,
+      0.01
+     ],
+     "status": "asumsi",
+     "catatan": "Per tahun atas rata-rata komitmen; perlu konsultasi OJK karena Pasal 52"
+    },
+    "biaya_modal_uji": [
+     0.1,
+     0.13,
+     0.16
+    ],
+    "bunga_pinjaman_per_bi_rate": {
+     "nilai": 0.2,
+     "status": "regulasi",
+     "catatan": "Paling tinggi 1/5 suku bunga BI (Pasal 32 huruf b angka 3)"
+    }
+   },
+   "opsi": {
+    "O3_proksi": "S22_zona_besar_batas20",
+    "O4_kenaikan_tarif_zona": 0.15,
+    "O6_profil": "K80"
+   }
+  },
+  "skema_bobot": {
+   "utama": [
+    0.3,
+    0.15,
+    0.2,
+    0.15,
+    0.1,
+    0.1
+   ],
+   "sama": [
+    0.16666666666666666,
+    0.16666666666666666,
+    0.16666666666666666,
+    0.16666666666666666,
+    0.16666666666666666,
+    0.16666666666666666
+   ],
+   "biaya": [
+    0.2,
+    0.1,
+    0.35,
+    0.15,
+    0.1,
+    0.1
+   ]
+  }
+ },
+ "konfigurasi": {
+  "status_quo": {
+   "profil": "K70",
+   "rasio_awal": 1.2,
+   "komitmen": 0.0,
+   "ekuitas": 22.89750392970859,
+   "mmbr": 19.081253274757167,
+   "C1": {
+    "pelanggaran": 709,
+    "peluang": 0.00709,
+    "selang": [
+     0.006579309843955681,
+     0.007629584511533005
+    ],
+    "lolos": false,
+    "peluang_cair": 0.0,
+    "peluang_cair_bencana": 0.01333,
+    "rata_dicairkan": 0.0,
+    "ekuitas": 22.89750392970859,
+    "mmbr": 19.081253274757167,
+    "laba_bersih": 25.802608060848435,
+    "imbal_hasil": 0.06295451532807278
+   },
+   "C2": {
+    "pelanggaran": 837,
+    "peluang": 0.00837,
+    "selang": [
+     0.007814637524192614,
+     0.008954153400295633
+    ],
+    "lolos": false,
+    "peluang_cair": 0.0,
+    "peluang_cair_bencana": 0.01531,
+    "rata_dicairkan": 0.0,
+    "ekuitas": 22.89750392970859,
+    "mmbr": 19.081253274757167,
+    "laba_bersih": 25.7285824813244,
+    "imbal_hasil": 0.06295451532807278
+   },
+   "rasio_megathrust_normal": -1.2221204193813826,
+   "rasio_megathrust_2026": -1.3189495586845603,
+   "lolos_C3": false,
+   "kebutuhan_komitmen_megathrust": [
+    42.40084252922577,
+    44.24846386064645
+   ]
+  },
+  "inti_saja": {
+   "profil": "K70",
+   "rasio_awal": 2.05,
+   "komitmen": 0.0,
+   "ekuitas": 39.32877913249618,
+   "mmbr": 19.184770308534727,
+   "C1": {
+    "pelanggaran": 456,
+    "peluang": 0.00456,
+    "selang": [
+     0.004151845914605826,
+     0.0049972854040614125
+    ],
+    "lolos": true,
+    "peluang_cair": 0.0,
+    "peluang_cair_bencana": 0.01333,
+    "rata_dicairkan": 0.0,
+    "ekuitas": 39.32877913249618,
+    "mmbr": 19.184770308534727,
+    "laba_bersih": 26.611007683558604,
+    "imbal_hasil": 0.0629545153280728
+   },
+   "C2": {
+    "pelanggaran": 550,
+    "peluang": 0.0055,
+    "selang": [
+     0.005051004257024025,
+     0.005978031837192
+    ],
+    "lolos": false,
+    "peluang_cair": 0.0,
+    "peluang_cair_bencana": 0.01531,
+    "rata_dicairkan": 0.0,
+    "ekuitas": 39.32877913249618,
+    "mmbr": 19.184770308534727,
+    "laba_bersih": 26.53724006509878,
+    "imbal_hasil": 0.0629545153280728
+   },
+   "rasio_megathrust_normal": -0.30513219553445087,
+   "rasio_megathrust_2026": -0.41830429693849364,
+   "lolos_C3": false,
+   "kebutuhan_komitmen_megathrust": [
+    25.038661393602073,
+    27.209842164372834
+   ]
+  },
+  "motera_peralihan": {
+   "profil": "K70",
+   "rasio_awal": 1.2,
+   "komitmen": 45.0,
+   "ekuitas": 22.89750392970859,
+   "mmbr": 19.081253274757167,
+   "C1": {
+    "pelanggaran": 279,
+    "peluang": 0.00279,
+    "selang": [
+     0.0024725742218272982,
+     0.0031367859483469067
+    ],
+    "lolos": true,
+    "peluang_cair": 0.01348,
+    "peluang_cair_bencana": 0.01333,
+    "rata_dicairkan": 0.21689427894127727,
+    "ekuitas": 22.89750392970859,
+    "mmbr": 19.081253274757167,
+    "laba_bersih": 25.802608060848435,
+    "imbal_hasil": 0.06295451532807278
+   },
+   "C2": {
+    "pelanggaran": 341,
+    "peluang": 0.00341,
+    "selang": [
+     0.0030581559484446643,
+     0.00379111303927396
+    ],
+    "lolos": true,
+    "peluang_cair": 0.0154,
+    "peluang_cair_bencana": 0.01531,
+    "rata_dicairkan": 0.25926642206278944,
+    "ekuitas": 22.89750392970859,
+    "mmbr": 19.081253274757167,
+    "laba_bersih": 25.7285824813244,
+    "imbal_hasil": 0.06295451532807278
+   },
+   "rasio_megathrust_normal": 1.1362152387659297,
+   "rasio_megathrust_2026": 1.039386099462752,
+   "lolos_C3": true,
+   "kebutuhan_komitmen_megathrust": [
+    42.40084252922577,
+    44.24846386064645
+   ]
+  },
+  "motera_tetap": {
+   "profil": "K70",
+   "rasio_awal": 2.05,
+   "komitmen": 30.0,
+   "ekuitas": 39.32877913249618,
+   "mmbr": 19.184770308534727,
+   "C1": {
+    "pelanggaran": 273,
+    "peluang": 0.00273,
+    "selang": [
+     0.002416101639861435,
+     0.00307326832367507
+    ],
+    "lolos": true,
+    "peluang_cair": 0.01333,
+    "peluang_cair_bencana": 0.01333,
+    "rata_dicairkan": 0.11300798193557166,
+    "ekuitas": 39.32877913249618,
+    "mmbr": 19.184770308534727,
+    "laba_bersih": 26.611007683558604,
+    "imbal_hasil": 0.0629545153280728
+   },
+   "C2": {
+    "pelanggaran": 334,
+    "peluang": 0.00334,
+    "selang": [
+     0.0029918740120064495,
+     0.0037174044963764943
+    ],
+    "lolos": true,
+    "peluang_cair": 0.01531,
+    "peluang_cair_bencana": 0.01531,
+    "rata_dicairkan": 0.1368694042890137,
+    "ekuitas": 39.32877913249618,
+    "mmbr": 19.184770308534727,
+    "laba_bersih": 26.53724006509878,
+    "imbal_hasil": 0.0629545153280728
+   },
+   "rasio_megathrust_normal": 1.2586081838149907,
+   "rasio_megathrust_2026": 1.1454360824109482,
+   "lolos_C3": true,
+   "kebutuhan_komitmen_megathrust": [
+    25.038661393602073,
+    27.209842164372834
+   ]
+  },
+  "modal_330": {
+   "profil": "K70",
+   "rasio_awal": 3.3,
+   "komitmen": 0.0,
+   "ekuitas": 63.81889145331439,
+   "mmbr": 19.33905801615588,
+   "C1": {
+    "pelanggaran": 287,
+    "peluang": 0.00287,
+    "selang": [
+     0.002547929976897786,
+     0.0032214174428339412
+    ],
+    "lolos": true,
+    "peluang_cair": 0.0,
+    "peluang_cair_bencana": 0.01333,
+    "rata_dicairkan": 0.0,
+    "ekuitas": 63.81889145331439,
+    "mmbr": 19.33905801615588,
+    "laba_bersih": 27.815807695893554,
+    "imbal_hasil": 0.0629545153280728
+   },
+   "C2": {
+    "pelanggaran": 352,
+    "peluang": 0.00352,
+    "selang": [
+     0.0031623903291898175,
+     0.003906864026284795
+    ],
+    "lolos": true,
+    "peluang_cair": 0.0,
+    "peluang_cair_bencana": 0.01531,
+    "rata_dicairkan": 0.0,
+    "ekuitas": 63.81889145331439,
+    "mmbr": 19.33905801615588,
+    "laba_bersih": 27.74242752743663,
+    "imbal_hasil": 0.0629545153280728
+   },
+   "rasio_megathrust_normal": 1.0433798983580957,
+   "rasio_megathrust_2026": 0.9061740291586635,
+   "lolos_C3": true,
+   "kebutuhan_komitmen_megathrust": [
+    0.0,
+    1.8145058935227563
+   ]
+  },
+  "modal_setara": {
+   "profil": "K70",
+   "rasio_awal": 3.578487499999282,
+   "komitmen": 0.0,
+   "ekuitas": 69.32877912018444,
+   "mmbr": 19.373770308457164,
+   "C1": {
+    "pelanggaran": 267,
+    "peluang": 0.00267,
+    "selang": [
+     0.0023596683653892966,
+     0.0030097116012901643
+    ],
+    "lolos": true,
+    "peluang_cair": 0.0,
+    "peluang_cair_bencana": 0.01333,
+    "rata_dicairkan": 0.0,
+    "ekuitas": 69.32877912018444,
+    "mmbr": 19.373770308457164,
+    "laba_bersih": 28.086852502535404,
+    "imbal_hasil": 0.06295451532807281
+   },
+   "C2": {
+    "pelanggaran": 330,
+    "peluang": 0.0033,
+    "selang": [
+     0.0029540163037141067,
+     0.003675267722131968
+    ],
+    "lolos": true,
+    "peluang_cair": 0.0,
+    "peluang_cair_bencana": 0.01531,
+    "rata_dicairkan": 0.0,
+    "ekuitas": 69.32877912018444,
+    "mmbr": 19.373770308457164,
+    "laba_bersih": 28.013561203638055,
+    "imbal_hasil": 0.06295451532807281
+   },
+   "rasio_megathrust_normal": 1.343814030370906,
+   "rasio_megathrust_2026": 1.2012536936814842,
+   "lolos_C3": true,
+   "kebutuhan_komitmen_megathrust": [
+    0.0,
+    0.0
+   ]
+  }
+ },
+ "waktu": {
+  "120": [
+   {
+    "porsi_tahun": 0.0,
+    "kerugian_kritis": 3.8162506549514257,
+    "rasio_banjir": 0.9053278190801246,
+    "rasio_megathrust": -3.1049561281797016
+   },
+   {
+    "porsi_tahun": 0.25,
+    "kerugian_kritis": 12.770327078968158,
+    "rasio_banjir": 1.3373086620981693,
+    "rasio_megathrust": -2.6342472009801217
+   },
+   {
+    "porsi_tahun": 0.5,
+    "kerugian_kritis": 21.70713475625965,
+    "rasio_banjir": 1.7044616253138416,
+    "rasio_megathrust": -2.163538273780542
+   },
+   {
+    "porsi_tahun": 0.75,
+    "kerugian_kritis": 30.64394243355114,
+    "rasio_banjir": 2.071614588529514,
+    "rasio_megathrust": -1.6928293465809623
+   },
+   {
+    "porsi_tahun": 1.0,
+    "kerugian_kritis": 39.58075011084263,
+    "rasio_banjir": 2.438767551745186,
+    "rasio_megathrust": -1.2221204193813826
+   }
+  ],
+  "205": [
+   {
+    "porsi_tahun": 0.0,
+    "kerugian_kritis": 20.079638779841645,
+    "rasio_banjir": 1.7569178089322324,
+    "rasio_megathrust": -2.2317274795295043
+   },
+   {
+    "porsi_tahun": 0.25,
+    "kerugian_kritis": 29.27375917007829,
+    "rasio_banjir": 2.1970819713461767,
+    "rasio_megathrust": -1.7500786585307404
+   },
+   {
+    "porsi_tahun": 0.5,
+    "kerugian_kritis": 38.467879560314934,
+    "rasio_banjir": 2.572768051725212,
+    "rasio_megathrust": -1.2684298375319776
+   },
+   {
+    "porsi_tahun": 0.75,
+    "kerugian_kritis": 47.661999950551575,
+    "rasio_banjir": 2.9484541321042474,
+    "rasio_megathrust": -0.7867810165332142
+   },
+   {
+    "porsi_tahun": 1.0,
+    "kerugian_kritis": 56.856120340788216,
+    "rasio_banjir": 3.324140212483283,
+    "rasio_megathrust": -0.30513219553445087
+   }
+  ],
+  "330": [
+   {
+    "porsi_tahun": 0.0,
+    "kerugian_kritis": 44.29378426997272,
+    "rasio_banjir": 3.009256029302979,
+    "rasio_megathrust": -0.947567702102743
+   },
+   {
+    "porsi_tahun": 0.25,
+    "kerugian_kritis": 53.87141824414179,
+    "rasio_banjir": 3.4614544849461866,
+    "rasio_megathrust": -0.44983080198753334
+   },
+   {
+    "porsi_tahun": 0.5,
+    "kerugian_kritis": 63.449052218310875,
+    "rasio_banjir": 3.849689267036051,
+    "rasio_megathrust": 0.04790609812767638
+   },
+   {
+    "porsi_tahun": 0.75,
+    "kerugian_kritis": 73.02668619247994,
+    "rasio_banjir": 4.2379240491259145,
+    "rasio_megathrust": 0.5456429982428861
+   },
+   {
+    "porsi_tahun": 1.0,
+    "kerugian_kritis": 82.60432016664903,
+    "rasio_banjir": 4.626158831215778,
+    "rasio_megathrust": 1.0433798983580957
+   }
+  ],
+  "motera_tetap": [
+   {
+    "porsi_tahun": 0.0,
+    "kerugian_kritis": 49.929638779841646,
+    "rasio_banjir": 3.320658188281674,
+    "rasio_megathrust": -0.6679871001800625
+   },
+   {
+    "porsi_tahun": 0.25,
+    "kerugian_kritis": 59.123759170078294,
+    "rasio_banjir": 3.760822350695618,
+    "rasio_megathrust": -0.18633827918129872
+   },
+   {
+    "porsi_tahun": 0.5,
+    "kerugian_kritis": 68.31787956031494,
+    "rasio_banjir": 4.136508431074653,
+    "rasio_megathrust": 0.2953105418174642
+   },
+   {
+    "porsi_tahun": 0.75,
+    "kerugian_kritis": 77.51199995055158,
+    "rasio_banjir": 4.512194511453688,
+    "rasio_megathrust": 0.7769593628162276
+   },
+   {
+    "porsi_tahun": 1.0,
+    "kerugian_kritis": 86.70612034078822,
+    "rasio_banjir": 4.887880591832724,
+    "rasio_megathrust": 1.2586081838149907
+   }
+  ]
+ },
+ "komitmen_awal_tahun": 61.999949394553404,
+ "opsi": {
+  "O0": {
+   "nama": "Status quo",
+   "c1": {
+    "pelanggaran": 709,
+    "peluang": 0.00709,
+    "selang": [
+     0.006579309843955681,
+     0.007629584511533005
+    ],
+    "lolos": false,
+    "peluang_cair": 0.0,
+    "peluang_cair_bencana": 0.01333,
+    "rata_dicairkan": 0.0,
+    "ekuitas": 22.89750392970859,
+    "mmbr": 19.081253274757167,
+    "laba_bersih": 25.802608060848435,
+    "imbal_hasil": 0.06295451532807278
+   },
+   "mega": [
+    -1.2221204193813826,
+    -1.3189495586845603
+   ]
+  },
+  "O1": {
+   "nama": "Tambah modal disetor ke 330%",
+   "c1": {
+    "pelanggaran": 287,
+    "peluang": 0.00287,
+    "selang": [
+     0.002547929976897786,
+     0.0032214174428339412
+    ],
+    "lolos": true,
+    "peluang_cair": 0.0,
+    "peluang_cair_bencana": 0.01333,
+    "rata_dicairkan": 0.0,
+    "ekuitas": 63.81889145331439,
+    "mmbr": 19.33905801615588,
+    "laba_bersih": 27.815807695893554,
+    "imbal_hasil": 0.0629545153280728
+   },
+   "mega": [
+    1.0433798983580957,
+    0.9061740291586635
+   ]
+  },
+  "O2": {
+   "nama": "Sistem peringatan dini tiga lapis",
+   "c1": {
+    "pelanggaran": 709,
+    "peluang": 0.00709,
+    "selang": [
+     0.006579309843955681,
+     0.007629584511533005
+    ],
+    "lolos": false,
+    "peluang_cair": 0.0,
+    "peluang_cair_bencana": 0.01333,
+    "rata_dicairkan": 0.0,
+    "ekuitas": 22.89750392970859,
+    "mmbr": 19.081253274757167,
+    "laba_bersih": 25.802608060848435,
+    "imbal_hasil": 0.06295451532807278
+   },
+   "mega": [
+    -1.2221204193813826,
+    -1.3189495586845603
+   ]
+  },
+  "O3": {
+   "nama": "Polis gempa berlapis untuk risiko besar di zona inti",
+   "c1": {
+    "pelanggaran": 690,
+    "peluang": 0.0069,
+    "selang": [
+     0.0063962822642281356,
+     0.007432628119067932
+    ],
+    "lolos": false,
+    "peluang_cair": 0.0,
+    "peluang_cair_bencana": 0.01175,
+    "rata_dicairkan": 0.0,
+    "ekuitas": 22.89750392970859,
+    "mmbr": 19.081253274757167,
+    "laba_bersih": 24.080160518308066,
+    "imbal_hasil": 0.06295451532807278
+   },
+   "mega": [
+    -0.4720896896851206,
+    -0.5689188289882984
+   ],
+   "L_mega": 64.69446320695123,
+   "premi_dilepas": 3.0971777746030966,
+   "laba_dilepas": 1.722447542540369
+  },
+  "O4": {
+   "nama": "Re-pricing tarif gempa zona inti",
+   "c1": {
+    "pelanggaran": 678,
+    "peluang": 0.00678,
+    "selang": [
+     0.00628073647739864,
+     0.007308184135873397
+    ],
+    "lolos": false,
+    "peluang_cair": 0.0,
+    "peluang_cair_bencana": 0.01333,
+    "rata_dicairkan": 0.0,
+    "ekuitas": 22.89750392970859,
+    "mmbr": 19.081253274757167,
+    "laba_bersih": 27.06491261484347,
+    "imbal_hasil": 0.06295451532807278
+   },
+   "mega": [
+    -1.1374865726256458,
+    -1.2343157119288233
+   ],
+   "tambahan_premi_bersih": 1.6149198655632
+  },
+  "O5": {
+   "nama": "MOTERA",
+   "c1": {
+    "pelanggaran": 273,
+    "peluang": 0.00273,
+    "selang": [
+     0.002416101639861435,
+     0.00307326832367507
+    ],
+    "lolos": true,
+    "peluang_cair": 0.01333,
+    "peluang_cair_bencana": 0.01333,
+    "rata_dicairkan": 0.11300798193557166,
+    "ekuitas": 39.32877913249618,
+    "mmbr": 19.184770308534727,
+    "laba_bersih": 26.611007683558604,
+    "imbal_hasil": 0.0629545153280728
+   },
+   "mega": [
+    1.2586081838149907,
+    1.1454360824109482
+   ]
+  },
+  "O6": {
+   "nama": "Konservatif 80/20 dengan repo SBN",
+   "c1": {
+    "pelanggaran": 702,
+    "peluang": 0.00702,
+    "selang": [
+     0.006511867404177435,
+     0.00755703283278502
+    ],
+    "lolos": false,
+    "peluang_cair": 0.0,
+    "peluang_cair_bencana": 0.01333,
+    "rata_dicairkan": 0.0,
+    "ekuitas": 22.659860898930617,
+    "mmbr": 18.88321741577551,
+    "laba_bersih": 25.92297710358499,
+    "imbal_hasil": 0.06476052742017845
+   },
+   "mega": [
+    -1.239363401442212,
+    -1.3530179141861292
+   ]
+  },
+  "O7": {
+   "nama": "Obligasi katastrofe",
+   "c1": null,
+   "mega": null
+  }
+ },
+ "biaya": {
+  "modal_330": {
+   "modal": 3.3103552059500934,
+   "komitmen": 0.0,
+   "operasional": 0.0,
+   "bersih": [
+    3.3103552059500934,
+    3.3103552059500934
+   ],
+   "rupiah_miliar": [
+    33.103552059500934,
+    33.103552059500934
+   ]
+  },
+  "modal_setara": {
+   "modal": 3.756080202730854,
+   "komitmen": 0.0,
+   "operasional": 0.0,
+   "bersih": [
+    3.756080202730854,
+    3.756080202730854
+   ],
+   "rupiah_miliar": [
+    37.56080202730854,
+    37.56080202730854
+   ]
+  },
+  "motera_tetap": {
+   "modal": 1.3292158624037214,
+   "komitmen_tanpa_jaminan": 0.3999,
+   "komitmen_dijamin_penuh": 2.4112645401578168,
+   "operasional": 0.1,
+   "bersih": [
+    1.8291158624037214,
+    3.840480402561538
+   ],
+   "rupiah_miliar": [
+    18.291158624037212,
+    38.404804025615384
+   ]
+  }
+ },
+ "penilaian": {
+  "O1": {
+   "skor": [
+    4,
+    5,
+    2,
+    5,
+    3,
+    1
+   ],
+   "nilai": {
+    "utama": 3.5000000000000004,
+    "sama": 3.333333333333333,
+    "biaya": 3.15
+   },
+   "biaya": [
+    3.3103552059500934,
+    3.3103552059500934
+   ]
+  },
+  "O2": {
+   "skor": [
+    1,
+    3,
+    4,
+    5,
+    4,
+    4
+   ],
+   "nilai": {
+    "utama": 3.0999999999999996,
+    "sama": 3.4999999999999996,
+    "biaya": 3.4499999999999997
+   },
+   "biaya": [
+    0.27999999999999997,
+    0.27999999999999997
+   ]
+  },
+  "O3": {
+   "skor": [
+    1,
+    2,
+    4,
+    3,
+    2,
+    4
+   ],
+   "nilai": {
+    "utama": 2.4499999999999997,
+    "sama": 2.6666666666666665,
+    "biaya": 2.85
+   },
+   "biaya": [
+    1.722447542540369,
+    1.722447542540369
+   ]
+  },
+  "O4": {
+   "skor": [
+    1,
+    1,
+    5,
+    3,
+    3,
+    1
+   ],
+   "nilai": {
+    "utama": 2.3000000000000003,
+    "sama": 2.333333333333333,
+    "biaya": 2.9
+   },
+   "biaya": [
+    -1.6149198655632,
+    -1.6149198655632
+   ]
+  },
+  "O5": {
+   "skor": [
+    5,
+    5,
+    3,
+    4,
+    4,
+    4
+   ],
+   "nilai": {
+    "utama": 4.25,
+    "sama": 4.166666666666666,
+    "biaya": 3.9499999999999997
+   },
+   "biaya": [
+    1.8291158624037214,
+    3.840480402561538
+   ]
+  },
+  "O6": {
+   "skor": [
+    1,
+    2,
+    5,
+    5,
+    5,
+    2
+   ],
+   "nilai": {
+    "utama": 3.0500000000000003,
+    "sama": 3.3333333333333335,
+    "biaya": 3.6
+   },
+   "biaya": [
+    -0.16902442048195596,
+    -0.16902442048195596
+   ]
+  },
+  "O7": {
+   "skor": [
+    4,
+    2,
+    1,
+    1,
+    1,
+    5
+   ],
+   "nilai": {
+    "utama": 2.45,
+    "sama": 2.3333333333333335,
+    "biaya": 2.1
+   },
+   "biaya": null
+  }
+ },
+ "rev6": {
+  "jadwal_tetap": [
+   {
+    "porsi_tahun": 0.0,
+    "butuh_normal": 65.83690345626034,
+    "butuh_2026": 65.83690345626034,
+    "komitmen": 66.0
+   },
+   {
+    "porsi_tahun": 0.08333333333333333,
+    "butuh_normal": 62.75679612284773,
+    "butuh_2026": 62.9377278537453,
+    "komitmen": 63.0
+   },
+   {
+    "porsi_tahun": 0.16666666666666666,
+    "butuh_normal": 59.67668878943512,
+    "butuh_2026": 60.03855225123024,
+    "komitmen": 61.0
+   },
+   {
+    "porsi_tahun": 0.25,
+    "butuh_normal": 56.596581456022506,
+    "butuh_2026": 57.1393766487152,
+    "komitmen": 58.0
+   },
+   {
+    "porsi_tahun": 0.3333333333333333,
+    "butuh_normal": 53.51647412260991,
+    "butuh_2026": 54.240201046200156,
+    "komitmen": 55.0
+   },
+   {
+    "porsi_tahun": 0.4166666666666667,
+    "butuh_normal": 50.436366789197294,
+    "butuh_2026": 51.34102544368511,
+    "komitmen": 52.0
+   },
+   {
+    "porsi_tahun": 0.5,
+    "butuh_normal": 47.35625945578468,
+    "butuh_2026": 48.44184984117007,
+    "komitmen": 49.0
+   },
+   {
+    "porsi_tahun": 0.5833333333333334,
+    "butuh_normal": 44.27615212237207,
+    "butuh_2026": 45.54267423865501,
+    "komitmen": 46.0
+   },
+   {
+    "porsi_tahun": 0.6666666666666666,
+    "butuh_normal": 41.19604478895946,
+    "butuh_2026": 42.64349863613997,
+    "komitmen": 43.0
+   },
+   {
+    "porsi_tahun": 0.75,
+    "butuh_normal": 38.11593745554685,
+    "butuh_2026": 39.74432303362492,
+    "komitmen": 40.0
+   },
+   {
+    "porsi_tahun": 0.8333333333333334,
+    "butuh_normal": 35.035830122134236,
+    "butuh_2026": 36.84514743110987,
+    "komitmen": 37.0
+   },
+   {
+    "porsi_tahun": 0.9166666666666666,
+    "butuh_normal": 31.95572278872163,
+    "butuh_2026": 33.94597182859482,
+    "komitmen": 34.0
+   },
+   {
+    "porsi_tahun": 1.0,
+    "butuh_normal": 28.875615455309017,
+    "butuh_2026": 31.046796226079778,
+    "komitmen": 32.0
+   }
+  ],
+  "jadwal_peralihan": [
+   {
+    "porsi_tahun": 0.0,
+    "butuh_normal": 82.14395821851485,
+    "butuh_2026": 82.14395821851485,
+    "komitmen": 83.0
+   },
+   {
+    "porsi_tahun": 0.08333333333333333,
+    "butuh_normal": 79.15005279898674,
+    "butuh_2026": 79.30402124327179,
+    "komitmen": 80.0
+   },
+   {
+    "porsi_tahun": 0.16666666666666666,
+    "butuh_normal": 76.15614737945859,
+    "butuh_2026": 76.4640842680287,
+    "komitmen": 77.0
+   },
+   {
+    "porsi_tahun": 0.25,
+    "butuh_normal": 73.16224195993044,
+    "butuh_2026": 73.62414729278561,
+    "komitmen": 74.0
+   },
+   {
+    "porsi_tahun": 0.3333333333333333,
+    "butuh_normal": 70.16833654040232,
+    "butuh_2026": 70.78421031754254,
+    "komitmen": 71.0
+   },
+   {
+    "porsi_tahun": 0.4166666666666667,
+    "butuh_normal": 67.17443112087417,
+    "butuh_2026": 67.94427334229945,
+    "komitmen": 68.0
+   },
+   {
+    "porsi_tahun": 0.5,
+    "butuh_normal": 64.18052570134603,
+    "butuh_2026": 65.10433636705636,
+    "komitmen": 66.0
+   },
+   {
+    "porsi_tahun": 0.5833333333333334,
+    "butuh_normal": 61.186620281817895,
+    "butuh_2026": 62.26439939181329,
+    "komitmen": 63.0
+   },
+   {
+    "porsi_tahun": 0.6666666666666666,
+    "butuh_normal": 58.19271486228976,
+    "butuh_2026": 59.424462416570215,
+    "komitmen": 60.0
+   },
+   {
+    "porsi_tahun": 0.75,
+    "butuh_normal": 55.19880944276162,
+    "butuh_2026": 56.58452544132713,
+    "komitmen": 57.0
+   },
+   {
+    "porsi_tahun": 0.8333333333333334,
+    "butuh_normal": 52.20490402323348,
+    "butuh_2026": 53.744588466084046,
+    "komitmen": 54.0
+   },
+   {
+    "porsi_tahun": 0.9166666666666666,
+    "butuh_normal": 49.21099860370535,
+    "butuh_2026": 50.90465149084097,
+    "komitmen": 51.0
+   },
+   {
+    "porsi_tahun": 1.0,
+    "butuh_normal": 46.21709318417721,
+    "butuh_2026": 48.064714515597885,
+    "komitmen": 49.0
+   }
+  ],
+  "K_akhir": 32.0,
+  "K_maks": 66.0,
+  "K_rata": 50.333333333333336,
+  "K_akhir_peralihan": 49.0,
+  "K_maks_peralihan": 83.0,
+  "K_rata_peralihan": 67.0,
+  "konfigurasi": {
+   "status_quo": {
+    "rasio_awal": 1.2,
+    "ekuitas": 22.89750392970859,
+    "mmbr": 19.081253274757167,
+    "komitmen_akhir": 0.0,
+    "C1": {
+     "pelanggaran": 709,
+     "peluang": 0.00709,
+     "selang": [
+      0.006579309843955681,
+      0.007629584511533005
+     ],
+     "lolos": false,
+     "peluang_cair": 0.0,
+     "peluang_cair_bencana": 0.01333,
+     "rata_dicairkan": 0.0,
+     "ekuitas": 22.89750392970859,
+     "mmbr": 19.081253274757167,
+     "laba_bersih": 25.802608060848435,
+     "imbal_hasil": 0.06295451532807278
+    },
+    "C2": {
+     "pelanggaran": 837,
+     "peluang": 0.00837,
+     "selang": [
+      0.007814637524192614,
+      0.008954153400295633
+     ],
+     "lolos": false,
+     "peluang_cair": 0.0,
+     "peluang_cair_bencana": 0.01531,
+     "rata_dicairkan": 0.0,
+     "ekuitas": 22.89750392970859,
+     "mmbr": 19.081253274757167,
+     "laba_bersih": 25.7285824813244,
+     "imbal_hasil": 0.06295451532807278
+    },
+    "rasio_megathrust_normal": -1.2221204193813826,
+    "rasio_megathrust_2026": -1.3189495586845603,
+    "rasio_terendah_sepanjang_tahun": -3.1049561281797016,
+    "rasio_awal_tahun_2026": -3.1049561281797016,
+    "rasio_waktu": [
+     {
+      "porsi_tahun": 0.0,
+      "pasar": "normal",
+      "tanpa": -3.1049561281797016,
+      "dengan": -3.1049561281797016
+     },
+     {
+      "porsi_tahun": 0.0,
+      "pasar": "2026",
+      "tanpa": -3.1049561281797016,
+      "dengan": -3.1049561281797016
+     },
+     {
+      "porsi_tahun": 0.08333333333333333,
+      "pasar": "normal",
+      "tanpa": -2.9480531524465086,
+      "dengan": -2.9480531524465086
+     },
+     {
+      "porsi_tahun": 0.08333333333333333,
+      "pasar": "2026",
+      "tanpa": -2.95612224738844,
+      "dengan": -2.95612224738844
+     },
+     {
+      "porsi_tahun": 0.16666666666666666,
+      "pasar": "normal",
+      "tanpa": -2.7911501767133147,
+      "dengan": -2.7911501767133147
+     },
+     {
+      "porsi_tahun": 0.16666666666666666,
+      "pasar": "2026",
+      "tanpa": -2.8072883665971777,
+      "dengan": -2.8072883665971777
+     },
+     {
+      "porsi_tahun": 0.25,
+      "pasar": "normal",
+      "tanpa": -2.6342472009801217,
+      "dengan": -2.6342472009801217
+     },
+     {
+      "porsi_tahun": 0.25,
+      "pasar": "2026",
+      "tanpa": -2.6584544858059163,
+      "dengan": -2.6584544858059163
+     },
+     {
+      "porsi_tahun": 0.3333333333333333,
+      "pasar": "normal",
+      "tanpa": -2.4773442252469287,
+      "dengan": -2.4773442252469287
+     },
+     {
+      "porsi_tahun": 0.3333333333333333,
+      "pasar": "2026",
+      "tanpa": -2.509620605014655,
+      "dengan": -2.509620605014655
+     },
+     {
+      "porsi_tahun": 0.4166666666666667,
+      "pasar": "normal",
+      "tanpa": -2.320441249513735,
+      "dengan": -2.320441249513735
+     },
+     {
+      "porsi_tahun": 0.4166666666666667,
+      "pasar": "2026",
+      "tanpa": -2.3607867242233924,
+      "dengan": -2.3607867242233924
+     },
+     {
+      "porsi_tahun": 0.5,
+      "pasar": "normal",
+      "tanpa": -2.163538273780542,
+      "dengan": -2.163538273780542
+     },
+     {
+      "porsi_tahun": 0.5,
+      "pasar": "2026",
+      "tanpa": -2.211952843432131,
+      "dengan": -2.211952843432131
+     },
+     {
+      "porsi_tahun": 0.5833333333333334,
+      "pasar": "normal",
+      "tanpa": -2.0066352980473487,
+      "dengan": -2.0066352980473487
+     },
+     {
+      "porsi_tahun": 0.5833333333333334,
+      "pasar": "2026",
+      "tanpa": -2.063118962640869,
+      "dengan": -2.063118962640869
+     },
+     {
+      "porsi_tahun": 0.6666666666666666,
+      "pasar": "normal",
+      "tanpa": -1.8497323223141557,
+      "dengan": -1.8497323223141557
+     },
+     {
+      "porsi_tahun": 0.6666666666666666,
+      "pasar": "2026",
+      "tanpa": -1.9142850818496076,
+      "dengan": -1.9142850818496076
+     },
+     {
+      "porsi_tahun": 0.75,
+      "pasar": "normal",
+      "tanpa": -1.6928293465809623,
+      "dengan": -1.6928293465809623
+     },
+     {
+      "porsi_tahun": 0.75,
+      "pasar": "2026",
+      "tanpa": -1.7654512010583456,
+      "dengan": -1.7654512010583456
+     },
+     {
+      "porsi_tahun": 0.8333333333333334,
+      "pasar": "normal",
+      "tanpa": -1.535926370847769,
+      "dengan": -1.535926370847769
+     },
+     {
+      "porsi_tahun": 0.8333333333333334,
+      "pasar": "2026",
+      "tanpa": -1.6166173202670837,
+      "dengan": -1.6166173202670837
+     },
+     {
+      "porsi_tahun": 0.9166666666666666,
+      "pasar": "normal",
+      "tanpa": -1.379023395114576,
+      "dengan": -1.379023395114576
+     },
+     {
+      "porsi_tahun": 0.9166666666666666,
+      "pasar": "2026",
+      "tanpa": -1.4677834394758222,
+      "dengan": -1.4677834394758222
+     },
+     {
+      "porsi_tahun": 1.0,
+      "pasar": "normal",
+      "tanpa": -1.2221204193813826,
+      "dengan": -1.2221204193813826
+     },
+     {
+      "porsi_tahun": 1.0,
+      "pasar": "2026",
+      "tanpa": -1.3189495586845603,
+      "dengan": -1.3189495586845603
+     }
+    ]
+   },
+   "inti_saja": {
+    "rasio_awal": 2.05,
+    "ekuitas": 39.32877913249618,
+    "mmbr": 19.184770308534727,
+    "komitmen_akhir": 0.0,
+    "C1": {
+     "pelanggaran": 456,
+     "peluang": 0.00456,
+     "selang": [
+      0.004151845914605826,
+      0.0049972854040614125
+     ],
+     "lolos": true,
+     "peluang_cair": 0.0,
+     "peluang_cair_bencana": 0.01333,
+     "rata_dicairkan": 0.0,
+     "ekuitas": 39.32877913249618,
+     "mmbr": 19.184770308534727,
+     "laba_bersih": 26.611007683558604,
+     "imbal_hasil": 0.0629545153280728
+    },
+    "C2": {
+     "pelanggaran": 550,
+     "peluang": 0.0055,
+     "selang": [
+      0.005051004257024025,
+      0.005978031837192
+     ],
+     "lolos": false,
+     "peluang_cair": 0.0,
+     "peluang_cair_bencana": 0.01531,
+     "rata_dicairkan": 0.0,
+     "ekuitas": 39.32877913249618,
+     "mmbr": 19.184770308534727,
+     "laba_bersih": 26.53724006509878,
+     "imbal_hasil": 0.0629545153280728
+    },
+    "rasio_megathrust_normal": -0.30513219553445087,
+    "rasio_megathrust_2026": -0.41830429693849364,
+    "rasio_terendah_sepanjang_tahun": -2.2317274795295043,
+    "rasio_awal_tahun_2026": -2.2317274795295043,
+    "rasio_waktu": [
+     {
+      "porsi_tahun": 0.0,
+      "pasar": "normal",
+      "tanpa": -2.2317274795295043,
+      "dengan": -2.2317274795295043
+     },
+     {
+      "porsi_tahun": 0.0,
+      "pasar": "2026",
+      "tanpa": -2.2317274795295043,
+      "dengan": -2.2317274795295043
+     },
+     {
+      "porsi_tahun": 0.08333333333333333,
+      "pasar": "normal",
+      "tanpa": -2.0711778725299164,
+      "dengan": -2.0711778725299164
+     },
+     {
+      "porsi_tahun": 0.08333333333333333,
+      "pasar": "2026",
+      "tanpa": -2.0806088809802534,
+      "dengan": -2.0806088809802534
+     },
+     {
+      "porsi_tahun": 0.16666666666666666,
+      "pasar": "normal",
+      "tanpa": -1.9106282655303284,
+      "dengan": -1.9106282655303284
+     },
+     {
+      "porsi_tahun": 0.16666666666666666,
+      "pasar": "2026",
+      "tanpa": -1.929490282431002,
+      "dengan": -1.929490282431002
+     },
+     {
+      "porsi_tahun": 0.25,
+      "pasar": "normal",
+      "tanpa": -1.7500786585307404,
+      "dengan": -1.7500786585307404
+     },
+     {
+      "porsi_tahun": 0.25,
+      "pasar": "2026",
+      "tanpa": -1.7783716838817514,
+      "dengan": -1.7783716838817514
+     },
+     {
+      "porsi_tahun": 0.3333333333333333,
+      "pasar": "normal",
+      "tanpa": -1.5895290515311533,
+      "dengan": -1.5895290515311533
+     },
+     {
+      "porsi_tahun": 0.3333333333333333,
+      "pasar": "2026",
+      "tanpa": -1.6272530853325007,
+      "dengan": -1.6272530853325007
+     },
+     {
+      "porsi_tahun": 0.4166666666666667,
+      "pasar": "normal",
+      "tanpa": -1.4289794445315653,
+      "dengan": -1.4289794445315653
+     },
+     {
+      "porsi_tahun": 0.4166666666666667,
+      "pasar": "2026",
+      "tanpa": -1.47613448678325,
+      "dengan": -1.47613448678325
+     },
+     {
+      "porsi_tahun": 0.5,
+      "pasar": "normal",
+      "tanpa": -1.2684298375319776,
+      "dengan": -1.2684298375319776
+     },
+     {
+      "porsi_tahun": 0.5,
+      "pasar": "2026",
+      "tanpa": -1.3250158882339993,
+      "dengan": -1.3250158882339993
+     },
+     {
+      "porsi_tahun": 0.5833333333333334,
+      "pasar": "normal",
+      "tanpa": -1.1078802305323896,
+      "dengan": -1.1078802305323896
+     },
+     {
+      "porsi_tahun": 0.5833333333333334,
+      "pasar": "2026",
+      "tanpa": -1.173897289684748,
+      "dengan": -1.173897289684748
+     },
+     {
+      "porsi_tahun": 0.6666666666666666,
+      "pasar": "normal",
+      "tanpa": -0.9473306235328021,
+      "dengan": -0.9473306235328021
+     },
+     {
+      "porsi_tahun": 0.6666666666666666,
+      "pasar": "2026",
+      "tanpa": -1.0227786911354972,
+      "dengan": -1.0227786911354972
+     },
+     {
+      "porsi_tahun": 0.75,
+      "pasar": "normal",
+      "tanpa": -0.7867810165332142,
+      "dengan": -0.7867810165332142
+     },
+     {
+      "porsi_tahun": 0.75,
+      "pasar": "2026",
+      "tanpa": -0.8716600925862464,
+      "dengan": -0.8716600925862464
+     },
+     {
+      "porsi_tahun": 0.8333333333333334,
+      "pasar": "normal",
+      "tanpa": -0.6262314095336263,
+      "dengan": -0.6262314095336263
+     },
+     {
+      "porsi_tahun": 0.8333333333333334,
+      "pasar": "2026",
+      "tanpa": -0.7205414940369954,
+      "dengan": -0.7205414940369954
+     },
+     {
+      "porsi_tahun": 0.9166666666666666,
+      "pasar": "normal",
+      "tanpa": -0.4656818025340388,
+      "dengan": -0.4656818025340388
+     },
+     {
+      "porsi_tahun": 0.9166666666666666,
+      "pasar": "2026",
+      "tanpa": -0.5694228954877443,
+      "dengan": -0.5694228954877443
+     },
+     {
+      "porsi_tahun": 1.0,
+      "pasar": "normal",
+      "tanpa": -0.30513219553445087,
+      "dengan": -0.30513219553445087
+     },
+     {
+      "porsi_tahun": 1.0,
+      "pasar": "2026",
+      "tanpa": -0.41830429693849364,
+      "dengan": -0.41830429693849364
+     }
+    ]
+   },
+   "motera_peralihan": {
+    "rasio_awal": 1.2,
+    "ekuitas": 22.89750392970859,
+    "mmbr": 19.081253274757167,
+    "komitmen_akhir": 49.0,
+    "C1": {
+     "pelanggaran": 268,
+     "peluang": 0.00268,
+     "selang": [
+      0.0023690711259330556,
+      0.003020307158493865
+     ],
+     "lolos": true,
+     "peluang_cair": 0.01348,
+     "peluang_cair_bencana": 0.01333,
+     "rata_dicairkan": 0.2283558931341819,
+     "ekuitas": 22.89750392970859,
+     "mmbr": 19.081253274757167,
+     "laba_bersih": 25.802608060848435,
+     "imbal_hasil": 0.06295451532807278
+    },
+    "C2": {
+     "pelanggaran": 330,
+     "peluang": 0.0033,
+     "selang": [
+      0.0029540163037141067,
+      0.003675267722131968
+     ],
+     "lolos": true,
+     "peluang_cair": 0.0154,
+     "peluang_cair_bencana": 0.01531,
+     "rata_dicairkan": 0.2732693366001321,
+     "ekuitas": 22.89750392970859,
+     "mmbr": 19.081253274757167,
+     "laba_bersih": 25.7285824813244,
+     "imbal_hasil": 0.06295451532807278
+    },
+    "rasio_megathrust_normal": 1.3458450750456907,
+    "rasio_megathrust_2026": 1.249015935742513,
+    "rasio_terendah_sepanjang_tahun": 1.2029204925325463,
+    "rasio_awal_tahun_2026": 1.244862974625341,
+    "rasio_waktu": [
+     {
+      "porsi_tahun": 0.0,
+      "pasar": "normal",
+      "tanpa": -3.1049561281797016,
+      "dengan": 1.244862974625341
+     },
+     {
+      "porsi_tahun": 0.0,
+      "pasar": "2026",
+      "tanpa": -3.1049561281797016,
+      "dengan": 1.244862974625341
+     },
+     {
+      "porsi_tahun": 0.08333333333333333,
+      "pasar": "normal",
+      "tanpa": -2.9480531524465086,
+      "dengan": 1.2445435731487133
+     },
+     {
+      "porsi_tahun": 0.08333333333333333,
+      "pasar": "2026",
+      "tanpa": -2.95612224738844,
+      "dengan": 1.2364744782067818
+     },
+     {
+      "porsi_tahun": 0.16666666666666666,
+      "pasar": "normal",
+      "tanpa": -2.7911501767133147,
+      "dengan": 1.244224171672086
+     },
+     {
+      "porsi_tahun": 0.16666666666666666,
+      "pasar": "2026",
+      "tanpa": -2.8072883665971777,
+      "dengan": 1.2280859817882233
+     },
+     {
+      "porsi_tahun": 0.25,
+      "pasar": "normal",
+      "tanpa": -2.6342472009801217,
+      "dengan": 1.2439047701954584
+     },
+     {
+      "porsi_tahun": 0.25,
+      "pasar": "2026",
+      "tanpa": -2.6584544858059163,
+      "dengan": 1.219697485369664
+     },
+     {
+      "porsi_tahun": 0.3333333333333333,
+      "pasar": "normal",
+      "tanpa": -2.4773442252469287,
+      "dengan": 1.2435853687188305
+     },
+     {
+      "porsi_tahun": 0.3333333333333333,
+      "pasar": "2026",
+      "tanpa": -2.509620605014655,
+      "dengan": 1.2113089889511048
+     },
+     {
+      "porsi_tahun": 0.4166666666666667,
+      "pasar": "normal",
+      "tanpa": -2.320441249513735,
+      "dengan": 1.2432659672422035
+     },
+     {
+      "porsi_tahun": 0.4166666666666667,
+      "pasar": "2026",
+      "tanpa": -2.3607867242233924,
+      "dengan": 1.2029204925325463
+     },
+     {
+      "porsi_tahun": 0.5,
+      "pasar": "normal",
+      "tanpa": -2.163538273780542,
+      "dengan": 1.295354024835516
+     },
+     {
+      "porsi_tahun": 0.5,
+      "pasar": "2026",
+      "tanpa": -2.211952843432131,
+      "dengan": 1.2469394551839272
+     },
+     {
+      "porsi_tahun": 0.5833333333333334,
+      "pasar": "normal",
+      "tanpa": -2.0066352980473487,
+      "dengan": 1.2950346233588885
+     },
+     {
+      "porsi_tahun": 0.5833333333333334,
+      "pasar": "2026",
+      "tanpa": -2.063118962640869,
+      "dengan": 1.238550958765368
+     },
+     {
+      "porsi_tahun": 0.6666666666666666,
+      "pasar": "normal",
+      "tanpa": -1.8497323223141557,
+      "dengan": 1.2947152218822606
+     },
+     {
+      "porsi_tahun": 0.6666666666666666,
+      "pasar": "2026",
+      "tanpa": -1.9142850818496076,
+      "dengan": 1.2301624623468088
+     },
+     {
+      "porsi_tahun": 0.75,
+      "pasar": "normal",
+      "tanpa": -1.6928293465809623,
+      "dengan": 1.2943958204056332
+     },
+     {
+      "porsi_tahun": 0.75,
+      "pasar": "2026",
+      "tanpa": -1.7654512010583456,
+      "dengan": 1.2217739659282498
+     },
+     {
+      "porsi_tahun": 0.8333333333333334,
+      "pasar": "normal",
+      "tanpa": -1.535926370847769,
+      "dengan": 1.2940764189290057
+     },
+     {
+      "porsi_tahun": 0.8333333333333334,
+      "pasar": "2026",
+      "tanpa": -1.6166173202670837,
+      "dengan": 1.2133854695096908
+     },
+     {
+      "porsi_tahun": 0.9166666666666666,
+      "pasar": "normal",
+      "tanpa": -1.379023395114576,
+      "dengan": 1.2937570174523778
+     },
+     {
+      "porsi_tahun": 0.9166666666666666,
+      "pasar": "2026",
+      "tanpa": -1.4677834394758222,
+      "dengan": 1.2049969730911316
+     },
+     {
+      "porsi_tahun": 1.0,
+      "pasar": "normal",
+      "tanpa": -1.2221204193813826,
+      "dengan": 1.3458450750456907
+     },
+     {
+      "porsi_tahun": 1.0,
+      "pasar": "2026",
+      "tanpa": -1.3189495586845603,
+      "dengan": 1.249015935742513
+     }
+    ]
+   },
+   "motera": {
+    "rasio_awal": 2.05,
+    "ekuitas": 39.32877913249618,
+    "mmbr": 19.184770308534727,
+    "komitmen_akhir": 32.0,
+    "C1": {
+     "pelanggaran": 265,
+     "peluang": 0.00265,
+     "selang": [
+      0.0023408662365805113,
+      0.0029885171131293336
+     ],
+     "lolos": true,
+     "peluang_cair": 0.01333,
+     "peluang_cair_bencana": 0.01333,
+     "rata_dicairkan": 0.11865875152788816,
+     "ekuitas": 39.32877913249618,
+     "mmbr": 19.184770308534727,
+     "laba_bersih": 26.611007683558604,
+     "imbal_hasil": 0.0629545153280728
+    },
+    "C2": {
+     "pelanggaran": 328,
+     "peluang": 0.00328,
+     "selang": [
+      0.00293509236701385,
+      0.003654194439275017
+     ],
+     "lolos": true,
+     "peluang_cair": 0.01531,
+     "peluang_cair_bencana": 0.01531,
+     "rata_dicairkan": 0.1437646799345511,
+     "ekuitas": 39.32877913249618,
+     "mmbr": 19.184770308534727,
+     "laba_bersih": 26.53724006509878,
+     "imbal_hasil": 0.0629545153280728
+    },
+    "rasio_megathrust_normal": 1.362857542438287,
+    "rasio_megathrust_2026": 1.2496854410342442,
+    "rasio_terendah_sepanjang_tahun": 1.2028162011082897,
+    "rasio_awal_tahun_2026": 1.2085013550392676,
+    "rasio_waktu": [
+     {
+      "porsi_tahun": 0.0,
+      "pasar": "normal",
+      "tanpa": -2.2317274795295043,
+      "dengan": 1.2085013550392676
+     },
+     {
+      "porsi_tahun": 0.0,
+      "pasar": "2026",
+      "tanpa": -2.2317274795295043,
+      "dengan": 1.2085013550392676
+     },
+     {
+      "porsi_tahun": 0.08333333333333333,
+      "pasar": "normal",
+      "tanpa": -2.0711778725299164,
+      "dengan": 1.2126769241039113
+     },
+     {
+      "porsi_tahun": 0.08333333333333333,
+      "pasar": "2026",
+      "tanpa": -2.0806088809802534,
+      "dengan": 1.2032459156535742
+     },
+     {
+      "porsi_tahun": 0.16666666666666666,
+      "pasar": "normal",
+      "tanpa": -1.9106282655303284,
+      "dengan": 1.2689771724802033
+     },
+     {
+      "porsi_tahun": 0.16666666666666666,
+      "pasar": "2026",
+      "tanpa": -1.929490282431002,
+      "dengan": 1.2501151555795296
+     },
+     {
+      "porsi_tahun": 0.25,
+      "pasar": "normal",
+      "tanpa": -1.7500786585307404,
+      "dengan": 1.273152741544847
+     },
+     {
+      "porsi_tahun": 0.25,
+      "pasar": "2026",
+      "tanpa": -1.7783716838817514,
+      "dengan": 1.244859716193836
+     },
+     {
+      "porsi_tahun": 0.3333333333333333,
+      "pasar": "normal",
+      "tanpa": -1.5895290515311533,
+      "dengan": 1.27732831060949
+     },
+     {
+      "porsi_tahun": 0.3333333333333333,
+      "pasar": "2026",
+      "tanpa": -1.6272530853325007,
+      "dengan": 1.2396042768081426
+     },
+     {
+      "porsi_tahun": 0.4166666666666667,
+      "pasar": "normal",
+      "tanpa": -1.4289794445315653,
+      "dengan": 1.2815038796741336
+     },
+     {
+      "porsi_tahun": 0.4166666666666667,
+      "pasar": "2026",
+      "tanpa": -1.47613448678325,
+      "dengan": 1.234348837422449
+     },
+     {
+      "porsi_tahun": 0.5,
+      "pasar": "normal",
+      "tanpa": -1.2684298375319776,
+      "dengan": 1.2856794487387773
+     },
+     {
+      "porsi_tahun": 0.5,
+      "pasar": "2026",
+      "tanpa": -1.3250158882339993,
+      "dengan": 1.2290933980367555
+     },
+     {
+      "porsi_tahun": 0.5833333333333334,
+      "pasar": "normal",
+      "tanpa": -1.1078802305323896,
+      "dengan": 1.289855017803421
+     },
+     {
+      "porsi_tahun": 0.5833333333333334,
+      "pasar": "2026",
+      "tanpa": -1.173897289684748,
+      "dengan": 1.2238379586510628
+     },
+     {
+      "porsi_tahun": 0.6666666666666666,
+      "pasar": "normal",
+      "tanpa": -0.9473306235328021,
+      "dengan": 1.2940305868680644
+     },
+     {
+      "porsi_tahun": 0.6666666666666666,
+      "pasar": "2026",
+      "tanpa": -1.0227786911354972,
+      "dengan": 1.2185825192653694
+     },
+     {
+      "porsi_tahun": 0.75,
+      "pasar": "normal",
+      "tanpa": -0.7867810165332142,
+      "dengan": 1.298206155932708
+     },
+     {
+      "porsi_tahun": 0.75,
+      "pasar": "2026",
+      "tanpa": -0.8716600925862464,
+      "dengan": 1.2133270798796758
+     },
+     {
+      "porsi_tahun": 0.8333333333333334,
+      "pasar": "normal",
+      "tanpa": -0.6262314095336263,
+      "dengan": 1.3023817249973517
+     },
+     {
+      "porsi_tahun": 0.8333333333333334,
+      "pasar": "2026",
+      "tanpa": -0.7205414940369954,
+      "dengan": 1.2080716404939826
+     },
+     {
+      "porsi_tahun": 0.9166666666666666,
+      "pasar": "normal",
+      "tanpa": -0.4656818025340388,
+      "dengan": 1.3065572940619952
+     },
+     {
+      "porsi_tahun": 0.9166666666666666,
+      "pasar": "2026",
+      "tanpa": -0.5694228954877443,
+      "dengan": 1.2028162011082897
+     },
+     {
+      "porsi_tahun": 1.0,
+      "pasar": "normal",
+      "tanpa": -0.30513219553445087,
+      "dengan": 1.362857542438287
+     },
+     {
+      "porsi_tahun": 1.0,
+      "pasar": "2026",
+      "tanpa": -0.41830429693849364,
+      "dengan": 1.2496854410342442
+     }
+    ]
+   },
+   "modal_330": {
+    "rasio_awal": 3.3,
+    "ekuitas": 63.81889145331439,
+    "mmbr": 19.33905801615588,
+    "komitmen_akhir": 0.0,
+    "C1": {
+     "pelanggaran": 287,
+     "peluang": 0.00287,
+     "selang": [
+      0.002547929976897786,
+      0.0032214174428339412
+     ],
+     "lolos": true,
+     "peluang_cair": 0.0,
+     "peluang_cair_bencana": 0.01333,
+     "rata_dicairkan": 0.0,
+     "ekuitas": 63.81889145331439,
+     "mmbr": 19.33905801615588,
+     "laba_bersih": 27.815807695893554,
+     "imbal_hasil": 0.0629545153280728
+    },
+    "C2": {
+     "pelanggaran": 352,
+     "peluang": 0.00352,
+     "selang": [
+      0.0031623903291898175,
+      0.003906864026284795
+     ],
+     "lolos": true,
+     "peluang_cair": 0.0,
+     "peluang_cair_bencana": 0.01531,
+     "rata_dicairkan": 0.0,
+     "ekuitas": 63.81889145331439,
+     "mmbr": 19.33905801615588,
+     "laba_bersih": 27.74242752743663,
+     "imbal_hasil": 0.0629545153280728
+    },
+    "rasio_megathrust_normal": 1.0433798983580957,
+    "rasio_megathrust_2026": 0.9061740291586635,
+    "rasio_terendah_sepanjang_tahun": -0.947567702102743,
+    "rasio_awal_tahun_2026": -0.947567702102743,
+    "rasio_waktu": [
+     {
+      "porsi_tahun": 0.0,
+      "pasar": "normal",
+      "tanpa": -0.947567702102743,
+      "dengan": -0.947567702102743
+     },
+     {
+      "porsi_tahun": 0.0,
+      "pasar": "2026",
+      "tanpa": -0.947567702102743,
+      "dengan": -0.947567702102743
+     },
+     {
+      "porsi_tahun": 0.08333333333333333,
+      "pasar": "normal",
+      "tanpa": -0.78165540206434,
+      "dengan": -0.78165540206434
+     },
+     {
+      "porsi_tahun": 0.08333333333333333,
+      "pasar": "2026",
+      "tanpa": -0.7930892244976256,
+      "dengan": -0.7930892244976256
+     },
+     {
+      "porsi_tahun": 0.16666666666666666,
+      "pasar": "normal",
+      "tanpa": -0.6157431020259363,
+      "dengan": -0.6157431020259363
+     },
+     {
+      "porsi_tahun": 0.16666666666666666,
+      "pasar": "2026",
+      "tanpa": -0.638610746892509,
+      "dengan": -0.638610746892509
+     },
+     {
+      "porsi_tahun": 0.25,
+      "pasar": "normal",
+      "tanpa": -0.44983080198753334,
+      "dengan": -0.44983080198753334
+     },
+     {
+      "porsi_tahun": 0.25,
+      "pasar": "2026",
+      "tanpa": -0.48413226928739156,
+      "dengan": -0.48413226928739156
+     },
+     {
+      "porsi_tahun": 0.3333333333333333,
+      "pasar": "normal",
+      "tanpa": -0.2839185019491303,
+      "dengan": -0.2839185019491303
+     },
+     {
+      "porsi_tahun": 0.3333333333333333,
+      "pasar": "2026",
+      "tanpa": -0.32965379168227416,
+      "dengan": -0.32965379168227416
+     },
+     {
+      "porsi_tahun": 0.4166666666666667,
+      "pasar": "normal",
+      "tanpa": -0.11800620191072661,
+      "dengan": -0.11800620191072661
+     },
+     {
+      "porsi_tahun": 0.4166666666666667,
+      "pasar": "2026",
+      "tanpa": -0.17517531407715678,
+      "dengan": -0.17517531407715678
+     },
+     {
+      "porsi_tahun": 0.5,
+      "pasar": "normal",
+      "tanpa": 0.04790609812767638,
+      "dengan": 0.04790609812767638
+     },
+     {
+      "porsi_tahun": 0.5,
+      "pasar": "2026",
+      "tanpa": -0.020696836472039393,
+      "dengan": -0.020696836472039393
+     },
+     {
+      "porsi_tahun": 0.5833333333333334,
+      "pasar": "normal",
+      "tanpa": 0.21381839816607973,
+      "dengan": 0.21381839816607973
+     },
+     {
+      "porsi_tahun": 0.5833333333333334,
+      "pasar": "2026",
+      "tanpa": 0.13378164113307725,
+      "dengan": 0.13378164113307725
+     },
+     {
+      "porsi_tahun": 0.6666666666666666,
+      "pasar": "normal",
+      "tanpa": 0.37973069820448274,
+      "dengan": 0.37973069820448274
+     },
+     {
+      "porsi_tahun": 0.6666666666666666,
+      "pasar": "2026",
+      "tanpa": 0.2882601187381947,
+      "dengan": 0.2882601187381947
+     },
+     {
+      "porsi_tahun": 0.75,
+      "pasar": "normal",
+      "tanpa": 0.5456429982428861,
+      "dengan": 0.5456429982428861
+     },
+     {
+      "porsi_tahun": 0.75,
+      "pasar": "2026",
+      "tanpa": 0.44273859634331203,
+      "dengan": 0.44273859634331203
+     },
+     {
+      "porsi_tahun": 0.8333333333333334,
+      "pasar": "normal",
+      "tanpa": 0.7115552982812894,
+      "dengan": 0.7115552982812894
+     },
+     {
+      "porsi_tahun": 0.8333333333333334,
+      "pasar": "2026",
+      "tanpa": 0.597217073948429,
+      "dengan": 0.597217073948429
+     },
+     {
+      "porsi_tahun": 0.9166666666666666,
+      "pasar": "normal",
+      "tanpa": 0.8774675983196925,
+      "dengan": 0.8774675983196925
+     },
+     {
+      "porsi_tahun": 0.9166666666666666,
+      "pasar": "2026",
+      "tanpa": 0.7516955515535461,
+      "dengan": 0.7516955515535461
+     },
+     {
+      "porsi_tahun": 1.0,
+      "pasar": "normal",
+      "tanpa": 1.0433798983580957,
+      "dengan": 1.0433798983580957
+     },
+     {
+      "porsi_tahun": 1.0,
+      "pasar": "2026",
+      "tanpa": 0.9061740291586635,
+      "dengan": 0.9061740291586635
+     }
+    ]
+   },
+   "modal_setara_akhir": {
+    "rasio_awal": 3.679326499999721,
+    "ekuitas": 71.32877897451101,
+    "mmbr": 19.38637030753942,
+    "komitmen_akhir": 0.0,
+    "C1": {
+     "pelanggaran": 259,
+     "peluang": 0.00259,
+     "selang": [
+      0.002284487453769663,
+      0.0029249061974815638
+     ],
+     "lolos": true,
+     "peluang_cair": 0.0,
+     "peluang_cair_bencana": 0.01333,
+     "rata_dicairkan": 0.0,
+     "ekuitas": 71.32877897451101,
+     "mmbr": 19.38637030753942,
+     "laba_bersih": 28.18523550060668,
+     "imbal_hasil": 0.0629545153280728
+    },
+    "C2": {
+     "pelanggaran": 322,
+     "peluang": 0.00322,
+     "selang": [
+      0.0028783405885375686,
+      0.003590954648596699
+     ],
+     "lolos": true,
+     "peluang_cair": 0.0,
+     "peluang_cair_bencana": 0.01531,
+     "rata_dicairkan": 0.0,
+     "ekuitas": 71.32877897451101,
+     "mmbr": 19.38637030753942,
+     "laba_bersih": 28.111976203636445,
+     "imbal_hasil": 0.0629545153280728
+    },
+    "rasio_megathrust_normal": 1.452600605000729,
+    "rasio_megathrust_2026": 1.3081014267645759,
+    "rasio_terendah_sepanjang_tahun": -0.5578754079508007,
+    "rasio_awal_tahun_2026": -0.5578754079508007,
+    "rasio_waktu": [
+     {
+      "porsi_tahun": 0.0,
+      "pasar": "normal",
+      "tanpa": -0.5578754079508007,
+      "dengan": -0.5578754079508007
+     },
+     {
+      "porsi_tahun": 0.0,
+      "pasar": "2026",
+      "tanpa": -0.5578754079508007,
+      "dengan": -0.5578754079508007
+     },
+     {
+      "porsi_tahun": 0.08333333333333333,
+      "pasar": "normal",
+      "tanpa": -0.39033574020484,
+      "dengan": -0.39033574020484
+     },
+     {
+      "porsi_tahun": 0.08333333333333333,
+      "pasar": "2026",
+      "tanpa": -0.402377338391186,
+      "dengan": -0.402377338391186
+     },
+     {
+      "porsi_tahun": 0.16666666666666666,
+      "pasar": "normal",
+      "tanpa": -0.22279607245887934,
+      "dengan": -0.22279607245887934
+     },
+     {
+      "porsi_tahun": 0.16666666666666666,
+      "pasar": "2026",
+      "tanpa": -0.24687926883157124,
+      "dengan": -0.24687926883157124
+     },
+     {
+      "porsi_tahun": 0.25,
+      "pasar": "normal",
+      "tanpa": -0.05525640471291792,
+      "dengan": -0.05525640471291792
+     },
+     {
+      "porsi_tahun": 0.25,
+      "pasar": "2026",
+      "tanpa": -0.09138119927195648,
+      "dengan": -0.09138119927195648
+     },
+     {
+      "porsi_tahun": 0.3333333333333333,
+      "pasar": "normal",
+      "tanpa": 0.11228326303304277,
+      "dengan": 0.11228326303304277
+     },
+     {
+      "porsi_tahun": 0.3333333333333333,
+      "pasar": "2026",
+      "tanpa": 0.06411687028765826,
+      "dengan": 0.06411687028765826
+     },
+     {
+      "porsi_tahun": 0.4166666666666667,
+      "pasar": "normal",
+      "tanpa": 0.27982293077900344,
+      "dengan": 0.27982293077900344
+     },
+     {
+      "porsi_tahun": 0.4166666666666667,
+      "pasar": "2026",
+      "tanpa": 0.219614939847273,
+      "dengan": 0.219614939847273
+     },
+     {
+      "porsi_tahun": 0.5,
+      "pasar": "normal",
+      "tanpa": 0.44736259852496413,
+      "dengan": 0.44736259852496413
+     },
+     {
+      "porsi_tahun": 0.5,
+      "pasar": "2026",
+      "tanpa": 0.37511300940688774,
+      "dengan": 0.37511300940688774
+     },
+     {
+      "porsi_tahun": 0.5833333333333334,
+      "pasar": "normal",
+      "tanpa": 0.6149022662709248,
+      "dengan": 0.6149022662709248
+     },
+     {
+      "porsi_tahun": 0.5833333333333334,
+      "pasar": "2026",
+      "tanpa": 0.5306110789665025,
+      "dengan": 0.5306110789665025
+     },
+     {
+      "porsi_tahun": 0.6666666666666666,
+      "pasar": "normal",
+      "tanpa": 0.7824419340168856,
+      "dengan": 0.7824419340168856
+     },
+     {
+      "porsi_tahun": 0.6666666666666666,
+      "pasar": "2026",
+      "tanpa": 0.6861091485261168,
+      "dengan": 0.6861091485261168
+     },
+     {
+      "porsi_tahun": 0.75,
+      "pasar": "normal",
+      "tanpa": 0.9499816017628465,
+      "dengan": 0.9499816017628465
+     },
+     {
+      "porsi_tahun": 0.75,
+      "pasar": "2026",
+      "tanpa": 0.8416072180857316,
+      "dengan": 0.8416072180857316
+     },
+     {
+      "porsi_tahun": 0.8333333333333334,
+      "pasar": "normal",
+      "tanpa": 1.1175212695088077,
+      "dengan": 1.1175212695088077
+     },
+     {
+      "porsi_tahun": 0.8333333333333334,
+      "pasar": "2026",
+      "tanpa": 0.9971052876453468,
+      "dengan": 0.9971052876453468
+     },
+     {
+      "porsi_tahun": 0.9166666666666666,
+      "pasar": "normal",
+      "tanpa": 1.2850609372547679,
+      "dengan": 1.2850609372547679
+     },
+     {
+      "porsi_tahun": 0.9166666666666666,
+      "pasar": "2026",
+      "tanpa": 1.1526033572049612,
+      "dengan": 1.1526033572049612
+     },
+     {
+      "porsi_tahun": 1.0,
+      "pasar": "normal",
+      "tanpa": 1.452600605000729,
+      "dengan": 1.452600605000729
+     },
+     {
+      "porsi_tahun": 1.0,
+      "pasar": "2026",
+      "tanpa": 1.3081014267645759,
+      "dengan": 1.3081014267645759
+     }
+    ]
+   },
+   "modal_setara_penuh": {
+    "rasio_awal": 5.373761499999486,
+    "ekuitas": 105.32877869454171,
+    "mmbr": 19.600570305775616,
+    "komitmen_akhir": 0.0,
+    "C1": {
+     "pelanggaran": 180,
+     "peluang": 0.0018,
+     "selang": [
+      0.0015468273039122402,
+      0.0020827313916320497
+     ],
+     "lolos": true,
+     "peluang_cair": 0.0,
+     "peluang_cair_bencana": 0.01333,
+     "rata_dicairkan": 0.0,
+     "ekuitas": 105.32877869454171,
+     "mmbr": 19.600570305775616,
+     "laba_bersih": 29.85766084907407,
+     "imbal_hasil": 0.06295451532807278
+    },
+    "C2": {
+     "pelanggaran": 230,
+     "peluang": 0.0023,
+     "selang": [
+      0.0020126181621499227,
+      0.0026168289251277373
+     ],
+     "lolos": true,
+     "peluang_cair": 0.0,
+     "peluang_cair_bencana": 0.01531,
+     "rata_dicairkan": 0.0,
+     "ekuitas": 105.32877869454171,
+     "mmbr": 19.600570305775616,
+     "laba_bersih": 29.784918875613407,
+     "imbal_hasil": 0.06295451532807278
+    },
+    "rasio_megathrust_normal": 3.280573241387392,
+    "rasio_megathrust_2026": 3.1034951414802965,
+    "rasio_terendah_sepanjang_tahun": 1.182864585791929,
+    "rasio_awal_tahun_2026": 1.182864585791929,
+    "rasio_waktu": [
+     {
+      "porsi_tahun": 0.0,
+      "pasar": "normal",
+      "tanpa": 1.182864585791929,
+      "dengan": 1.182864585791929
+     },
+     {
+      "porsi_tahun": 0.0,
+      "pasar": "2026",
+      "tanpa": 1.182864585791929,
+      "dengan": 1.182864585791929
+     },
+     {
+      "porsi_tahun": 0.08333333333333333,
+      "pasar": "normal",
+      "tanpa": 1.357673640424884,
+      "dengan": 1.357673640424884
+     },
+     {
+      "porsi_tahun": 0.08333333333333333,
+      "pasar": "2026",
+      "tanpa": 1.3429171320992932,
+      "dengan": 1.3429171320992932
+     },
+     {
+      "porsi_tahun": 0.16666666666666666,
+      "pasar": "normal",
+      "tanpa": 1.5324826950578396,
+      "dengan": 1.5324826950578396
+     },
+     {
+      "porsi_tahun": 0.16666666666666666,
+      "pasar": "2026",
+      "tanpa": 1.5029696784066566,
+      "dengan": 1.5029696784066566
+     },
+     {
+      "porsi_tahun": 0.25,
+      "pasar": "normal",
+      "tanpa": 1.7072917496907944,
+      "dengan": 1.7072917496907944
+     },
+     {
+      "porsi_tahun": 0.25,
+      "pasar": "2026",
+      "tanpa": 1.6630222247140207,
+      "dengan": 1.6630222247140207
+     },
+     {
+      "porsi_tahun": 0.3333333333333333,
+      "pasar": "normal",
+      "tanpa": 1.8821008043237502,
+      "dengan": 1.8821008043237502
+     },
+     {
+      "porsi_tahun": 0.3333333333333333,
+      "pasar": "2026",
+      "tanpa": 1.8230747710213848,
+      "dengan": 1.8230747710213848
+     },
+     {
+      "porsi_tahun": 0.4166666666666667,
+      "pasar": "normal",
+      "tanpa": 2.056909858956705,
+      "dengan": 2.056909858956705
+     },
+     {
+      "porsi_tahun": 0.4166666666666667,
+      "pasar": "2026",
+      "tanpa": 1.983127317328749,
+      "dengan": 1.983127317328749
+     },
+     {
+      "porsi_tahun": 0.5,
+      "pasar": "normal",
+      "tanpa": 2.2317189135896602,
+      "dengan": 2.2317189135896602
+     },
+     {
+      "porsi_tahun": 0.5,
+      "pasar": "2026",
+      "tanpa": 2.143179863636113,
+      "dengan": 2.143179863636113
+     },
+     {
+      "porsi_tahun": 0.5833333333333334,
+      "pasar": "normal",
+      "tanpa": 2.406527968222616,
+      "dengan": 2.406527968222616
+     },
+     {
+      "porsi_tahun": 0.5833333333333334,
+      "pasar": "2026",
+      "tanpa": 2.3032324099434764,
+      "dengan": 2.3032324099434764
+     },
+     {
+      "porsi_tahun": 0.6666666666666666,
+      "pasar": "normal",
+      "tanpa": 2.5813370228555708,
+      "dengan": 2.5813370228555708
+     },
+     {
+      "porsi_tahun": 0.6666666666666666,
+      "pasar": "2026",
+      "tanpa": 2.4632849562508405,
+      "dengan": 2.4632849562508405
+     },
+     {
+      "porsi_tahun": 0.75,
+      "pasar": "normal",
+      "tanpa": 2.7561460774885265,
+      "dengan": 2.7561460774885265
+     },
+     {
+      "porsi_tahun": 0.75,
+      "pasar": "2026",
+      "tanpa": 2.623337502558205,
+      "dengan": 2.623337502558205
+     },
+     {
+      "porsi_tahun": 0.8333333333333334,
+      "pasar": "normal",
+      "tanpa": 2.9309551321214817,
+      "dengan": 2.9309551321214817
+     },
+     {
+      "porsi_tahun": 0.8333333333333334,
+      "pasar": "2026",
+      "tanpa": 2.7833900488655687,
+      "dengan": 2.7833900488655687
+     },
+     {
+      "porsi_tahun": 0.9166666666666666,
+      "pasar": "normal",
+      "tanpa": 3.1057641867544366,
+      "dengan": 3.1057641867544366
+     },
+     {
+      "porsi_tahun": 0.9166666666666666,
+      "pasar": "2026",
+      "tanpa": 2.9434425951729324,
+      "dengan": 2.9434425951729324
+     },
+     {
+      "porsi_tahun": 1.0,
+      "pasar": "normal",
+      "tanpa": 3.280573241387392,
+      "dengan": 3.280573241387392
+     },
+     {
+      "porsi_tahun": 1.0,
+      "pasar": "2026",
+      "tanpa": 3.1034951414802965,
+      "dengan": 3.1034951414802965
+     }
+    ]
+   }
+  },
+  "biaya": {
+   "0.1": {
+    "biaya_modal": 0.1,
+    "friksi_dalam": 0.050895478044103236,
+    "friksi_luar": 0.037045484671927226,
+    "perusahaan": {
+     "modal_inti": 0.8362776063200936,
+     "imbalan_komitmen": [
+      0.0,
+      0.2516666666666667,
+      0.5033333333333334
+     ],
+     "bunga_saat_ditarik": 0.001364575642570714,
+     "operasional": 0.1,
+     "jumlah": [
+      0.9376421819626644,
+      1.189308848629331,
+      1.4409755152959978
+     ]
+    },
+    "gabungan": {
+     "modal_inti": 0.8362776063200936,
+     "jaminan_sbn": [
+      0.0,
+      0.9323113642435019,
+      1.8646227284870038
+     ],
+     "operasional": 0.1,
+     "jumlah": [
+      0.9362776063200936,
+      1.8685889705635956,
+      2.8009003348070975
+     ]
+    },
+    "modal_330": 2.082713580241919,
+    "modal_setara_akhir": 2.4649328956906666,
+    "modal_setara_penuh": 4.195379134941005
+   },
+   "0.13": {
+    "biaya_modal": 0.13,
+    "friksi_dalam": 0.08089547804410324,
+    "friksi_luar": 0.06704548467192722,
+    "perusahaan": {
+     "modal_inti": 1.3292158624037214,
+     "imbalan_komitmen": [
+      0.0,
+      0.2516666666666667,
+      0.5033333333333334
+     ],
+     "bunga_saat_ditarik": 0.001364575642570714,
+     "operasional": 0.1,
+     "jumlah": [
+      1.430580438046292,
+      1.6822471047129588,
+      1.9339137713796255
+     ]
+    },
+    "gabungan": {
+     "modal_inti": 1.3292158624037214,
+     "jaminan_sbn": [
+      0.0,
+      1.6873113642435018,
+      3.3746227284870036
+     ],
+     "operasional": 0.1,
+     "jumlah": [
+      1.4292158624037214,
+      3.1165272266472233,
+      4.803838590890725
+     ]
+    },
+    "modal_330": 3.3103552059500934,
+    "modal_setara_akhir": 3.9178711470347394,
+    "modal_setara_penuh": 6.668317377885999
+   },
+   "0.16": {
+    "biaya_modal": 0.16,
+    "friksi_dalam": 0.11089547804410324,
+    "friksi_luar": 0.09704548467192722,
+    "perusahaan": {
+     "modal_inti": 1.822154118487349,
+     "imbalan_komitmen": [
+      0.0,
+      0.2516666666666667,
+      0.5033333333333334
+     ],
+     "bunga_saat_ditarik": 0.001364575642570714,
+     "operasional": 0.1,
+     "jumlah": [
+      1.9235186941299198,
+      2.1751853607965868,
+      2.4268520274632532
+     ]
+    },
+    "gabungan": {
+     "modal_inti": 1.822154118487349,
+     "jaminan_sbn": [
+      0.0,
+      2.4423113642435017,
+      4.884622728487003
+     ],
+     "operasional": 0.1,
+     "jumlah": [
+      1.9221541184873492,
+      4.36446548273085,
+      6.806776846974352
+     ]
+    },
+    "modal_330": 4.537996831658267,
+    "modal_setara_akhir": 5.370809398378812,
+    "modal_setara_penuh": 9.141255620830993
+   }
+  },
+  "prasyarat": {
+   "efektivitas": {
+    "C1": 265,
+    "C2": 328,
+    "batas": 456,
+    "rasio_megathrust": [
+     1.362857542438287,
+     1.2496854410342442
+    ],
+    "terpenuhi": true
+   },
+   "ketepatan_waktu": {
+    "rasio_terendah": 1.2028162011082897,
+    "rasio_terendah_peralihan": 1.2029204925325463,
+    "terpenuhi": true
+   },
+   "pendanaan": {
+    "jaminan_sbn_minimum": 92.22222222222221,
+    "jaminan_sbn_tetap": 73.33333333333333,
+    "potongan": 0.1
+   }
+  },
+  "bi_rate": 0.0575,
+  "target_pemulihan": 1.2
+ }
+}

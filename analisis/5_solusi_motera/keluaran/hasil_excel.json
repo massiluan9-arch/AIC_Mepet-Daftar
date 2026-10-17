@@ -1,0 +1,83 @@
+{
+ "npv_miliar": -15.595491123000926,
+ "biaya_setara_modal": 0.14643245843128594,
+ "nilai_kini_manfaat": 290.52870286410905,
+ "nilai_kini_biaya": 306.12419398711,
+ "rasio_manfaat_biaya": 0.9490550194028191,
+ "keputusan": "Modal saja lebih murah; lihat lembar Sensitivitas",
+ "biaya_keamanan_miliar": 42.191530821419796,
+ "biaya_keamanan_terhadap_premi": 0.0421915308214198,
+ "biaya_per_0_1_poin": 12.594486812364117,
+ "ekuitas_dihemat_miliar": 274.02691439144803,
+ "laba_dilepas_miliar": 40.24333500194075,
+ "defisit_dihindari_miliar": 4.691698454148016,
+ "biaya_awal_miliar": 6.0,
+ "biaya_tahunan_miliar": 2.8,
+ "selisih_rumus_simulasi": 0.13318077431855002,
+ "porsi_laba_ditahan": 0.5682159908739335,
+ "npv_per_biaya_modal": {
+  "0.1": -47.50511625684179,
+  "0.11": -36.33842101690905,
+  "0.12": -25.71238277242921,
+  "0.13": -15.595491123000826,
+  "0.14": -5.958351691483529,
+  "0.15": 3.226473739680273,
+  "0.16": 11.984613719926344
+ },
+ "npv_per_horizon": {
+  "3": -12.441549363153271,
+  "5": -15.595491123000826,
+  "7": -18.065490151779528,
+  "10": -20.80353927080401
+ },
+ "npv_per_kasus": {
+  "Dasar": -15.595491123000826,
+  "Eksposur per premi 122": -17.47854229474744,
+  "Eksposur per premi 188": -13.286377896665925,
+  "Biaya akuisisi 15% premi": -8.226816404388515,
+  "Rasio klaim non-bencana 29,5%": -19.109035762747027
+ },
+ "kelayakan": {
+  "Operasional": {
+   "skor": 3.642857142857143,
+   "putusan": "Layak bersyarat"
+  },
+  "Hukum dan regulasi": {
+   "skor": 5.000000000000001,
+   "putusan": "Layak"
+  },
+  "Teknologi": {
+   "skor": 3.3,
+   "putusan": "Layak bersyarat"
+  },
+  "Modal": {
+   "skor": 4.545454545454545,
+   "putusan": "Layak"
+  },
+  "Seluruh aspek": {
+   "skor": 4.180000000000001,
+   "putusan": "Layak"
+  }
+ },
+ "jumlah_rumus": 358,
+ "galat_rumus": 0,
+ "profil_acuan": "K70",
+ "aturan_peluang": "batas_atas",
+ "strategi_terpilih": "S21_zona_batas10",
+ "target_terpilih": 1.9,
+ "target_modal_saja": 3.3,
+ "npv_diperluas_miliar": -15.595491123000926,
+ "npv_perusahaan_miliar": -32.097279595661945,
+ "npv_diperluas_biaya_x2_miliar": -31.443738655320544,
+ "npv_perusahaan_biaya_x2_miliar": -47.94552712798155,
+ "impas_biaya_modal_diperluas": 0.14643245843128594,
+ "impas_biaya_modal_perusahaan": 0.16382392110745525,
+ "impas_biaya_modal_diperluas_biaya_x2": 0.16366242265965614,
+ "impas_biaya_modal_perusahaan_biaya_x2": 0.18134106292449048,
+ "kerugian_dialihkan_rata_miliar": 10.3202879431824,
+ "kerugian_dialihkan_ekor_0_5_miliar": 1231.62880012479,
+ "porsi_kerugian_ekor_dialihkan": 0.585618526493469,
+ "premi_tidak_dibayar_tertanggung_miliar": 50.3501422481917,
+ "skala_premi_syarat_terpilih": 0.6,
+ "porsi_premi_terkena_syarat": 0.670126614631801
+}

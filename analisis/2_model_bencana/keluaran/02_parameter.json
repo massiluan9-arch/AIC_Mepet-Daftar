@@ -1,0 +1,11 @@
+{
+  "versi_dipakai": "jarak ruptur",
+  "tau": 0.838118,
+  "phi": 0.927016,
+  "bias_antar_gempa": -0.225493,
+  "p_bias": 0.174049,
+  "jumlah_observasi": 436,
+  "jumlah_gempa": 41,
+  "kedalaman_maks_km": 23,
+  "catatan": "phi memuat galat pengamatan intensitas; dipakai apa adanya sehingga sebaran simulasi cenderung lebar"
+}

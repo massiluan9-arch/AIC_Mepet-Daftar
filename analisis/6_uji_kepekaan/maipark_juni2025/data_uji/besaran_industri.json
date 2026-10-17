@@ -1,0 +1,37 @@
+{
+ "sumber": "MAIPARK, Laporan Statistik Asuransi Gempa Bumi Indonesia per 31 Desember 2024; OJK, Statistik Perasuransian 2024 Tabel 2.10.4",
+ "eksposur_uy_triliun": {
+  "2020": 3185.51,
+  "2021": 3748.89,
+  "2022": 4246.84,
+  "2023": 4745.94,
+  "2024": 4785.86
+ },
+ "premi_gempa_uy_miliar": {
+  "2020": 4437.85,
+  "2021": 5257.39,
+  "2022": 6138.21,
+  "2023": 6891.84,
+  "2024": 6148.94
+ },
+ "klaim_uy_miliar": {
+  "2020": 200.88,
+  "2021": 89.25,
+  "2022": 64.44,
+  "2023": 110.53,
+  "2024": 4.19
+ },
+ "eksposur_berjalan_2024_rata_triliun": 3748.84,
+ "premi_harta_benda_langsung_2024_miliar": 26938.117,
+ "E_eksposur_gempa_per_premi": 139.16,
+ "E_rentang": [
+  122.0,
+  187.6
+ ],
+ "tarif_gempa_rata_per_mil": 1.3498,
+ "porsi_premi_gempa_dalam_premi_harta_benda": 0.2283,
+ "rasio_klaim_5_tahun": 0.0163,
+ "klaim_per_eksposur_5_tahun_per_mil": 0.0219,
+ "catatan_E": "E = eksposur gempa berjalan rata-rata empat kuartal 2024 dibagi premi harta benda penutupan langsung 2024.",
+ "catatan_uji_F03": "eksposur_uy_triliun 2021-2024 dari MAIPARK edisi 30 Juni 2025; 2020 = edisi Desember 2024 dengan Papua diskalakan; butir lain tidak diubah"
+}

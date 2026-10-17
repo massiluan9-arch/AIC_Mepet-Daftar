@@ -1,0 +1,564 @@
+# KONTEKS_AI.yaml
+# Konteks terstruktur analisis hasil investasi dan MMBR PT Aktu Proteksi, untuk dibaca program atau AI.
+# Berkas ini dihasilkan kode/buat_laporan.py dari kode/templat_konteks_ai.yaml dan keluaran/hasil.json.
+# Jangan disunting langsung: ubah templat atau parameter, lalu jalankan ulang.
+
+skema:
+  nama: konteks_analisis
+  versi: 1
+  bahasa: id
+  desimal: titik
+  catatan: "Semua angka di berkas ini bertipe numerik dengan titik desimal. LAPORAN.md memuat angka yang sama dengan koma desimal."
+
+identitas:
+  judul: "Model hasil investasi dan perhitungan MMBR PT Aktu Proteksi"
+  proyek: "Paper Actuarial Insight Competition (AIC) UNESA 2026, studi kasus asuransi"
+  tanggal_kondisi_awal: "2026-10-09"
+  status: sebagian
+  alasan_status: "Dua dari tiga submodel selesai. Model kerugian bencana ditahan atas permintaan pemilik proyek."
+  jumlah_tahun_simulasi: 100000
+  benih_acak: 20261011
+
+aturan_pakai:
+  - "Sumber kebenaran angka adalah keluaran/hasil.json. Bila berkas ini berbeda darinya, hasil.json yang benar."
+  - "Sumber kebenaran masukan adalah parameter/*.yaml. Tiap butir punya status: regulasi, data, asumsi, atau tafsir."
+  - "Jangan mengutip angka sebagai hasil akhir soal 3 dan soal 4: keduanya menunggu model bencana."
+  - "Peluang pelanggaran di sini hanya dari risiko investasi (U = 0, L = 0). Jangan menyebutnya peluang pelanggaran perusahaan."
+  - "Jawaban soal 1 wajib memilih satu profil pada tabel brief dan tidak boleh keluar dari rentangnya (brief, ketentuan C.5)."
+  - "Reasuransi tidak boleh dipakai sebagai solusi (brief, latar belakang dan soal 2)."
+  - "Angka ekor (VaR, TVaR, peluang) peka terhadap panjang blok bootstrap. Laporkan sebagai rentang; urutan antarprofil lebih kokoh daripada nilainya."
+  - "Setelah mengubah parameter atau kode, jalankan python kode/semua.py dari folder analisis/3_investasi_mmbr."
+
+kasus:
+  sumber: "Studi kasus dan buku panduan AIC 2026 (dokumen lomba, tidak disertakan di repo)"
+  perusahaan: "PT Aktu Proteksi, perusahaan asuransi umum fiktif berfokus lini harta benda, diawasi OJK"
+  premis:
+    - "Mengelola dana cadangan premi sebagai portofolio investasi yang wajib memenuhi ketentuan AYD."
+    - "Peninjauan portofolio mempertimbangkan inflasi, suku bunga acuan BI, daya beli masyarakat, dan profil risiko rata-rata pemegang polis."
+    - "Terpapar gempa bumi, tsunami, dan erupsi; mitigasi klaim massal tanpa menjadikan reasuransi solusi utama."
+    - "Tingkat Solvabilitas paling rendah 100% MMBR; target internal paling rendah 120% MMBR."
+    - "MMBR mencakup lima risiko: kredit, likuiditas, pasar, asuransi, operasional."
+  soal:
+    1: "Tentukan profil risiko (Konservatif, Moderat, Agresif) yang paling sesuai kondisi ekonomi masyarakat Indonesia saat ini, dengan alasan."
+    2: "Susun strategi mitigasi klaim massal akibat bencana alam tanpa skema reasuransi."
+    3: "Tentukan modul risiko MMBR yang kemungkinan terjadinya paling tinggi, dengan alasan."
+    4: "Evaluasi apakah target solvabilitas internal 120% MMBR masih memadai."
+    5: "Rancang satu solusi berbasis inovasi dan jelaskan dampaknya pada risiko atau posisi MMBR."
+  referensi_brief: "SEOJK 24/SEOJK.05/2017"
+  penilaian_penyisihan: {pemahaman_kasus: 0.25, metodologi_aktuaria: 0.30, inovasi_dan_realisme: 0.25, struktur_dan_kualitas: 0.15, abstrak: 0.05}
+  format_paper: {halaman_maksimum: 15, bab: ["Pendahuluan", "Landasan Teori dan Metode", "Hasil dan Pembahasan", "Strategi Mitigasi dan Rekomendasi", "Penutup"]}
+  tenggat_paper: "2026-10-17"
+
+lingkup:
+  dikerjakan:
+    - {id: investasi, nama: "Model hasil investasi satu tahun", soal: [1, 4]}
+    - {id: ayd, nama: "Uji batas AYD menurut POJK 26/2025 Pasal 15", soal: [1]}
+    - {id: mmbr, nama: "MMBR lima modul menurut SEOJK 24/2017", soal: [1, 3, 4]}
+    - {id: kaitan, nama: "Rasio solvabilitas akhir tahun dari risiko investasi saja", soal: [1, 4]}
+  ditahan:
+    - {id: bencana, nama: "Model kerugian bencana L(m)", dibutuhkan_oleh: [soal_2, soal_3, soal_4, "komposisi akhir soal 1"]}
+    - {id: underwriting, nama: "Hasil underwriting non-bencana U", dibutuhkan_oleh: [soal_3, soal_4]}
+  tidak_termasuk: ["Soal 5 (inovasi)", "pajak dan biaya transaksi", "risiko valuta", "data internal perusahaan (tidak ada)"]
+  kedudukan_dalam_alur_metode: "Rancangan metode awal tim (tidak disertakan di repo), bagian 1: R(a, m, s) = [s x MMBR + U + I(a) - L(m)] / MMBR. Folder ini menghitung MMBR(a) dan I(a)."
+
+satuan_dan_notasi:
+  neraca: "per 100 premi dicatat penutupan langsung setahun; tanpa reasuransi sehingga premi bruto = premi retensi sendiri"
+  imbal_hasil: "desimal per tahun, sebelum pajak"
+  rasio: "desimal (1.20 = 120%)"
+  var_dan_tvar: "kerugian bernilai positif; var_99_5 = -(persentil 0,5 imbal hasil)"
+  kode_varian:
+    K80: "Konservatif: SBN 80%, deposito 20%"
+    K75: "Konservatif: SBN 75%, deposito 25% (varian acuan)"
+    K70: "Konservatif: SBN 70%, deposito 30%"
+    M40: "Moderat: obligasi korporasi 40%, SBN 50%, reksa dana saham 10%"
+    M50: "Moderat: obligasi korporasi 50%, SBN 40%, reksa dana saham 10%"
+    M60: "Moderat: obligasi korporasi 60%, SBN 30%, reksa dana saham 10%"
+    A20: "Agresif: saham 20%, obligasi korporasi 80%"
+    A30: "Agresif: saham 30%, obligasi korporasi 70%"
+    A40: "Agresif: saham 40%, obligasi korporasi 60%"
+  jendela:
+    bersama: "Feb 2012 - Des 2024, 155 bulan; semua faktor teramati; jendela dasar"
+    panjang: "Feb 2000 - Okt 2026, 321 bulan; 166 bulan perubahan imbal hasil diimputasi; uji banding"
+
+berkas:
+  - {jalur: "README.md", peran: "peta folder", pembaca: manusia}
+  - {jalur: "LAPORAN.md", peran: "gambaran analisis lengkap", pembaca: manusia, dihasilkan: true}
+  - {jalur: "KONTEKS_AI.yaml", peran: "berkas ini", pembaca: mesin, dihasilkan: true}
+  - {jalur: "parameter/regulasi.yaml", peran: "batas AYD dan faktor risiko dengan rujukan pasal", pembaca: keduanya}
+  - {jalur: "parameter/profil.yaml", peran: "tiga profil brief dan sembilan variannya", pembaca: keduanya}
+  - {jalur: "parameter/neraca_dasar.yaml", peran: "neraca per 100 premi dengan sumber dan status", pembaca: keduanya}
+  - {jalur: "parameter/pasar.yaml", peran: "kondisi awal, instrumen, bootstrap, skenario", pembaca: keduanya}
+  - {jalur: "kode/data_pasar.py", peran: "memuat deret pasar dan menyiapkan perubahan bulanan"}
+  - {jalur: "kode/model_investasi.py", peran: "bootstrap blok dan penilaian ulang instrumen"}
+  - {jalur: "kode/mmbr.py", peran: "uji AYD, MMBR lima modul, neraca pada target"}
+  - {jalur: "kode/rekonstruksi_industri.py", peran: "uji kewajaran MMBR terhadap neraca industri OJK"}
+  - {jalur: "kode/jalankan.py", peran: "menjalankan model; menulis hasil.json dan tabel CSV"}
+  - {jalur: "kode/buat_gambar.py", peran: "delapan gambar dari hasil.json"}
+  - {jalur: "kode/buat_laporan.py", peran: "mengisi LAPORAN.md dan KONTEKS_AI.yaml dari templat"}
+  - {jalur: "kode/uji.py", peran: "pemeriksaan konsistensi; gagal bila ada yang tidak cocok"}
+  - {jalur: "kode/semua.py", peran: "menjalankan keempat langkah berurutan"}
+  - {jalur: "keluaran/hasil.json", peran: "semua angka", pembaca: mesin, dihasilkan: true}
+  - {jalur: "keluaran/tabel/*.csv", peran: "tabel rapi, satu baris per pengamatan", pembaca: mesin, dihasilkan: true}
+  - {jalur: "keluaran/gambar/*.png", peran: "gambar laporan", pembaca: manusia, dihasilkan: true}
+
+alur:
+  - id: 1
+    nama: "Data"
+    masukan: ["data/ekonomi_pasar/pasar_riwayat/*.csv"]
+    proses: "Gabung deret bulanan; y2 = y10 - selisih 10 dan 2 tahun; isi celah deposito dengan interpolasi; hitung perubahan bulanan lima faktor."
+    keluaran: "hasil.json: data"
+    kode: "kode/data_pasar.py"
+  - id: 2
+    nama: "Faktor pasar setahun"
+    proses: "Bootstrap blok melingkar, panjang blok 6 bulan, lima faktor diambil pada bulan yang sama."
+    keluaran: "perubahan imbal hasil 2 dan 10 tahun, imbal hasil LQ45 dan IHSG, bunga deposito rata-rata"
+    kode: "kode/model_investasi.py: bootstrap_faktor"
+  - id: 3
+    nama: "Imbal hasil instrumen"
+    proses: "Obligasi dibeli pada nominal dan dihargai ulang setahun kemudian (kupon setengah tahunan, sisa tenor berkurang satu tahun, termasuk efek menuruni kurva). Korporasi ditambah gagal bayar binomial. Deposito digulirkan bulanan. Saham = LQ45 + dividen. Reksa dana saham = IHSG."
+    keluaran: "hasil.json: instrumen"
+    kode: "kode/model_investasi.py: imbal_instrumen"
+  - id: 4
+    nama: "Imbal hasil profil"
+    proses: "Jumlah berbobot per varian; statistik sebaran; sensitivitas satu-per-satu; skenario deterministik."
+    keluaran: "hasil.json: profil, sensitivitas_investasi, skenario"
+  - id: 5
+    nama: "Uji AYD"
+    proses: "Batas total per jenis, lalu batas gabungan 80%; kelebihan tidak diakui."
+    keluaran: "hasil.json: ayd"
+    kode: "kode/mmbr.py: uji_ayd"
+  - id: 6
+    nama: "MMBR dan neraca"
+    proses: "Lima modul atas AYD dan cadangan; investasi dicari sehingga rasio awal = target (120%); juga dihitung pada neraca varian acuan."
+    keluaran: "hasil.json: mmbr, kepatuhan_lain, efisiensi_modal"
+    kode: "kode/mmbr.py: hitung_mmbr, neraca_pada_target, susun_neraca"
+  - id: 7
+    nama: "Kaitan investasi dan solvabilitas"
+    proses: "Rasio akhir = (Tingkat Solvabilitas awal + investasi x imbal hasil) / MMBR untuk tiap tahun simulasi."
+    keluaran: "hasil.json: solvabilitas_investasi, tenor_sbn, regulasi_vs_ekonomi, turunan"
+  - id: 8
+    nama: "Uji kewajaran"
+    proses: "Sebaran bootstrap lawan jendela bergulir historis; MMBR industri dari neraca OJK Juli 2025 lawan rasio resmi."
+    keluaran: "hasil.json: validasi_bootstrap, rekonstruksi_industri"
+
+rumus:
+  tingkat_solvabilitas: "TS = AYD - Liabilitas"
+  ayd: "AYD = alfa(a) x Investasi + kas + tagihan premi; alfa = porsi investasi yang diakui"
+  rasio: "rasio = TS / MMBR"
+  mmbr: "MMBR = kredit + likuiditas + pasar + asuransi + operasional"
+  kredit: "deposito_diakui x FR(peringkat bank) + korporasi_diakui x FR(peringkat) + tagihan_premi x 0.08"
+  likuiditas: "jumlah atas lima kelompok jatuh tempo dari 0.04 x max(L_i - AYD_i, 0)"
+  pasar: "saham_diakui x 0.15 (IDX30) + reksadana_saham_diakui x 0.16"
+  asuransi: "0.25 x CAPYBMP + 0.20 x cadangan_klaim + 0.25 x cadangan_bencana"
+  operasional: "0.01 x (BUA - BPL) + 0.50 x DAC"
+  neraca_pada_target: "cari Investasi sehingga alfa x Investasi + kas + tagihan - Liabilitas = target x MMBR(Investasi)"
+  ekuitas: "Investasi + kas + tagihan premi - Liabilitas = TS + investasi tidak diakui"
+  imbal_obligasi: "harga(kupon, y_akhir, tenor - 1) + kupon - 1; y_akhir = kurva_awal(tenor - 1) + perubahan imbal hasil pada tenor itu"
+  rasio_akhir_investasi_saja: "(TS_awal + Investasi x imbal_hasil) / MMBR"
+  bantalan: "(target - 1) x MMBR"
+
+regulasi_ke_model:
+  - {ketentuan: "Tingkat Solvabilitas minimum 100% dan target internal minimum 120%", dasar: "POJK 26/2025 Pasal 3 ayat (1)", perlakuan: "neraca disusun pada target; peluang jatuh di bawah 100% diukur", status: regulasi}
+  - {ketentuan: "Batas AYD investasi per jenis dan gabungan", dasar: "POJK 26/2025 Pasal 15", perlakuan: "kode/mmbr.py: uji_ayd", status: regulasi}
+  - {ketentuan: "Kelebihan atas batas Pasal 15 tidak diakui AYD", dasar: "judul dan penjelasan Pasal 15; Pasal 36 tidak memuat Pasal 15; analogi Pasal 20 ayat (5)", perlakuan: "porsi_tidak_diakui dikurangkan dari AYD dan tidak dibebani faktor risiko", status: tafsir}
+  - {ketentuan: "Urutan jenis yang dipotong pada batas gabungan 80%", dasar: "tidak diatur", perlakuan: "faktor risiko terendah dipotong dulu (obligasi korporasi)", status: asumsi}
+  - {ketentuan: "Faktor risiko kredit, pasar, asuransi, operasional, likuiditas", dasar: "SEOJK 24/2017 Lampiran II angka 1 sampai 5", perlakuan: "kode/mmbr.py: hitung_mmbr", status: regulasi}
+  - {ketentuan: "SBN berfaktor 0% dan obligasi tidak dibebani risiko suku bunga", dasar: "SEOJK 24/2017 Lampiran II angka 1 huruf b dan angka 3", perlakuan: "modul pasar nol untuk profil Konservatif", status: regulasi}
+  - {ketentuan: "Efek bernilai pasar masuk kelompok jatuh tempo di bawah 1 tahun", dasar: "SEOJK 24/2017 Lampiran II angka 2 huruf c", perlakuan: "klasifikasi nilai_wajar; obligasi bernilai wajar diperlakukan seperti saham (tafsir)", status: tafsir}
+  - {ketentuan: "Kekurangan likuiditas dihitung per kelompok tanpa saling hapus", dasar: "rumus SEOJK 24/2017 Lampiran II angka 2 huruf e dibaca harfiah", perlakuan: "kelebihan kelompok pendek tidak menutup kelompok panjang", status: tafsir}
+  - {ketentuan: "Tagihan premi diakui sampai umur 2 bulan", dasar: "POJK 26/2025 Pasal 25 ayat (2) huruf b", perlakuan: "tagihan premi = dua bulan premi", status: asumsi}
+  - {ketentuan: "Kecukupan investasi", dasar: "POJK 26/2025 Pasal 34", perlakuan: "kecukupan_investasi pada tiap neraca", status: regulasi}
+  - {ketentuan: "Dana jaminan berupa deposito atau SBN", dasar: "POJK 26/2025 Pasal 55 dan 56", perlakuan: "kepatuhan_lain.dana_jaminan", status: regulasi}
+  - {ketentuan: "Repo SBN untuk likuiditas", dasar: "POJK 26/2025 Pasal 8", perlakuan: "kepatuhan_lain.aset_siap_cair", status: regulasi}
+  - {ketentuan: "Porsi minimum SBN 20% bagi asuransi umum", dasar: "POJK 1/POJK.05/2016 jo. 36/2016 jo. 56/2017", perlakuan: "dilaporkan, tidak dipakai menggugurkan profil", status: belum_terkonfirmasi}
+
+asumsi:
+  - {id: tenor_sbn, nilai: 5, satuan: tahun, uji: [2, 10], dampak: besar, catatan: "brief tidak menyebut tenor; diperlakukan sebagai keputusan"}
+  - {id: klasifikasi_obligasi, nilai: nilai_wajar, uji: [dimiliki_hingga_jatuh_tempo], dampak: besar}
+  - {id: panjang_blok, nilai: 6, satuan: bulan, uji: [3, 12], dampak: besar, catatan: "blok 12 mempertahankan pembalikan imbal hasil; blok pendek lebih hati-hati"}
+  - {id: selisih_kredit_tetap, nilai: true, uji: ["melebar 2 bps per 1% penurunan saham"], dampak: sedang, arah_bias: "menguntungkan Moderat dan Agresif"}
+  - {id: peluang_gagal_bayar, nilai: {AAA: 0.001, AA: 0.003}, uji: ["tiga kali lipat"], dampak: kecil, sumber: "belum bersumber"}
+  - {id: tingkat_kerugian_saat_gagal, nilai: 0.60, dampak: kecil, sumber: "belum bersumber"}
+  - {id: imbal_dividen, nilai: 0.03, uji: [0.0], dampak: "sedang untuk Agresif", sumber: "belum bersumber"}
+  - {id: capybmp, nilai: 32.71, uji: [50.0], dampak: besar, sumber: "OJK Statistik Perasuransian 2024 Tabel 2.10.4"}
+  - {id: cadangan_bencana, nilai: 0.1, uji: [5.0], dampak: kecil, catatan: "akan diganti keluaran model bencana"}
+  - {id: tagihan_premi, nilai: 16.67, dampak: kecil}
+  - {id: pola_jatuh_tempo_cadangan_klaim, nilai: [0.70, 0.25, 0.05, 0.0, 0.0], uji: ["seluruhnya di bawah 1 tahun"], dampak: kecil}
+  - {id: peringkat_bank_dan_emiten, nilai: AA, uji: [AAA, A], dampak: kecil}
+  - {id: imputasi_jendela_panjang, nilai: "regresi atas saham ditambah residu acak", r2: 0.258, dampak: "sedang untuk jendela panjang"}
+
+skema_hasil_json:
+  meta: "identitas simulasi dan daftar yang ditahan"
+  data.deskriptif: "statistik data masukan"
+  data.kondisi_awal: "imbal hasil, bunga deposito, inflasi, BI-Rate pada tanggal awal (desimal)"
+  validasi_bootstrap: "simulasi lawan historis untuk perubahan 12 bulan"
+  instrumen.<jendela>.<instrumen>: "statistik imbal hasil setahun per instrumen"
+  profil.<varian>.imbal_hasil.<jendela>: "rata, simpangan, p0_5, p5, median, p95, p99_5, var_99_5, tvar_99_5, peluang_negatif, peluang_di_bawah_inflasi, rata_riil, galat baku"
+  sensitivitas_investasi.<uji>.<varian>: "statistik ringkas bila satu asumsi diubah"
+  skenario.<nama>: "guncangan, imbal hasil per instrumen dan varian, rasio akhir"
+  ayd.<varian>: "porsi diakui per jenis, porsi_tidak_diakui, batas yang dilampaui, minimum pihak"
+  mmbr.neraca_dasar: "butir neraca per 100 premi"
+  mmbr.beban_aset_per_100_investasi.<varian>.<peringkat>: "beban kredit dan pasar atas aset investasi"
+  mmbr.pada_target.<varian>: "neraca saat rasio = 1.20: investasi, ayd, liabilitas, tingkat_solvabilitas, ekuitas, mmbr, modul, rincian, kecukupan_investasi"
+  mmbr.neraca_sama.<varian>: "sama, tetapi investasi dipaku pada nilai varian acuan"
+  mmbr.sensitivitas.<uji>.<varian>: "neraca pada target bila satu asumsi diubah"
+  mmbr.pada_target_lain.<target>.<varian>: "investasi, ekuitas, mmbr pada target 1.0, 1.5, 2.0, 3.3152"
+  kepatuhan_lain.<varian>: "dana jaminan, porsi minimum SBN, repo, kecukupan investasi, aset siap cair"
+  solvabilitas_investasi.neraca_sendiri.<jendela>.<varian>: "sebaran rasio akhir dan peluang di bawah 1.00 dan 1.20; rasio awal 1.20"
+  solvabilitas_investasi.neraca_sama.<jendela>.<varian>: "sama, pada neraca varian acuan"
+  solvabilitas_investasi.sensitivitas.<uji>.<varian>: "peluang pada tiap uji sensitivitas"
+  tenor_sbn.<tenor>: "varian acuan dengan SBN 2, 5, 10 tahun"
+  regulasi_vs_ekonomi.<varian>: "per 100 investasi: beban modal aset MMBR dan VaR 99,5%"
+  efisiensi_modal.<varian>: "hasil investasi rata-rata dan ekuitas pada target"
+  rekonstruksi_industri: "MMBR industri asuransi umum Juli 2025 dengan dua set asumsi"
+  turunan: "besaran yang dikutip laporan"
+
+varian:
+  K80:
+    profil: Konservatif
+    label: Konservatif 80/20
+    bobot: {sbn: 0.8, deposito: 0.2}
+    patuh_ayd: true
+    porsi_tidak_diakui: 0.0
+    beban_aset_per_100_investasi: {AAA: 0.24, AA: 0.42}
+    imbal_hasil:
+      bersama: {rata: 0.0648, rata_riil: 0.0309, simpangan: 0.0358, var_99_5: 0.0371, tvar_99_5: 0.0499, peluang_negatif: 0.0478}
+      panjang: {rata: 0.0676, rata_riil: 0.0337, simpangan: 0.0375, var_99_5: 0.0347, tvar_99_5: 0.0463, peluang_negatif: 0.0448}
+    pada_target_120:
+      investasi: 93.5899
+      investasi_tidak_diakui: 0.0
+      tingkat_solvabilitas: 22.6599
+      ekuitas: 22.6599
+      mmbr: 18.8832
+      modul: {kredit: 1.7267, likuiditas: 0.4862, pasar: 0.0, asuransi: 16.3065, operasional: 0.3638}
+      porsi_asuransi: 0.8635
+    rasio_bila_neraca_sama: 1.2063
+    peluang_rasio_di_bawah_100_investasi_saja: {bersama: 0.0042, panjang: 0.0033}
+    aset_siap_cair_per_100_premi: 93.3727
+    dana_jaminan_dari_portofolio: true
+    imbal_hasil_skenario: {ulangan_2026: 0.0418, pengetatan_tajam: 0.01, ekstrem_gabungan: -0.0208, pelonggaran: 0.0959}
+  K75:
+    profil: Konservatif
+    label: Konservatif 75/25
+    bobot: {sbn: 0.75, deposito: 0.25}
+    patuh_ayd: true
+    porsi_tidak_diakui: 0.0
+    beban_aset_per_100_investasi: {AAA: 0.3, AA: 0.525}
+    imbal_hasil:
+      bersama: {rata: 0.0639, rata_riil: 0.0301, simpangan: 0.0335, var_99_5: 0.0316, tvar_99_5: 0.0433, peluang_negatif: 0.0398}
+      panjang: {rata: 0.0665, rata_riil: 0.0326, simpangan: 0.0351, var_99_5: 0.0294, tvar_99_5: 0.0401, peluang_negatif: 0.0368}
+    pada_target_120:
+      investasi: 93.7085
+      investasi_tidak_diakui: 0.0
+      tingkat_solvabilitas: 22.7785
+      ekuitas: 22.7785
+      mmbr: 18.9821
+      modul: {kredit: 1.8256, likuiditas: 0.4862, pasar: 0.0, asuransi: 16.3065, operasional: 0.3638}
+      porsi_asuransi: 0.859
+    rasio_bila_neraca_sama: 1.2
+    peluang_rasio_di_bawah_100_investasi_saja: {bersama: 0.0026, panjang: 0.002}
+    aset_siap_cair_per_100_premi: 93.9504
+    dana_jaminan_dari_portofolio: true
+    imbal_hasil_skenario: {ulangan_2026: 0.0425, pengetatan_tajam: 0.0129, ekstrem_gabungan: -0.0158, pelonggaran: 0.0929}
+  K70:
+    profil: Konservatif
+    label: Konservatif 70/30
+    bobot: {sbn: 0.7, deposito: 0.3}
+    patuh_ayd: true
+    porsi_tidak_diakui: 0.0
+    beban_aset_per_100_investasi: {AAA: 0.36, AA: 0.63}
+    imbal_hasil:
+      bersama: {rata: 0.063, rata_riil: 0.0292, simpangan: 0.0312, var_99_5: 0.0259, tvar_99_5: 0.0368, peluang_negatif: 0.0332}
+      panjang: {rata: 0.0653, rata_riil: 0.0315, simpangan: 0.0326, var_99_5: 0.0239, tvar_99_5: 0.034, peluang_negatif: 0.0296}
+    pada_target_120:
+      investasi: 93.8275
+      investasi_tidak_diakui: 0.0
+      tingkat_solvabilitas: 22.8975
+      ekuitas: 22.8975
+      mmbr: 19.0813
+      modul: {kredit: 1.9247, likuiditas: 0.4862, pasar: 0.0, asuransi: 16.3065, operasional: 0.3638}
+      porsi_asuransi: 0.8546
+    rasio_bila_neraca_sama: 1.1938
+    peluang_rasio_di_bawah_100_investasi_saja: {bersama: 0.0015, panjang: 0.001}
+    aset_siap_cair_per_100_premi: 94.5296
+    dana_jaminan_dari_portofolio: true
+    imbal_hasil_skenario: {ulangan_2026: 0.0433, pengetatan_tajam: 0.0158, ekstrem_gabungan: -0.0108, pelonggaran: 0.09}
+  M40:
+    profil: Moderat
+    label: Moderat 40/50/10
+    bobot: {korporasi: 0.4, sbn: 0.5, reksadana_saham: 0.1}
+    patuh_ayd: true
+    porsi_tidak_diakui: 0.0
+    beban_aset_per_100_investasi: {AAA: 2.24, AA: 2.72}
+    imbal_hasil:
+      bersama: {rata: 0.0698, rata_riil: 0.0358, simpangan: 0.041, var_99_5: 0.047, tvar_99_5: 0.061, peluang_negatif: 0.0581}
+      panjang: {rata: 0.0788, rata_riil: 0.0445, simpangan: 0.0559, var_99_5: 0.0649, tvar_99_5: 0.0803, peluang_negatif: 0.0843}
+    pada_target_120:
+      investasi: 96.2601
+      investasi_tidak_diakui: 0.0
+      tingkat_solvabilitas: 25.3301
+      ekuitas: 25.3301
+      mmbr: 21.1084
+      modul: {kredit: 2.4117, likuiditas: 0.4862, pasar: 1.5402, asuransi: 16.3065, operasional: 0.3638}
+      porsi_asuransi: 0.7725
+    rasio_bila_neraca_sama: 1.0827
+    peluang_rasio_di_bawah_100_investasi_saja: {bersama: 0.0057, panjang: 0.0145}
+    aset_siap_cair_per_100_premi: 50.587
+    dana_jaminan_dari_portofolio: true
+    imbal_hasil_skenario: {ulangan_2026: 0.0106, pengetatan_tajam: -0.0108, ekstrem_gabungan: -0.0856, pelonggaran: 0.1097}
+  M50:
+    profil: Moderat
+    label: Moderat 50/40/10
+    bobot: {korporasi: 0.5, sbn: 0.4, reksadana_saham: 0.1}
+    patuh_ayd: true
+    porsi_tidak_diakui: 0.0
+    beban_aset_per_100_investasi: {AAA: 2.4, AA: 3.0}
+    imbal_hasil:
+      bersama: {rata: 0.0704, rata_riil: 0.0365, simpangan: 0.0392, var_99_5: 0.041, tvar_99_5: 0.0549, peluang_negatif: 0.0488}
+      panjang: {rata: 0.0792, rata_riil: 0.0449, simpangan: 0.054, var_99_5: 0.0594, tvar_99_5: 0.0743, peluang_negatif: 0.0758}
+    pada_target_120:
+      investasi: 96.5956
+      investasi_tidak_diakui: 0.0
+      tingkat_solvabilitas: 25.6656
+      ekuitas: 25.6656
+      mmbr: 21.388
+      modul: {kredit: 2.6859, likuiditas: 0.4862, pasar: 1.5455, asuransi: 16.3065, operasional: 0.3638}
+      porsi_asuransi: 0.7624
+    rasio_bila_neraca_sama: 1.0693
+    peluang_rasio_di_bawah_100_investasi_saja: {bersama: 0.0041, panjang: 0.011}
+    aset_siap_cair_per_100_premi: 42.0444
+    dana_jaminan_dari_portofolio: true
+    imbal_hasil_skenario: {ulangan_2026: 0.012, pengetatan_tajam: -0.0084, ekstrem_gabungan: -0.0831, pelonggaran: 0.1091}
+  M60:
+    profil: Moderat
+    label: Moderat 60/30/10
+    bobot: {korporasi: 0.6, sbn: 0.3, reksadana_saham: 0.1}
+    patuh_ayd: false
+    porsi_tidak_diakui: 0.1
+    beban_aset_per_100_investasi: {AAA: 2.4, AA: 3.0}
+    imbal_hasil:
+      bersama: {rata: 0.0711, rata_riil: 0.0371, simpangan: 0.0375, var_99_5: 0.036, tvar_99_5: 0.0492, peluang_negatif: 0.0397}
+      panjang: {rata: 0.0796, rata_riil: 0.0454, simpangan: 0.0521, var_99_5: 0.0539, tvar_99_5: 0.0688, peluang_negatif: 0.0663}
+    pada_target_120:
+      investasi: 107.7757
+      investasi_tidak_diakui: 10.7776
+      tingkat_solvabilitas: 26.0681
+      ekuitas: 36.8457
+      mmbr: 21.7234
+      modul: {kredit: 2.8425, likuiditas: 0.4862, pasar: 1.7244, asuransi: 16.3065, operasional: 0.3638}
+      porsi_asuransi: 0.7506
+    rasio_bila_neraca_sama: 0.6294
+    peluang_rasio_di_bawah_100_investasi_saja: {bersama: 0.0038, panjang: 0.0105}
+    aset_siap_cair_per_100_premi: 36.3694
+    dana_jaminan_dari_portofolio: true
+    imbal_hasil_skenario: {ulangan_2026: 0.0134, pengetatan_tajam: -0.006, ekstrem_gabungan: -0.0805, pelonggaran: 0.1086}
+  A20:
+    profil: Agresif
+    label: Agresif 20/80
+    bobot: {saham: 0.2, korporasi: 0.8}
+    patuh_ayd: false
+    porsi_tidak_diakui: 0.3
+    beban_aset_per_100_investasi: {AAA: 3.8, AA: 4.4}
+    imbal_hasil:
+      bersama: {rata: 0.0713, rata_riil: 0.0372, simpangan: 0.0447, var_99_5: 0.0474, tvar_99_5: 0.0616, peluang_negatif: 0.0624}
+      panjang: {rata: 0.0864, rata_riil: 0.0519, simpangan: 0.0726, var_99_5: 0.0894, tvar_99_5: 0.1063, peluang_negatif: 0.1081}
+    pada_target_120:
+      investasi: 143.8785
+      investasi_tidak_diakui: 43.1636
+      tingkat_solvabilitas: 29.785
+      ekuitas: 72.9485
+      mmbr: 24.8208
+      modul: {kredit: 3.3479, likuiditas: 0.4862, pasar: 4.3164, asuransi: 16.3065, operasional: 0.3638}
+      porsi_asuransi: 0.657
+    rasio_bila_neraca_sama: -0.2359
+    peluang_rasio_di_bawah_100_investasi_saja: {bersama: 0.0113, panjang: 0.0434}
+    aset_siap_cair_per_100_premi: 7.27
+    dana_jaminan_dari_portofolio: false
+    imbal_hasil_skenario: {ulangan_2026: -0.0117, pengetatan_tajam: -0.0141, ekstrem_gabungan: -0.1243, pelonggaran: 0.1176}
+  A30:
+    profil: Agresif
+    label: Agresif 30/70
+    bobot: {saham: 0.3, korporasi: 0.7}
+    patuh_ayd: false
+    porsi_tidak_diakui: 0.2
+    beban_aset_per_100_investasi: {AAA: 5.3, AA: 5.9}
+    imbal_hasil:
+      bersama: {rata: 0.0694, rata_riil: 0.0354, simpangan: 0.0566, var_99_5: 0.0772, tvar_99_5: 0.0908, peluang_negatif: 0.1205}
+      panjang: {rata: 0.0914, rata_riil: 0.0567, simpangan: 0.0985, var_99_5: 0.1401, tvar_99_5: 0.1608, peluang_negatif: 0.1646}
+    pada_target_120:
+      investasi: 127.6991
+      investasi_tidak_diakui: 25.5398
+      tingkat_solvabilitas: 31.2293
+      ekuitas: 56.7691
+      mmbr: 26.0244
+      modul: {kredit: 3.1214, likuiditas: 0.4862, pasar: 5.7465, asuransi: 16.3065, operasional: 0.3638}
+      porsi_asuransi: 0.6266
+    rasio_bila_neraca_sama: 0.1681
+    peluang_rasio_di_bawah_100_investasi_saja: {bersama: 0.0284, panjang: 0.0781}
+    aset_siap_cair_per_100_premi: 7.27
+    dana_jaminan_dari_portofolio: false
+    imbal_hasil_skenario: {ulangan_2026: -0.044, pengetatan_tajam: -0.0323, ekstrem_gabungan: -0.1787, pelonggaran: 0.1254}
+  A40:
+    profil: Agresif
+    label: Agresif 40/60
+    bobot: {saham: 0.4, korporasi: 0.6}
+    patuh_ayd: false
+    porsi_tidak_diakui: 0.2
+    beban_aset_per_100_investasi: {AAA: 6.64, AA: 7.12}
+    imbal_hasil:
+      bersama: {rata: 0.0675, rata_riil: 0.0336, simpangan: 0.0694, var_99_5: 0.11, tvar_99_5: 0.126, peluang_negatif: 0.1739}
+      panjang: {rata: 0.0964, rata_riil: 0.0615, simpangan: 0.1249, var_99_5: 0.1938, tvar_99_5: 0.2175, peluang_negatif: 0.2072}
+    pada_target_120:
+      investasi: 130.3154
+      investasi_tidak_diakui: 26.0631
+      tingkat_solvabilitas: 33.3223
+      ekuitas: 59.3854
+      mmbr: 27.7686
+      modul: {kredit: 2.7931, likuiditas: 0.4862, pasar: 7.8189, asuransi: 16.3065, operasional: 0.3638}
+      porsi_asuransi: 0.5872
+    rasio_bila_neraca_sama: 0.1604
+    peluang_rasio_di_bawah_100_investasi_saja: {bersama: 0.0642, panjang: 0.1186}
+    aset_siap_cair_per_100_premi: 7.27
+    dana_jaminan_dari_portofolio: false
+    imbal_hasil_skenario: {ulangan_2026: -0.0763, pengetatan_tajam: -0.0505, ekstrem_gabungan: -0.2332, pelonggaran: 0.1332}
+
+temuan:
+  - id: T1
+    pernyataan: "Hanya profil Konservatif yang patuh batas AYD di seluruh rentang brief."
+    bukti:
+      tidak_diakui: {K80: 0.00, K75: 0.00, K70: 0.00, M40: 0.00, M50: 0.00, M60: 0.10, A20: 0.30, A30: 0.20, A40: 0.20}
+    dasar: "POJK 26/2025 Pasal 15 ayat (1) huruf e, huruf h, dan ayat (4)"
+    bergantung_pada: [tafsir perlakuan kelebihan]
+    kekuatan: tinggi
+    soal: [1]
+  - id: T2
+    pernyataan: "Beban modal aset dan ekuitas untuk target 120% naik dari Konservatif ke Moderat ke Agresif; varian yang melampaui batas AYD membutuhkan ekuitas jauh lebih besar."
+    bukti:
+      ekuitas_pada_120: {K75: 22.78, M50: 25.67, M60: 36.85, A30: 56.77}
+      kelipatan_ekuitas_A30_terhadap_K75: 2.49
+      rasio_bila_neraca_sama: {K75: 1.200, M50: 1.069, M60: 0.629, A30: 0.168}
+    kekuatan: tinggi
+    soal: [1]
+  - id: T3
+    pernyataan: "Imbal hasil riil ketiga profil positif; Moderat memberi sekitar 0.0066 (desimal) lebih tinggi daripada Konservatif; Agresif tidak lebih tinggi daripada Moderat pada jendela bersama."
+    bukti:
+      rata_bersama: {K75: 0.0639, M50: 0.0704, A30: 0.0694}
+      rata_panjang: {K75: 0.0665, M50: 0.0792, A30: 0.0914}
+      inflasi: 0.0328
+    bergantung_pada: [jendela data, imbal_dividen]
+    kekuatan: sedang
+    catatan: "Rata-rata imbal hasil saham tidak stabil antarjendela."
+    soal: [1]
+  - id: T4
+    pernyataan: "Dengan rasio awal 120% dan hanya investasi yang bergerak, peluang rasio jatuh di bawah 100% berada di bawah ambang 0,5% untuk Konservatif pada kedua jendela, di sekitar ambang untuk Moderat pada jendela bersama dan di atasnya pada jendela panjang, dan di atas ambang untuk Agresif."
+    bukti:
+      peluang_bersama: {K80: 0.0042, K75: 0.0026, K70: 0.0015, M40: 0.0057, M50: 0.0041, A20: 0.0113, A30: 0.0284, A40: 0.0642}
+      peluang_panjang: {K75: 0.0020, M50: 0.0110, A30: 0.0781}
+      ambang: 0.005
+    bergantung_pada: [tenor_sbn, panjang_blok, klasifikasi_obligasi]
+    kekuatan: sedang
+    catatan: "Pada blok 3 bulan K80 menjadi 0.0054; pada blok 12 bulan semua varian patuh mendekati nol."
+    soal: [1, 4]
+  - id: T5
+    pernyataan: "Tenor SBN menentukan risiko profil Konservatif lebih daripada porsi deposito; SBN 10 tahun membuat Konservatif lebih berisiko daripada Moderat."
+    bukti:
+      peluang_K75_menurut_tenor: {"2": 0.0000, "5": 0.0026, "10": 0.0540}
+      var_99_5_K75_menurut_tenor: {"2": -0.0360, "5": 0.0316, "10": 0.1019}
+      imbal_awal: {"2": 0.0678, "5": 0.0705, "10": 0.0718}
+    kekuatan: tinggi
+    implikasi: "Rekomendasi profil harus disertai batas tenor (paling panjang 5 tahun)."
+    soal: [1, 4]
+  - id: T6
+    pernyataan: "Rumus MMBR tidak menangkap risiko suku bunga SBN: beban modal aset jauh di bawah kerugian 1-dalam-200 hasil simulasi."
+    bukti:
+      per_100_investasi_K75: {beban_mmbr_aset: 0.53, var_99_5_bersama: 3.16}
+      per_100_investasi_A40: {beban_mmbr_aset: 7.12, var_99_5_panjang: 19.38}
+    dasar: "SEOJK 24/2017: SBN berfaktor 0%; risiko tingkat bunga hanya atas cadangan premi jangka panjang"
+    kekuatan: tinggi
+    soal: [3, 4]
+  - id: T7
+    pernyataan: "Bantalan 20% untuk varian acuan hanya 3.80 per 100 premi; kerugian investasi 1-dalam-200 memakai 0.78 bagiannya."
+    bukti:
+      bantalan: 3.796
+      kerugian_investasi_1_dalam_200: 2.963
+      sisa: 0.833
+      imbal_hasil_pemicu_pelanggaran: -0.0405
+    bergantung_pada: [tenor_sbn, panjang_blok]
+    kekuatan: sedang
+    soal: [4]
+  - id: T8
+    pernyataan: "Risiko asuransi adalah modul MMBR terbesar pada semua varian; porsinya 0.76 sampai 0.86 pada varian yang patuh. Nilainya tidak bergantung pada eksposur bencana, hanya pada cadangan."
+    bukti:
+      mmbr_asuransi: 16.306
+      mmbr_total: {K75: 18.982, M50: 21.388, A40: 27.769}
+    kekuatan: tinggi
+    catatan: "Ini besaran, bukan kemungkinan. Soal 3 menanyakan kemungkinan; itu menunggu model bencana."
+    soal: [3, 4]
+  - id: T9
+    pernyataan: "Hanya profil ber-SBN yang dapat memenuhi dana jaminan dari portofolionya dan memakai repo SBN; profil Agresif hanya punya kas sebagai aset siap cair."
+    bukti:
+      aset_siap_cair_per_100_premi: {K75: 94.0, M50: 42.0, A30: 7.3}
+    dasar: "POJK 26/2025 Pasal 8, Pasal 56 ayat (4)"
+    kekuatan: tinggi
+    soal: [1, 2]
+  - id: T10
+    pernyataan: "Mesin MMBR menghasilkan rasio industri yang seorde dengan angka resmi tetapi cenderung lebih rendah."
+    bukti:
+      rasio_rekonstruksi: [1.906, 3.131]
+      rasio_resmi_ojk: 3.248
+    kekuatan: sedang
+    implikasi: "Pakai untuk membandingkan profil, bukan untuk meniru angka OJK."
+    soal: []
+
+kaitan_soal:
+  soal_1:
+    jawaban_sementara: "Profil Konservatif dengan SBN bertenor paling panjang 5 tahun"
+    temuan: [T1, T2, T3, T4, T5, T9]
+    pesaing_terdekat: "Moderat dengan obligasi korporasi 40%-50%"
+    belum_diputuskan: "komposisi di dalam rentang (70/30 sampai 80/20); menunggu kebutuhan likuiditas dari model bencana"
+    biaya_pilihan: "sekitar 0.0066 imbal hasil per tahun dibanding Moderat 50/40/10"
+  soal_2:
+    masukan_tersedia: [T9]
+    menunggu: [bencana]
+  soal_3:
+    masukan_tersedia: [T6, T8]
+    menunggu: [bencana, underwriting]
+    catatan: "Besaran tiap modul tersedia; kemungkinan tiap modul belum."
+  soal_4:
+    masukan_tersedia: [T4, T6, T7, T8]
+    menunggu: [bencana, underwriting]
+  soal_5:
+    masukan_tersedia: []
+
+keterbatasan:
+  - {id: L1, isi: "Model bencana dan hasil underwriting belum masuk; peluang gabungan lebih tinggi daripada yang dilaporkan.", arah: "kurang-taksir risiko semua profil"}
+  - {id: L2, isi: "Imbal hasil SBN bulanan hanya 2012-2024 (155 bulan); ekor 1-dalam-200 tidak teridentifikasi dengan pasti.", bukti: {var_K75_blok_12: 0.0113, var_K75_blok_3: 0.0358}}
+  - {id: L3, isi: "Selisih kredit dianggap tetap dan peluang gagal bayar belum bersumber.", arah: "menguntungkan Moderat dan Agresif"}
+  - {id: L4, isi: "Jendela panjang memakai imputasi perubahan imbal hasil.", bukti: {r2: 0.258}}
+  - {id: L5, isi: "Neraca fiktif dari rasio industri; CAPYBMP paling menggeser hasil."}
+  - {id: L6, isi: "Sebelum pajak dan biaya transaksi."}
+  - {id: L7, isi: "Rumus risiko likuiditas dibaca harfiah.", bukti: {modul_likuiditas_K75: 0.486}}
+
+pertanyaan_terbuka:
+  - {id: Q1, isi: "Tenor SBN yang direkomendasikan di paper", usulan: "paling panjang 5 tahun", pemutus: tim}
+  - {id: Q2, isi: "Klasifikasi akuntansi obligasi", usulan: "nilai wajar", pemutus: tim}
+  - {id: Q3, isi: "Peluang gagal bayar per peringkat dari studi Pefindo", pemutus: "tim (butuh akses)"}
+  - {id: Q4, isi: "Imbal dividen LQ45 atau IDX30 dari lembar fakta BEI", pemutus: tim}
+  - {id: Q5, isi: "Status berlaku POJK 1/POJK.05/2016 pada 2026", pemutus: tim}
+  - {id: Q6, isi: "Imbal hasil SBN bulanan 2025-2026 dari DJPPR untuk menghapus imputasi dua tahun terakhir", pemutus: tim}
+  - {id: Q7, isi: "Satu istilah satuan neraca di paper: per 100 premi dicatat atau per 100 premi neto", pemutus: tim}
+
+perbedaan_dari_dokumen_lama:
+  dokumen: "rancangan metode awal tim (tidak disertakan di repo)"
+  butir:
+    - {hal: "beban modal aset Moderat per 100 investasi", lama: [2.24, 3.28], baru: [2.24, 3.00], sebab: "faktor risiko hanya atas porsi yang diakui AYD"}
+    - {hal: "beban modal aset Agresif per 100 investasi", lama: [5.24, 7.68], baru: [3.80, 7.12], sebab: "sama"}
+    - {hal: "MMBR per 100 premi", lama: [24, 35], baru: [18.9, 27.8], sebab: "cadangan dari data lini harta benda; DAC dari rasio industri"}
+    - {hal: "rekonstruksi rasio industri", lama: [2.56, 3.52], baru: [1.91, 3.13], sebab: "pembilang AYD dikurangi liabilitas, bukan ekuitas"}
+  akibat: "Tabel indikatif soal 4 (bagian 8.3 dokumen lama) perlu dihitung ulang dengan MMBR baru saat model bencana dijalankan."
+
+langkah_berikut:
+  - "Jalankan model kerugian bencana dan sambungkan L(m) ke rasio akhir tahun."
+  - "Tambahkan hasil underwriting non-bencana U dari rasio klaim harta benda OJK 2011-2024."
+  - "Hitung peluang pelanggaran gabungan; putuskan komposisi dalam rentang Konservatif dan target solvabilitas."
+  - "Ganti cadangan bencana dengan nilai menurut Pasal 28 ayat (7) POJK 26/2025."

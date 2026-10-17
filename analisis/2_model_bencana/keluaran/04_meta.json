@@ -1,0 +1,18 @@
+{
+  "jumlah_tahun": 100000,
+  "benih": 20261012,
+  "m_min": 5.5,
+  "m_maks": 9.2,
+  "geser_episenter_derajat": 0.3,
+  "presisi_beta": 3,
+  "dasar_batas": "bayar",
+  "kejadian_per_tahun": 59.001,
+  "kejadian_merugikan_per_tahun": 4.4446,
+  "satuan": "fraksi nilai pertanggungan gempa awal",
+  "kurva": ["klaim", "aulady", "pager"],
+  "strategi": ["S0_dasar", "S1_rs5", "S2_rs10", "S3_batas20", "S4_batas10", "S5_akumulasi10", "S6_koas50", "S7_paketA", "S8_paketB", "S9_batas50", "S10_batas40", "S11_batas30", "S12_batas25", "S13_batas15", "S14_batas20_akum10", "S15_batas20_akum5", "S16_batas10_akum5", "S17_batas20_besar", "S18_batas20_besar_akum10", "S19_akum5", "S20_zona_batas20", "S21_zona_batas10", "S22_zona_besar_batas20", "S23_zona_batas20_akum10", "S24_zona_batas10_luar_batas30", "S25_zona_batas15"],
+  "porsi_eksposur_risiko_besar": 0.8202,
+  "porsi_jumlah_risiko_besar": 0.0327,
+  "zona_inti": ["PAPUA", "JAWA BARAT", "JAKARTA", "SUMATERA UTARA", "BANTEN"],
+  "porsi_eksposur_zona_inti": 0.623
+}

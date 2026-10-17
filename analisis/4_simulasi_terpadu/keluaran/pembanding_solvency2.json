@@ -1,0 +1,16 @@
+{
+ "sumber": "solvency2-python, profil EU-S2-DOCUMENTS-2024-2025-v0.1 (Delegated Regulation (EU) 2015/35)",
+ "satuan": "per 100 premi dicatat",
+ "solvency2_premi_dan_cadangan": 27.38254071484237,
+ "solvency2_gempa_wilayah_lain": 120.0,
+ "solvency2_faktor_gempa_efektif": 1.2,
+ "solvency2_gabungan_akar_kuadrat": 129.58686653704743,
+ "mmbr_modul_asuransi": 16.3065,
+ "model_var_99_5_kerugian_bencana_setahun": 53.239601794400045,
+ "model_var_99_5_klaim_satu_kejadian": 52.117707790400445,
+ "catatan": "Gabungan memakai korelasi 0,25 antara risiko premi-cadangan dan risiko katastrofe non-jiwa (Delegated Regulation Pasal 114). Volume cadangan memakai cadangan klaim bruto.",
+ "rincian_premi_cadangan": {
+  "quadratic_form": 83.31150400000001,
+  "scope": "standard_parameters_and_selected_volumes"
+ }
+}

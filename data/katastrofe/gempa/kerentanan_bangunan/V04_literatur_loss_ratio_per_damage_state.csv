@@ -1,0 +1,5 @@
+﻿damage_state,loss_ratio,CoV,padanan_pelaporan_Indonesia,sumber
+Slight,0.05,0.3,Retak elemen non-struktural; layak huni,"Global (Martins & Silva 2020) via 'Fragility of Indonesian houses: scenario damage analysis of the 2006 Yogyakarta and 2009 Padang earthquakes', Bull. Earthquake Eng. 2024, doi:10.1007/s10518-024-01930-z, Tabel 6"
+Moderate,0.2,0.2,Retak pada elemen struktural,"Global (Martins & Silva 2020) via 'Fragility of Indonesian houses: scenario damage analysis of the 2006 Yogyakarta and 2009 Padang earthquakes', Bull. Earthquake Eng. 2024, doi:10.1007/s10518-024-01930-z, Tabel 6"
+Extensive,0.6,0.1,Rusak berat - perlu rekonstruksi,"Global (Martins & Silva 2020) via 'Fragility of Indonesian houses: scenario damage analysis of the 2006 Yogyakarta and 2009 Padang earthquakes', Bull. Earthquake Eng. 2024, doi:10.1007/s10518-024-01930-z, Tabel 6"
+Complete,1.0,0.0,Rusak berat/roboh - perlu rekonstruksi,"Global (Martins & Silva 2020) via 'Fragility of Indonesian houses: scenario damage analysis of the 2006 Yogyakarta and 2009 Padang earthquakes', Bull. Earthquake Eng. 2024, doi:10.1007/s10518-024-01930-z, Tabel 6"

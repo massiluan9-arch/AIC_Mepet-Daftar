@@ -1,0 +1,27 @@
+strategi,keterangan,syarat,syarat_khusus,eksposur_ditahan,premi_gempa_ditahan,porsi_eksposur_khusus,porsi_premi_khusus
+S0_dasar,"Polis standar: risiko sendiri 2,5%",rs2_5,"",1,1,0,0
+S1_rs5,Risiko sendiri 5%,rs5,"",1,1,0,0
+S2_rs10,Risiko sendiri 10%,rs10,"",1,1,0,0
+S3_batas20,Batas ganti rugi gempa 20% nilai pertanggungan per risiko,batas20,"",1,1,0,0
+S4_batas10,Batas ganti rugi gempa 10% nilai pertanggungan per risiko,batas10,"",1,1,0,0
+S5_akumulasi10,Batas akumulasi 10% per provinsi,rs2_5,"",0.799789918126971,0.798867113504137,0,0
+S6_koas50,"Koasuransi 50% di Jakarta, Jawa Barat, Banten",rs2_5,"",0.766555283694674,0.771163940995136,0,0
+S7_paketA,"Paket A: risiko sendiri 5%, batas 20%, akumulasi 10%",rs5_batas20,"",0.799789918126971,0.798867113504137,0,0
+S8_paketB,Paket B: paket A dan koasuransi 50%,rs5_batas20,"",0.653089942529004,0.652128236139418,0,0
+S9_batas50,Batas ganti rugi gempa 50%,batas50,"",1,1,0,0
+S10_batas40,Batas ganti rugi gempa 40%,batas40,"",1,1,0,0
+S11_batas30,Batas ganti rugi gempa 30%,batas30,"",1,1,0,0
+S12_batas25,Batas ganti rugi gempa 25%,batas25,"",1,1,0,0
+S13_batas15,Batas ganti rugi gempa 15%,batas15,"",1,1,0,0
+S14_batas20_akum10,Batas 20% dan akumulasi 10% per provinsi,batas20,"",0.799789918126971,0.798867113504137,0,0
+S15_batas20_akum5,Batas 20% dan akumulasi 5% per provinsi,batas20,"",0.556389966931038,0.545737946172012,0,0
+S16_batas10_akum5,Batas 10% dan akumulasi 5% per provinsi,batas10,"",0.556389966931038,0.545737946172012,0,0
+S17_batas20_besar,Batas 20% hanya untuk risiko di atas Rp50 miliar,batas20_besar,"",1,1,0,0
+S18_batas20_besar_akum10,Batas 20% risiko besar dan akumulasi 10% per provinsi,batas20_besar,"",0.799789918126971,0.798867113504137,0,0
+S19_akum5,Batas akumulasi 5% per provinsi,rs2_5,"",0.556389966931038,0.545737946172012,0,0
+S20_zona_batas20,Batas 20% di zona inti,rs2_5,batas20,1,1,0.623015231169531,0.670126614631801
+S21_zona_batas10,Batas 10% di zona inti,rs2_5,batas10,1,1,0.623015231169531,0.670126614631801
+S22_zona_besar_batas20,Batas 20% untuk risiko besar di zona inti,rs2_5,batas20,1,1,0.510978742345535,0.549618111444937
+S23_zona_batas20_akum10,Batas 20% di zona inti dan akumulasi 10% per provinsi,rs2_5,batas20,0.799789918126971,0.798867113504137,0.53047203567467,0.588498942383863
+S24_zona_batas10_luar_batas30,"Batas berjenjang: 10% di zona inti, 30% di luar",batas30,batas10,1,1,0.623015231169531,0.670126614631801
+S25_zona_batas15,Batas 15% di zona inti,rs2_5,batas15,1,1,0.623015231169531,0.670126614631801

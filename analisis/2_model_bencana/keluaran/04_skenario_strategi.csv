@@ -1,0 +1,781 @@
+skenario,eta,strategi,kurva,kerugian
+"Megathrust Jawa bagian barat M 8,7",0,S0_dasar,klaim,0.00343246359916516
+"Megathrust Jawa bagian barat M 8,7",0,S0_dasar,aulady,0.00671261944693807
+"Megathrust Jawa bagian barat M 8,7",0,S0_dasar,pager,0.000132315589514294
+"Megathrust Jawa bagian barat M 8,7",0,S1_rs5,klaim,0.00281170271017735
+"Megathrust Jawa bagian barat M 8,7",0,S1_rs5,aulady,0.00553328850288909
+"Megathrust Jawa bagian barat M 8,7",0,S1_rs5,pager,0.000107808148394964
+"Megathrust Jawa bagian barat M 8,7",0,S2_rs10,klaim,0.00196993626856807
+"Megathrust Jawa bagian barat M 8,7",0,S2_rs10,aulady,0.00391121386037474
+"Megathrust Jawa bagian barat M 8,7",0,S2_rs10,pager,7.49712591707101e-05
+"Megathrust Jawa bagian barat M 8,7",0,S3_batas20,klaim,0.00257528320768296
+"Megathrust Jawa bagian barat M 8,7",0,S3_batas20,aulady,0.00498416461346856
+"Megathrust Jawa bagian barat M 8,7",0,S3_batas20,pager,0.000100111706449143
+"Megathrust Jawa bagian barat M 8,7",0,S4_batas10,klaim,0.00176858894153113
+"Megathrust Jawa bagian barat M 8,7",0,S4_batas10,aulady,0.00339721552984263
+"Megathrust Jawa bagian barat M 8,7",0,S4_batas10,pager,6.91820280935788e-05
+"Megathrust Jawa bagian barat M 8,7",0,S5_akumulasi10,klaim,0.00227108517751278
+"Megathrust Jawa bagian barat M 8,7",0,S5_akumulasi10,aulady,0.00457607288150132
+"Megathrust Jawa bagian barat M 8,7",0,S5_akumulasi10,pager,9.7696984133574e-05
+"Megathrust Jawa bagian barat M 8,7",0,S6_koas50,klaim,0.00177763149342344
+"Megathrust Jawa bagian barat M 8,7",0,S6_koas50,aulady,0.00337393935396891
+"Megathrust Jawa bagian barat M 8,7",0,S6_koas50,pager,6.61845536870072e-05
+"Megathrust Jawa bagian barat M 8,7",0,S7_paketA,klaim,0.00138077584304353
+"Megathrust Jawa bagian barat M 8,7",0,S7_paketA,aulady,0.00277193028366149
+"Megathrust Jawa bagian barat M 8,7",0,S7_paketA,pager,5.9540591774134e-05
+"Megathrust Jawa bagian barat M 8,7",0,S8_paketB,klaim,0.000727785922864732
+"Megathrust Jawa bagian barat M 8,7",0,S8_paketB,aulady,0.00139669917603728
+"Megathrust Jawa bagian barat M 8,7",0,S8_paketB,pager,2.97866061558949e-05
+"Megathrust Jawa bagian barat M 8,7",0,S9_batas50,klaim,0.00334607801979567
+"Megathrust Jawa bagian barat M 8,7",0,S9_batas50,aulady,0.00653317552212141
+"Megathrust Jawa bagian barat M 8,7",0,S9_batas50,pager,0.000129148633993206
+"Megathrust Jawa bagian barat M 8,7",0,S10_batas40,klaim,0.00322899297726436
+"Megathrust Jawa bagian barat M 8,7",0,S10_batas40,aulady,0.00629411971271794
+"Megathrust Jawa bagian barat M 8,7",0,S10_batas40,pager,0.00012479538562134
+"Megathrust Jawa bagian barat M 8,7",0,S11_batas30,klaim,0.00300131473290536
+"Megathrust Jawa bagian barat M 8,7",0,S11_batas30,aulady,0.00583435783910164
+"Megathrust Jawa bagian barat M 8,7",0,S11_batas30,pager,0.000116253071049874
+"Megathrust Jawa bagian barat M 8,7",0,S12_batas25,klaim,0.00282109378051205
+"Megathrust Jawa bagian barat M 8,7",0,S12_batas25,aulady,0.0054734060777539
+"Megathrust Jawa bagian barat M 8,7",0,S12_batas25,pager,0.000109445335844424
+"Megathrust Jawa bagian barat M 8,7",0,S13_batas15,klaim,0.00223824470734635
+"Megathrust Jawa bagian barat M 8,7",0,S13_batas15,aulady,0.00431799727071163
+"Megathrust Jawa bagian barat M 8,7",0,S13_batas15,pager,8.72400471254923e-05
+"Megathrust Jawa bagian barat M 8,7",0,S14_batas20_akum10,klaim,0.00170365468173627
+"Megathrust Jawa bagian barat M 8,7",0,S14_batas20_akum10,aulady,0.00339285638586
+"Megathrust Jawa bagian barat M 8,7",0,S14_batas20_akum10,pager,7.39144373327121e-05
+"Megathrust Jawa bagian barat M 8,7",0,S15_batas20_akum5,klaim,0.000918546074321762
+"Megathrust Jawa bagian barat M 8,7",0,S15_batas20_akum5,aulady,0.00175908806336937
+"Megathrust Jawa bagian barat M 8,7",0,S15_batas20_akum5,pager,3.83384205776345e-05
+"Megathrust Jawa bagian barat M 8,7",0,S16_batas10_akum5,klaim,0.00063087780956882
+"Megathrust Jawa bagian barat M 8,7",0,S16_batas10_akum5,aulady,0.0011977442916253
+"Megathrust Jawa bagian barat M 8,7",0,S16_batas10_akum5,pager,2.64924148374091e-05
+"Megathrust Jawa bagian barat M 8,7",0,S17_batas20_besar,klaim,0.00272942948942019
+"Megathrust Jawa bagian barat M 8,7",0,S17_batas20_besar,aulady,0.0052949917023493
+"Megathrust Jawa bagian barat M 8,7",0,S17_batas20_besar,pager,0.000105902913155831
+"Megathrust Jawa bagian barat M 8,7",0,S18_batas20_besar_akum10,klaim,0.00180569539794656
+"Megathrust Jawa bagian barat M 8,7",0,S18_batas20_besar_akum10,aulady,0.00360563356217628
+"Megathrust Jawa bagian barat M 8,7",0,S18_batas20_besar_akum10,pager,7.81912397374608e-05
+"Megathrust Jawa bagian barat M 8,7",0,S19_akum5,klaim,0.00122412716322626
+"Megathrust Jawa bagian barat M 8,7",0,S19_akum5,aulady,0.00237258452910364
+"Megathrust Jawa bagian barat M 8,7",0,S19_akum5,pager,5.06743973023701e-05
+"Megathrust Jawa bagian barat M 8,7",0,S20_zona_batas20,klaim,0.00260537238728357
+"Megathrust Jawa bagian barat M 8,7",0,S20_zona_batas20,aulady,0.00499284047985186
+"Megathrust Jawa bagian barat M 8,7",0,S20_zona_batas20,pager,0.000100124713250921
+"Megathrust Jawa bagian barat M 8,7",0,S21_zona_batas10,klaim,0.00182742448929698
+"Megathrust Jawa bagian barat M 8,7",0,S21_zona_batas10,aulady,0.00341415272056709
+"Megathrust Jawa bagian barat M 8,7",0,S21_zona_batas10,pager,6.92075411651863e-05
+"Megathrust Jawa bagian barat M 8,7",0,S22_zona_besar_batas20,klaim,0.0027541077482834
+"Megathrust Jawa bagian barat M 8,7",0,S22_zona_besar_batas20,aulady,0.00530210739241835
+"Megathrust Jawa bagian barat M 8,7",0,S22_zona_besar_batas20,pager,0.000105913580951548
+"Megathrust Jawa bagian barat M 8,7",0,S23_zona_batas20_akum10,klaim,0.00173374386133688
+"Megathrust Jawa bagian barat M 8,7",0,S23_zona_batas20_akum10,aulady,0.00340153225224331
+"Megathrust Jawa bagian barat M 8,7",0,S23_zona_batas20_akum10,pager,7.39274441344707e-05
+"Megathrust Jawa bagian barat M 8,7",0,S24_zona_batas10_luar_batas30,klaim,0.00181238380915306
+"Megathrust Jawa bagian barat M 8,7",0,S24_zona_batas10_luar_batas30,aulady,0.00340980999345147
+"Megathrust Jawa bagian barat M 8,7",0,S24_zona_batas10_luar_batas30,pager,6.92010567224252e-05
+"Megathrust Jawa bagian barat M 8,7",0,S25_zona_batas15,klaim,0.0022803092311612
+"Megathrust Jawa bagian barat M 8,7",0,S25_zona_batas15,aulady,0.00433011690856304
+"Megathrust Jawa bagian barat M 8,7",0,S25_zona_batas15,pager,8.72582573772121e-05
+"Megathrust Jawa bagian barat M 8,7",1,S0_dasar,klaim,0.00623933427837063
+"Megathrust Jawa bagian barat M 8,7",1,S0_dasar,aulady,0.0296928332396123
+"Megathrust Jawa bagian barat M 8,7",1,S0_dasar,pager,0.00172857264289744
+"Megathrust Jawa bagian barat M 8,7",1,S1_rs5,klaim,0.00513145934622587
+"Megathrust Jawa bagian barat M 8,7",1,S1_rs5,aulady,0.0253141328873877
+"Megathrust Jawa bagian barat M 8,7",1,S1_rs5,pager,0.00141304368525276
+"Megathrust Jawa bagian barat M 8,7",1,S2_rs10,klaim,0.0036155118144649
+"Megathrust Jawa bagian barat M 8,7",1,S2_rs10,aulady,0.0187985415516362
+"Megathrust Jawa bagian barat M 8,7",1,S2_rs10,pager,0.000987160668719455
+"Megathrust Jawa bagian barat M 8,7",1,S3_batas20,klaim,0.00465057408594387
+"Megathrust Jawa bagian barat M 8,7",1,S3_batas20,aulady,0.0206050154832956
+"Megathrust Jawa bagian barat M 8,7",1,S3_batas20,pager,0.00130116513435278
+"Megathrust Jawa bagian barat M 8,7",1,S4_batas10,klaim,0.0031785910164268
+"Megathrust Jawa bagian barat M 8,7",1,S4_batas10,aulady,0.0134288289374368
+"Megathrust Jawa bagian barat M 8,7",1,S4_batas10,pager,0.000895749001900633
+"Megathrust Jawa bagian barat M 8,7",1,S5_akumulasi10,klaim,0.00418255130066654
+"Megathrust Jawa bagian barat M 8,7",1,S5_akumulasi10,aulady,0.0205252507699321
+"Megathrust Jawa bagian barat M 8,7",1,S5_akumulasi10,pager,0.00123791783730887
+"Megathrust Jawa bagian barat M 8,7",1,S6_koas50,klaim,0.00329962536306168
+"Megathrust Jawa bagian barat M 8,7",1,S6_koas50,aulady,0.0149395354781302
+"Megathrust Jawa bagian barat M 8,7",1,S6_koas50,pager,0.000865180253469268
+"Megathrust Jawa bagian barat M 8,7",1,S7_paketA,klaim,0.0025377745630608
+"Megathrust Jawa bagian barat M 8,7",1,S7_paketA,aulady,0.0120444657219933
+"Megathrust Jawa bagian barat M 8,7",1,S7_paketA,pager,0.00075324420983815
+"Megathrust Jawa bagian barat M 8,7",1,S8_paketB,klaim,0.00137792089356196
+"Megathrust Jawa bagian barat M 8,7",1,S8_paketB,aulady,0.00607882533206811
+"Megathrust Jawa bagian barat M 8,7",1,S8_paketB,pager,0.00037716695137421
+"Megathrust Jawa bagian barat M 8,7",1,S9_batas50,klaim,0.0060761822600248
+"Megathrust Jawa bagian barat M 8,7",1,S9_batas50,aulady,0.0285640562769776
+"Megathrust Jawa bagian barat M 8,7",1,S9_batas50,pager,0.00168590437710956
+"Megathrust Jawa bagian barat M 8,7",1,S10_batas40,klaim,0.00585744462549601
+"Megathrust Jawa bagian barat M 8,7",1,S10_batas40,aulady,0.0272146984146197
+"Megathrust Jawa bagian barat M 8,7",1,S10_batas40,pager,0.0016277573092377
+"Megathrust Jawa bagian barat M 8,7",1,S11_batas30,klaim,0.00543505374215689
+"Megathrust Jawa bagian barat M 8,7",1,S11_batas30,aulady,0.0247872392026157
+"Megathrust Jawa bagian barat M 8,7",1,S11_batas30,pager,0.00151428976260237
+"Megathrust Jawa bagian barat M 8,7",1,S12_batas25,klaim,0.00510244063529316
+"Megathrust Jawa bagian barat M 8,7",1,S12_batas25,aulady,0.022973477567763
+"Megathrust Jawa bagian barat M 8,7",1,S12_batas25,pager,0.00142423761693203
+"Megathrust Jawa bagian barat M 8,7",1,S13_batas15,klaim,0.00403373071544832
+"Megathrust Jawa bagian barat M 8,7",1,S13_batas15,aulady,0.0175095538051263
+"Megathrust Jawa bagian barat M 8,7",1,S13_batas15,pager,0.00113203946953097
+"Megathrust Jawa bagian barat M 8,7",1,S14_batas20_akum10,klaim,0.00311703799170576
+"Megathrust Jawa bagian barat M 8,7",1,S14_batas20_akum10,aulady,0.0141357566853828
+"Megathrust Jawa bagian barat M 8,7",1,S14_batas20_akum10,pager,0.000931242161192196
+"Megathrust Jawa bagian barat M 8,7",1,S15_batas20_akum5,klaim,0.00168268464232321
+"Megathrust Jawa bagian barat M 8,7",1,S15_batas20_akum5,aulady,0.00734721130947163
+"Megathrust Jawa bagian barat M 8,7",1,S15_batas20_akum5,pager,0.000482087750796711
+"Megathrust Jawa bagian barat M 8,7",1,S16_batas10_akum5,klaim,0.00115040845241293
+"Megathrust Jawa bagian barat M 8,7",1,S16_batas10_akum5,aulady,0.00476613820818621
+"Megathrust Jawa bagian barat M 8,7",1,S16_batas10_akum5,pager,0.000331711232972382
+"Megathrust Jawa bagian barat M 8,7",1,S17_batas20_besar,klaim,0.0049362799638061
+"Megathrust Jawa bagian barat M 8,7",1,S17_batas20_besar,aulady,0.0222392727880147
+"Megathrust Jawa bagian barat M 8,7",1,S17_batas20_besar,pager,0.00137802559322867
+"Megathrust Jawa bagian barat M 8,7",1,S18_batas20_besar_akum10,klaim,0.00330864866823305
+"Megathrust Jawa bagian barat M 8,7",1,S18_batas20_besar_akum10,aulady,0.0152847759176266
+"Megathrust Jawa bagian barat M 8,7",1,S18_batas20_besar_akum10,pager,0.000986391480568127
+"Megathrust Jawa bagian barat M 8,7",1,S19_akum5,klaim,0.00225671242751843
+"Megathrust Jawa bagian barat M 8,7",1,S19_akum5,aulady,0.0106680881146193
+"Megathrust Jawa bagian barat M 8,7",1,S19_akum5,pager,0.00064088275526218
+"Megathrust Jawa bagian barat M 8,7",1,S20_zona_batas20,klaim,0.00473895430975514
+"Megathrust Jawa bagian barat M 8,7",1,S20_zona_batas20,aulady,0.0206517025183692
+"Megathrust Jawa bagian barat M 8,7",1,S20_zona_batas20,pager,0.00130159991703629
+"Megathrust Jawa bagian barat M 8,7",1,S21_zona_batas10,klaim,0.00335126245028323
+"Megathrust Jawa bagian barat M 8,7",1,S21_zona_batas10,aulady,0.0135193144825749
+"Megathrust Jawa bagian barat M 8,7",1,S21_zona_batas10,pager,0.000896601635322601
+"Megathrust Jawa bagian barat M 8,7",1,S22_zona_besar_batas20,klaim,0.00500876682022938
+"Megathrust Jawa bagian barat M 8,7",1,S22_zona_besar_batas20,aulady,0.0222775641190645
+"Megathrust Jawa bagian barat M 8,7",1,S22_zona_besar_batas20,pager,0.00137838218917961
+"Megathrust Jawa bagian barat M 8,7",1,S23_zona_batas20_akum10,klaim,0.00320497297086611
+"Megathrust Jawa bagian barat M 8,7",1,S23_zona_batas20_akum10,aulady,0.0141824437204564
+"Megathrust Jawa bagian barat M 8,7",1,S23_zona_batas20_akum10,pager,0.000931676943828798
+"Megathrust Jawa bagian barat M 8,7",1,S24_zona_batas10_luar_batas30,klaim,0.00330705220383555
+"Megathrust Jawa bagian barat M 8,7",1,S24_zona_batas10_luar_batas30,aulady,0.0134957999731836
+"Megathrust Jawa bagian barat M 8,7",1,S24_zona_batas10_luar_batas30,pager,0.000896384834572824
+"Megathrust Jawa bagian barat M 8,7",1,S25_zona_batas15,klaim,0.00415723711080094
+"Megathrust Jawa bagian barat M 8,7",1,S25_zona_batas15,aulady,0.0175745506256015
+"Megathrust Jawa bagian barat M 8,7",1,S25_zona_batas15,pager,0.00113264812250837
+"Sesar Lembang M 6,8",0,S0_dasar,klaim,0.00111113323457299
+"Sesar Lembang M 6,8",0,S0_dasar,aulady,0.00220060997671824
+"Sesar Lembang M 6,8",0,S0_dasar,pager,7.14575778523634e-05
+"Sesar Lembang M 6,8",0,S1_rs5,klaim,0.000909944724557923
+"Sesar Lembang M 6,8",0,S1_rs5,aulady,0.00182705174193749
+"Sesar Lembang M 6,8",0,S1_rs5,pager,5.82437725313179e-05
+"Sesar Lembang M 6,8",0,S2_rs10,klaim,0.000637302713662834
+"Sesar Lembang M 6,8",0,S2_rs10,aulady,0.00130466183976398
+"Sesar Lembang M 6,8",0,S2_rs10,pager,4.05243287758982e-05
+"Sesar Lembang M 6,8",0,S3_batas20,klaim,0.000833979311103998
+"Sesar Lembang M 6,8",0,S3_batas20,aulady,0.00161366301142164
+"Sesar Lembang M 6,8",0,S3_batas20,pager,5.40349396202948e-05
+"Sesar Lembang M 6,8",0,S4_batas10,klaim,0.000572918802869754
+"Sesar Lembang M 6,8",0,S4_batas10,aulady,0.00109011710709614
+"Sesar Lembang M 6,8",0,S4_batas10,pager,3.73248622648163e-05
+"Sesar Lembang M 6,8",0,S5_akumulasi10,klaim,0.000534489292719101
+"Sesar Lembang M 6,8",0,S5_akumulasi10,aulady,0.00100369071448659
+"Sesar Lembang M 6,8",0,S5_akumulasi10,pager,3.25915579429116e-05
+"Sesar Lembang M 6,8",0,S6_koas50,klaim,0.000555566617286494
+"Sesar Lembang M 6,8",0,S6_koas50,aulady,0.00110030498835912
+"Sesar Lembang M 6,8",0,S6_koas50,pager,3.57287889261817e-05
+"Sesar Lembang M 6,8",0,S7_paketA,klaim,0.00032503800443712
+"Sesar Lembang M 6,8",0,S7_paketA,aulady,0.000605685425967442
+"Sesar Lembang M 6,8",0,S7_paketA,pager,1.98599305430383e-05
+"Sesar Lembang M 6,8",0,S8_paketB,klaim,0.00016251900221856
+"Sesar Lembang M 6,8",0,S8_paketB,aulady,0.000302842712983721
+"Sesar Lembang M 6,8",0,S8_paketB,pager,9.92996527151917e-06
+"Sesar Lembang M 6,8",0,S9_batas50,klaim,0.00108322826859851
+"Sesar Lembang M 6,8",0,S9_batas50,aulady,0.0021375556422679
+"Sesar Lembang M 6,8",0,S9_batas50,pager,6.9741351311269e-05
+"Sesar Lembang M 6,8",0,S10_batas40,klaim,0.00104538716605796
+"Sesar Lembang M 6,8",0,S10_batas40,aulady,0.00205521464300357
+"Sesar Lembang M 6,8",0,S10_batas40,pager,6.73845120284056e-05
+"Sesar Lembang M 6,8",0,S11_batas30,klaim,0.000971776498700316
+"Sesar Lembang M 6,8",0,S11_batas30,aulady,0.00189885871946962
+"Sesar Lembang M 6,8",0,S11_batas30,pager,6.27625880234485e-05
+"Sesar Lembang M 6,8",0,S12_batas25,klaim,0.000913492755201728
+"Sesar Lembang M 6,8",0,S12_batas25,aulady,0.00177727080560994
+"Sesar Lembang M 6,8",0,S12_batas25,pager,5.90808849966923e-05
+"Sesar Lembang M 6,8",0,S13_batas15,klaim,0.000724927714899753
+"Sesar Lembang M 6,8",0,S13_batas15,aulady,0.00139268292447811
+"Sesar Lembang M 6,8",0,S13_batas15,pager,4.70790124218365e-05
+"Sesar Lembang M 6,8",0,S14_batas20_akum10,klaim,0.000401322114561543
+"Sesar Lembang M 6,8",0,S14_batas20_akum10,aulady,0.00073598620292075
+"Sesar Lembang M 6,8",0,S14_batas20_akum10,pager,2.46451519700274e-05
+"Sesar Lembang M 6,8",0,S15_batas20_akum5,klaim,0.000200661057280772
+"Sesar Lembang M 6,8",0,S15_batas20_akum5,aulady,0.000367993101460375
+"Sesar Lembang M 6,8",0,S15_batas20_akum5,pager,1.23225759852453e-05
+"Sesar Lembang M 6,8",0,S16_batas10_akum5,klaim,0.00013788694601155
+"Sesar Lembang M 6,8",0,S16_batas10_akum5,aulady,0.000248599349651017
+"Sesar Lembang M 6,8",0,S16_batas10_akum5,pager,8.51187129346307e-06
+"Sesar Lembang M 6,8",0,S17_batas20_besar,klaim,0.000883819749821636
+"Sesar Lembang M 6,8",0,S17_batas20_besar,aulady,0.00171921336368877
+"Sesar Lembang M 6,8",0,S17_batas20_besar,pager,5.7168043139943e-05
+"Sesar Lembang M 6,8",0,S18_batas20_besar_akum10,klaim,0.000425269495493732
+"Sesar Lembang M 6,8",0,S18_batas20_besar_akum10,aulady,0.000784127359055693
+"Sesar Lembang M 6,8",0,S18_batas20_besar_akum10,pager,2.60741498169994e-05
+"Sesar Lembang M 6,8",0,S19_akum5,klaim,0.00026724464635955
+"Sesar Lembang M 6,8",0,S19_akum5,aulady,0.000501845357243297
+"Sesar Lembang M 6,8",0,S19_akum5,pager,1.62957789717618e-05
+"Sesar Lembang M 6,8",0,S20_zona_batas20,klaim,0.000833979311103998
+"Sesar Lembang M 6,8",0,S20_zona_batas20,aulady,0.00161366301142164
+"Sesar Lembang M 6,8",0,S20_zona_batas20,pager,5.40349396202948e-05
+"Sesar Lembang M 6,8",0,S21_zona_batas10,klaim,0.000572918802869754
+"Sesar Lembang M 6,8",0,S21_zona_batas10,aulady,0.00109011710709614
+"Sesar Lembang M 6,8",0,S21_zona_batas10,pager,3.73248622648163e-05
+"Sesar Lembang M 6,8",0,S22_zona_besar_batas20,klaim,0.000883819749821636
+"Sesar Lembang M 6,8",0,S22_zona_besar_batas20,aulady,0.00171921336368877
+"Sesar Lembang M 6,8",0,S22_zona_besar_batas20,pager,5.7168043139943e-05
+"Sesar Lembang M 6,8",0,S23_zona_batas20_akum10,klaim,0.000401322114561543
+"Sesar Lembang M 6,8",0,S23_zona_batas20_akum10,aulady,0.00073598620292075
+"Sesar Lembang M 6,8",0,S23_zona_batas20_akum10,pager,2.46451519700274e-05
+"Sesar Lembang M 6,8",0,S24_zona_batas10_luar_batas30,klaim,0.000572918802869754
+"Sesar Lembang M 6,8",0,S24_zona_batas10_luar_batas30,aulady,0.00109011710709614
+"Sesar Lembang M 6,8",0,S24_zona_batas10_luar_batas30,pager,3.73248622648163e-05
+"Sesar Lembang M 6,8",0,S25_zona_batas15,klaim,0.000724927714899753
+"Sesar Lembang M 6,8",0,S25_zona_batas15,aulady,0.00139268292447811
+"Sesar Lembang M 6,8",0,S25_zona_batas15,pager,4.70790124218365e-05
+"Sesar Lembang M 6,8",1,S0_dasar,klaim,0.0023052924029926
+"Sesar Lembang M 6,8",1,S0_dasar,aulady,0.0160195639186728
+"Sesar Lembang M 6,8",1,S0_dasar,pager,0.00128333185040551
+"Sesar Lembang M 6,8",1,S1_rs5,klaim,0.00189858648991636
+"Sesar Lembang M 6,8",1,S1_rs5,aulady,0.0143115666294089
+"Sesar Lembang M 6,8",1,S1_rs5,pager,0.00105744424957013
+"Sesar Lembang M 6,8",1,S2_rs10,klaim,0.00134042666374833
+"Sesar Lembang M 6,8",1,S2_rs10,aulady,0.0114442058300822
+"Sesar Lembang M 6,8",1,S2_rs10,pager,0.000747018446211504
+"Sesar Lembang M 6,8",1,S3_batas20,klaim,0.00171406093364647
+"Sesar Lembang M 6,8",1,S3_batas20,aulady,0.00962918594300777
+"Sesar Lembang M 6,8",1,S3_batas20,pager,0.000953563996537941
+"Sesar Lembang M 6,8",1,S4_batas10,klaim,0.00116958104775705
+"Sesar Lembang M 6,8",1,S4_batas10,aulady,0.00579666318182086
+"Sesar Lembang M 6,8",1,S4_batas10,pager,0.000650264145297805
+"Sesar Lembang M 6,8",1,S5_akumulasi10,klaim,0.0011407958767584
+"Sesar Lembang M 6,8",1,S5_akumulasi10,aulady,0.00732188344283074
+"Sesar Lembang M 6,8",1,S5_akumulasi10,pager,0.000585323384691629
+"Sesar Lembang M 6,8",1,S6_koas50,klaim,0.0011526462014963
+"Sesar Lembang M 6,8",1,S6_koas50,aulady,0.0080097819593364
+"Sesar Lembang M 6,8",1,S6_koas50,pager,0.000641665925202758
+"Sesar Lembang M 6,8",1,S7_paketA,klaim,0.000691856098799776
+"Sesar Lembang M 6,8",1,S7_paketA,aulady,0.00396163837405486
+"Sesar Lembang M 6,8",1,S7_paketA,pager,0.000354820360319401
+"Sesar Lembang M 6,8",1,S8_paketB,klaim,0.000345928049399888
+"Sesar Lembang M 6,8",1,S8_paketB,aulady,0.00198081918702743
+"Sesar Lembang M 6,8",1,S8_paketB,pager,0.000177410180159704
+"Sesar Lembang M 6,8",1,S9_batas50,klaim,0.00224410775267356
+"Sesar Lembang M 6,8",1,S9_batas50,aulady,0.0149453409297263
+"Sesar Lembang M 6,8",1,S9_batas50,pager,0.00124917272035588
+"Sesar Lembang M 6,8",1,S10_batas40,klaim,0.00216245508235122
+"Sesar Lembang M 6,8",1,S10_batas40,aulady,0.0138918665330324
+"Sesar Lembang M 6,8",1,S10_batas40,pager,0.00120360465790607
+"Sesar Lembang M 6,8",1,S11_batas30,klaim,0.00200522394984728
+"Sesar Lembang M 6,8",1,S11_batas30,aulady,0.0122039274705159
+"Sesar Lembang M 6,8",1,S11_batas30,pager,0.00111589473318091
+"Sesar Lembang M 6,8",1,S12_batas25,klaim,0.00188166476676694
+"Sesar Lembang M 6,8",1,S12_batas25,aulady,0.0110467408847667
+"Sesar Lembang M 6,8",1,S12_batas25,pager,0.0010469942689645
+"Sesar Lembang M 6,8",1,S13_batas15,klaim,0.00148564333069191
+"Sesar Lembang M 6,8",1,S13_batas15,aulady,0.00790112351606514
+"Sesar Lembang M 6,8",1,S13_batas15,pager,0.000826285393517519
+"Sesar Lembang M 6,8",1,S14_batas20_akum10,klaim,0.000849290676224863
+"Sesar Lembang M 6,8",1,S14_batas20_akum10,aulady,0.00440349976781988
+"Sesar Lembang M 6,8",1,S14_batas20_akum10,pager,0.000434917365737478
+"Sesar Lembang M 6,8",1,S15_batas20_akum5,klaim,0.000426651821439064
+"Sesar Lembang M 6,8",1,S15_batas20_akum5,aulady,0.00220174988390994
+"Sesar Lembang M 6,8",1,S15_batas20_akum5,pager,0.000217458683344317
+"Sesar Lembang M 6,8",1,S16_batas10_akum5,klaim,0.00029140862901955
+"Sesar Lembang M 6,8",1,S16_batas10_akum5,aulady,0.00132594769067801
+"Sesar Lembang M 6,8",1,S16_batas10_akum5,pager,0.000148291657104208
+"Sesar Lembang M 6,8",1,S17_batas20_besar,klaim,0.00182038176593728
+"Sesar Lembang M 6,8",1,S17_batas20_besar,aulady,0.0107783641249082
+"Sesar Lembang M 6,8",1,S17_batas20_besar,pager,0.00101286596962934
+"Sesar Lembang M 6,8",1,S18_batas20_besar_akum10,klaim,0.00090171189726051
+"Sesar Lembang M 6,8",1,S18_batas20_besar_akum10,aulady,0.00492831111051483
+"Sesar Lembang M 6,8",1,S18_batas20_besar_akum10,pager,0.000461964797996856
+"Sesar Lembang M 6,8",1,S19_akum5,klaim,0.000573053156702671
+"Sesar Lembang M 6,8",1,S19_akum5,aulady,0.00366094172141537
+"Sesar Lembang M 6,8",1,S19_akum5,pager,0.000292661692974083
+"Sesar Lembang M 6,8",1,S20_zona_batas20,klaim,0.00171406093364647
+"Sesar Lembang M 6,8",1,S20_zona_batas20,aulady,0.00962918594300777
+"Sesar Lembang M 6,8",1,S20_zona_batas20,pager,0.000953563996537944
+"Sesar Lembang M 6,8",1,S21_zona_batas10,klaim,0.00116958104775705
+"Sesar Lembang M 6,8",1,S21_zona_batas10,aulady,0.00579666318182086
+"Sesar Lembang M 6,8",1,S21_zona_batas10,pager,0.00065026414529781
+"Sesar Lembang M 6,8",1,S22_zona_besar_batas20,klaim,0.00182038176593728
+"Sesar Lembang M 6,8",1,S22_zona_besar_batas20,aulady,0.0107783641249082
+"Sesar Lembang M 6,8",1,S22_zona_besar_batas20,pager,0.00101286596962934
+"Sesar Lembang M 6,8",1,S23_zona_batas20_akum10,klaim,0.000849290676224863
+"Sesar Lembang M 6,8",1,S23_zona_batas20_akum10,aulady,0.00440349976781988
+"Sesar Lembang M 6,8",1,S23_zona_batas20_akum10,pager,0.000434917365737481
+"Sesar Lembang M 6,8",1,S24_zona_batas10_luar_batas30,klaim,0.00116958104775705
+"Sesar Lembang M 6,8",1,S24_zona_batas10_luar_batas30,aulady,0.00579666318182086
+"Sesar Lembang M 6,8",1,S24_zona_batas10_luar_batas30,pager,0.000650264145297809
+"Sesar Lembang M 6,8",1,S25_zona_batas15,klaim,0.00148564333069191
+"Sesar Lembang M 6,8",1,S25_zona_batas15,aulady,0.00790112351606514
+"Sesar Lembang M 6,8",1,S25_zona_batas15,pager,0.000826285393517522
+"Sesar Surabaya M 6,5",0,S0_dasar,klaim,0.000734649973641808
+"Sesar Surabaya M 6,5",0,S0_dasar,aulady,0.00149477701131438
+"Sesar Surabaya M 6,5",0,S0_dasar,pager,2.88432587303215e-05
+"Sesar Surabaya M 6,5",0,S1_rs5,klaim,0.000601911793746135
+"Sesar Surabaya M 6,5",0,S1_rs5,aulady,0.00123176452970975
+"Sesar Surabaya M 6,5",0,S1_rs5,pager,2.34992960133985e-05
+"Sesar Surabaya M 6,5",0,S2_rs10,klaim,0.000421831485503079
+"Sesar Surabaya M 6,5",0,S2_rs10,aulady,0.00087025762850345
+"Sesar Surabaya M 6,5",0,S2_rs10,pager,1.63401608918909e-05
+"Sesar Surabaya M 6,5",0,S3_batas20,klaim,0.000551008545108035
+"Sesar Surabaya M 6,5",0,S3_batas20,aulady,0.00111053408434367
+"Sesar Surabaya M 6,5",0,S3_batas20,pager,2.18255107514828e-05
+"Sesar Surabaya M 6,5",0,S4_batas10,klaim,0.00037831633931126
+"Sesar Surabaya M 6,5",0,S4_batas10,aulady,0.000757237272229921
+"Sesar Surabaya M 6,5",0,S4_batas10,pager,1.50836824838076e-05
+"Sesar Surabaya M 6,5",0,S5_akumulasi10,klaim,0.000724071030268543
+"Sesar Surabaya M 6,5",0,S5_akumulasi10,aulady,0.00147325225540924
+"Sesar Surabaya M 6,5",0,S5_akumulasi10,pager,2.8427916442489e-05
+"Sesar Surabaya M 6,5",0,S6_koas50,klaim,0.000734649973641808
+"Sesar Surabaya M 6,5",0,S6_koas50,aulady,0.00149477701131438
+"Sesar Surabaya M 6,5",0,S6_koas50,pager,2.88432587303215e-05
+"Sesar Surabaya M 6,5",0,S7_paketA,klaim,0.000440202664805259
+"Sesar Surabaya M 6,5",0,S7_paketA,aulady,0.000893041887241084
+"Sesar Surabaya M 6,5",0,S7_paketA,pager,1.73259178912896e-05
+"Sesar Surabaya M 6,5",0,S8_paketB,klaim,0.000440202664805259
+"Sesar Surabaya M 6,5",0,S8_paketB,aulady,0.000893041887241084
+"Sesar Surabaya M 6,5",0,S8_paketB,pager,1.73259178912896e-05
+"Sesar Surabaya M 6,5",0,S9_batas50,klaim,0.000716125989344978
+"Sesar Surabaya M 6,5",0,S9_batas50,aulady,0.00145496083191393
+"Sesar Surabaya M 6,5",0,S9_batas50,pager,2.81533442002957e-05
+"Sesar Surabaya M 6,5",0,S10_batas40,klaim,0.000691032055227889
+"Sesar Surabaya M 6,5",0,S10_batas40,aulady,0.00140185734272951
+"Sesar Surabaya M 6,5",0,S10_batas40,pager,2.72048280044035e-05
+"Sesar Surabaya M 6,5",0,S11_batas30,klaim,0.000642252067577242
+"Sesar Surabaya M 6,5",0,S11_batas30,aulady,0.00129965672533618
+"Sesar Surabaya M 6,5",0,S11_batas30,pager,2.53433526248301e-05
+"Sesar Surabaya M 6,5",0,S12_batas25,klaim,0.000603649629810432
+"Sesar Surabaya M 6,5",0,S12_batas25,aulady,0.00121938107365085
+"Sesar Surabaya M 6,5",0,S12_batas25,pager,2.38597347920832e-05
+"Sesar Surabaya M 6,5",0,S13_batas15,klaim,0.00047884654053022
+"Sesar Surabaya M 6,5",0,S13_batas15,aulady,0.000962265993910786
+"Sesar Surabaya M 6,5",0,S13_batas15,pager,1.90199811678918e-05
+"Sesar Surabaya M 6,5",0,S14_batas20_akum10,klaim,0.000543074034244328
+"Sesar Surabaya M 6,5",0,S14_batas20_akum10,aulady,0.00109454241808918
+"Sesar Surabaya M 6,5",0,S14_batas20_akum10,pager,2.15112238793443e-05
+"Sesar Surabaya M 6,5",0,S15_batas20_akum5,klaim,0.000271537017122164
+"Sesar Surabaya M 6,5",0,S15_batas20_akum5,aulady,0.000547271209044589
+"Sesar Surabaya M 6,5",0,S15_batas20_akum5,pager,1.07556119396722e-05
+"Sesar Surabaya M 6,5",0,S16_batas10_akum5,klaim,0.000186434296195923
+"Sesar Surabaya M 6,5",0,S16_batas10_akum5,aulady,0.000373166536128259
+"Sesar Surabaya M 6,5",0,S16_batas10_akum5,pager,7.43323889481226e-06
+"Sesar Surabaya M 6,5",0,S17_batas20_besar,klaim,0.000584032682923934
+"Sesar Surabaya M 6,5",0,S17_batas20_besar,aulady,0.00117963228008511
+"Sesar Surabaya M 6,5",0,S17_batas20_besar,pager,2.30875085384789e-05
+"Sesar Surabaya M 6,5",0,S18_batas20_besar_akum10,klaim,0.000575622625206025
+"Sesar Surabaya M 6,5",0,S18_batas20_besar_akum10,aulady,0.00116264560134009
+"Sesar Surabaya M 6,5",0,S18_batas20_besar_akum10,pager,2.27550489261174e-05
+"Sesar Surabaya M 6,5",0,S19_akum5,klaim,0.000362035515134272
+"Sesar Surabaya M 6,5",0,S19_akum5,aulady,0.000736626127704621
+"Sesar Surabaya M 6,5",0,S19_akum5,pager,1.42139582212445e-05
+"Sesar Surabaya M 6,5",0,S20_zona_batas20,klaim,0.000734649973641808
+"Sesar Surabaya M 6,5",0,S20_zona_batas20,aulady,0.00149477701131438
+"Sesar Surabaya M 6,5",0,S20_zona_batas20,pager,2.88432587303215e-05
+"Sesar Surabaya M 6,5",0,S21_zona_batas10,klaim,0.000734649973641808
+"Sesar Surabaya M 6,5",0,S21_zona_batas10,aulady,0.00149477701131438
+"Sesar Surabaya M 6,5",0,S21_zona_batas10,pager,2.88432587303215e-05
+"Sesar Surabaya M 6,5",0,S22_zona_besar_batas20,klaim,0.000734649973641808
+"Sesar Surabaya M 6,5",0,S22_zona_besar_batas20,aulady,0.00149477701131438
+"Sesar Surabaya M 6,5",0,S22_zona_besar_batas20,pager,2.88432587303215e-05
+"Sesar Surabaya M 6,5",0,S23_zona_batas20_akum10,klaim,0.000724071030268543
+"Sesar Surabaya M 6,5",0,S23_zona_batas20_akum10,aulady,0.00147325225540924
+"Sesar Surabaya M 6,5",0,S23_zona_batas20_akum10,pager,2.8427916442489e-05
+"Sesar Surabaya M 6,5",0,S24_zona_batas10_luar_batas30,klaim,0.000642252067577242
+"Sesar Surabaya M 6,5",0,S24_zona_batas10_luar_batas30,aulady,0.00129965672533618
+"Sesar Surabaya M 6,5",0,S24_zona_batas10_luar_batas30,pager,2.53433526248301e-05
+"Sesar Surabaya M 6,5",0,S25_zona_batas15,klaim,0.000734649973641808
+"Sesar Surabaya M 6,5",0,S25_zona_batas15,aulady,0.00149477701131438
+"Sesar Surabaya M 6,5",0,S25_zona_batas15,pager,2.88432587303215e-05
+"Sesar Surabaya M 6,5",1,S0_dasar,klaim,0.00155077239529068
+"Sesar Surabaya M 6,5",1,S0_dasar,aulady,0.0105065586463306
+"Sesar Surabaya M 6,5",1,S0_dasar,pager,0.000728191482594797
+"Sesar Surabaya M 6,5",1,S1_rs5,klaim,0.00127843437093826
+"Sesar Surabaya M 6,5",1,S1_rs5,aulady,0.00912056678017865
+"Sesar Surabaya M 6,5",1,S1_rs5,pager,0.000596589619917106
+"Sesar Surabaya M 6,5",1,S2_rs10,klaim,0.000903756892727174
+"Sesar Surabaya M 6,5",1,S2_rs10,aulady,0.00695966950598517
+"Sesar Surabaya M 6,5",1,S2_rs10,pager,0.000418071555992496
+"Sesar Surabaya M 6,5",1,S3_batas20,klaim,0.0011513313297285
+"Sesar Surabaya M 6,5",1,S3_batas20,aulady,0.006969128698629
+"Sesar Surabaya M 6,5",1,S3_batas20,pager,0.000546209632967281
+"Sesar Surabaya M 6,5",1,S4_batas10,klaim,0.000784661368303599
+"Sesar Surabaya M 6,5",1,S4_batas10,aulady,0.00441632055356186
+"Sesar Surabaya M 6,5",1,S4_batas10,pager,0.000375044203880205
+"Sesar Surabaya M 6,5",1,S5_akumulasi10,klaim,0.00152844130709465
+"Sesar Surabaya M 6,5",1,S5_akumulasi10,aulady,0.0103552644341816
+"Sesar Surabaya M 6,5",1,S5_akumulasi10,pager,0.000717705541349776
+"Sesar Surabaya M 6,5",1,S6_koas50,klaim,0.00155077239529068
+"Sesar Surabaya M 6,5",1,S6_koas50,aulady,0.0105065586463306
+"Sesar Surabaya M 6,5",1,S6_koas50,pager,0.000728191482594797
+"Sesar Surabaya M 6,5",1,S7_paketA,klaim,0.000926285677828468
+"Sesar Surabaya M 6,5",1,S7_paketA,aulady,0.00596100478255899
+"Sesar Surabaya M 6,5",1,S7_paketA,pager,0.000436343386288882
+"Sesar Surabaya M 6,5",1,S8_paketB,klaim,0.000926285677828468
+"Sesar Surabaya M 6,5",1,S8_paketB,aulady,0.00596100478255899
+"Sesar Surabaya M 6,5",1,S8_paketB,pager,0.000436343386288882
+"Sesar Surabaya M 6,5",1,S9_batas50,klaim,0.00150930040434978
+"Sesar Surabaya M 6,5",1,S9_batas50,aulady,0.010021577952791
+"Sesar Surabaya M 6,5",1,S9_batas50,pager,0.00070983926033624
+"Sesar Surabaya M 6,5",1,S10_batas40,klaim,0.00145405136943261
+"Sesar Surabaya M 6,5",1,S10_batas40,aulady,0.00947627754749229
+"Sesar Surabaya M 6,5",1,S10_batas40,pager,0.000684974600673408
+"Sesar Surabaya M 6,5",1,S11_batas30,klaim,0.00134779875445861
+"Sesar Surabaya M 6,5",1,S11_batas30,aulady,0.00853168293727526
+"Sesar Surabaya M 6,5",1,S11_batas30,pager,0.000636636038705422
+"Sesar Surabaya M 6,5",1,S12_batas25,klaim,0.00126438563785624
+"Sesar Surabaya M 6,5",1,S12_batas25,aulady,0.0078457305422891
+"Sesar Surabaya M 6,5",1,S12_batas25,pager,0.000598380409442025
+"Sesar Surabaya M 6,5",1,S13_batas15,klaim,0.00099740293208718
+"Sesar Surabaya M 6,5",1,S13_batas15,aulady,0.00585052866711936
+"Sesar Surabaya M 6,5",1,S13_batas15,pager,0.000474688341425357
+"Sesar Surabaya M 6,5",1,S14_batas20_akum10,klaim,0.00113475218404271
+"Sesar Surabaya M 6,5",1,S14_batas20_akum10,aulady,0.00686877339949476
+"Sesar Surabaya M 6,5",1,S14_batas20_akum10,pager,0.000538344226332271
+"Sesar Surabaya M 6,5",1,S15_batas20_akum5,klaim,0.000567376092021357
+"Sesar Surabaya M 6,5",1,S15_batas20_akum5,aulady,0.00343438669974738
+"Sesar Surabaya M 6,5",1,S15_batas20_akum5,pager,0.000269172113166136
+"Sesar Surabaya M 6,5",1,S16_batas10_akum5,klaim,0.000386681130976617
+"Sesar Surabaya M 6,5",1,S16_batas10_akum5,aulady,0.00217636281762993
+"Sesar Surabaya M 6,5",1,S16_batas10_akum5,pager,0.000184821787819317
+"Sesar Surabaya M 6,5",1,S17_batas20_besar,klaim,0.00122316259843391
+"Sesar Surabaya M 6,5",1,S17_batas20_besar,aulady,0.00760526279451196
+"Sesar Surabaya M 6,5",1,S17_batas20_besar,pager,0.00057893532961468
+"Sesar Surabaya M 6,5",1,S18_batas20_besar_akum10,klaim,0.00120554908406736
+"Sesar Surabaya M 6,5",1,S18_batas20_besar_akum10,aulady,0.00749574717846545
+"Sesar Surabaya M 6,5",1,S18_batas20_besar_akum10,pager,0.000570598673671694
+"Sesar Surabaya M 6,5",1,S19_akum5,klaim,0.000764220653547327
+"Sesar Surabaya M 6,5",1,S19_akum5,aulady,0.00517763221709082
+"Sesar Surabaya M 6,5",1,S19_akum5,pager,0.000358852770674889
+"Sesar Surabaya M 6,5",1,S20_zona_batas20,klaim,0.00155077239529068
+"Sesar Surabaya M 6,5",1,S20_zona_batas20,aulady,0.0105065586463306
+"Sesar Surabaya M 6,5",1,S20_zona_batas20,pager,0.000728191482594797
+"Sesar Surabaya M 6,5",1,S21_zona_batas10,klaim,0.00155077239529068
+"Sesar Surabaya M 6,5",1,S21_zona_batas10,aulady,0.0105065586463306
+"Sesar Surabaya M 6,5",1,S21_zona_batas10,pager,0.000728191482594797
+"Sesar Surabaya M 6,5",1,S22_zona_besar_batas20,klaim,0.00155077239529068
+"Sesar Surabaya M 6,5",1,S22_zona_besar_batas20,aulady,0.0105065586463306
+"Sesar Surabaya M 6,5",1,S22_zona_besar_batas20,pager,0.000728191482594797
+"Sesar Surabaya M 6,5",1,S23_zona_batas20_akum10,klaim,0.00152844130709465
+"Sesar Surabaya M 6,5",1,S23_zona_batas20_akum10,aulady,0.0103552644341816
+"Sesar Surabaya M 6,5",1,S23_zona_batas20_akum10,pager,0.000717705541349776
+"Sesar Surabaya M 6,5",1,S24_zona_batas10_luar_batas30,klaim,0.00134779875445861
+"Sesar Surabaya M 6,5",1,S24_zona_batas10_luar_batas30,aulady,0.00853168293727526
+"Sesar Surabaya M 6,5",1,S24_zona_batas10_luar_batas30,pager,0.000636636038705422
+"Sesar Surabaya M 6,5",1,S25_zona_batas15,klaim,0.00155077239529068
+"Sesar Surabaya M 6,5",1,S25_zona_batas15,aulady,0.0105065586463306
+"Sesar Surabaya M 6,5",1,S25_zona_batas15,pager,0.000728191482594797
+"Megathrust Mentawai M 8,9",0,S0_dasar,klaim,0.000317786856015555
+"Megathrust Mentawai M 8,9",0,S0_dasar,aulady,0.000739263326611454
+"Megathrust Mentawai M 8,9",0,S0_dasar,pager,3.74460351917939e-05
+"Megathrust Mentawai M 8,9",0,S1_rs5,klaim,0.000260275863643911
+"Megathrust Mentawai M 8,9",0,S1_rs5,aulady,0.000624744976642131
+"Megathrust Mentawai M 8,9",0,S1_rs5,pager,3.05819286271093e-05
+"Megathrust Mentawai M 8,9",0,S2_rs10,klaim,0.000182323504196687
+"Megathrust Mentawai M 8,9",0,S2_rs10,aulady,0.000457895454082281
+"Megathrust Mentawai M 8,9",0,S2_rs10,pager,2.13365824839884e-05
+"Megathrust Mentawai M 8,9",0,S3_batas20,klaim,0.000238468260428793
+"Megathrust Mentawai M 8,9",0,S3_batas20,aulady,0.000523234409390824
+"Megathrust Mentawai M 8,9",0,S3_batas20,pager,2.82291471734241e-05
+"Megathrust Mentawai M 8,9",0,S4_batas10,klaim,0.00016379903644503
+"Megathrust Mentawai M 8,9",0,S4_batas10,aulady,0.000345278065695942
+"Megathrust Mentawai M 8,9",0,S4_batas10,pager,1.94548681986688e-05
+"Megathrust Mentawai M 8,9",0,S5_akumulasi10,klaim,0.000317786856015555
+"Megathrust Mentawai M 8,9",0,S5_akumulasi10,aulady,0.000739263326611454
+"Megathrust Mentawai M 8,9",0,S5_akumulasi10,pager,3.74460351899605e-05
+"Megathrust Mentawai M 8,9",0,S6_koas50,klaim,0.000317786856015555
+"Megathrust Mentawai M 8,9",0,S6_koas50,aulady,0.000739263326611454
+"Megathrust Mentawai M 8,9",0,S6_koas50,pager,3.74460351860899e-05
+"Megathrust Mentawai M 8,9",0,S7_paketA,klaim,0.000193215270306777
+"Megathrust Mentawai M 8,9",0,S7_paketA,aulady,0.000439532412911287
+"Megathrust Mentawai M 8,9",0,S7_paketA,pager,2.27988487591092e-05
+"Megathrust Mentawai M 8,9",0,S8_paketB,klaim,0.000193215270306777
+"Megathrust Mentawai M 8,9",0,S8_paketB,aulady,0.000439532412911287
+"Megathrust Mentawai M 8,9",0,S8_paketB,pager,2.27988487561912e-05
+"Megathrust Mentawai M 8,9",0,S9_batas50,klaim,0.000309794033247422
+"Megathrust Mentawai M 8,9",0,S9_batas50,aulady,0.000713738613965428
+"Megathrust Mentawai M 8,9",0,S9_batas50,pager,3.65299266950916e-05
+"Megathrust Mentawai M 8,9",0,S10_batas40,klaim,0.000298960843110439
+"Megathrust Mentawai M 8,9",0,S10_batas40,aulady,0.000682265507764347
+"Megathrust Mentawai M 8,9",0,S10_batas40,pager,3.52783285722157e-05
+"Megathrust Mentawai M 8,9",0,S11_batas30,klaim,0.000277893765770845
+"Megathrust Mentawai M 8,9",0,S11_batas30,aulady,0.00062458156594065
+"Megathrust Mentawai M 8,9",0,S11_batas30,pager,3.28320161687389e-05
+"Megathrust Mentawai M 8,9",0,S12_batas25,klaim,0.000261216634204937
+"Megathrust Mentawai M 8,9",0,S12_batas25,aulady,0.000580884593930459
+"Megathrust Mentawai M 8,9",0,S12_batas25,pager,3.08881872386402e-05
+"Megathrust Mentawai M 8,9",0,S13_batas15,klaim,0.000207273992095497
+"Megathrust Mentawai M 8,9",0,S13_batas15,aulady,0.00044703616960526
+"Megathrust Mentawai M 8,9",0,S13_batas15,pager,2.45713691285313e-05
+"Megathrust Mentawai M 8,9",0,S14_batas20_akum10,klaim,0.000238468260428793
+"Megathrust Mentawai M 8,9",0,S14_batas20_akum10,aulady,0.000523234409390824
+"Megathrust Mentawai M 8,9",0,S14_batas20_akum10,pager,2.82291471720362e-05
+"Megathrust Mentawai M 8,9",0,S15_batas20_akum5,klaim,0.000238468260428793
+"Megathrust Mentawai M 8,9",0,S15_batas20_akum5,aulady,0.000523234409390824
+"Megathrust Mentawai M 8,9",0,S15_batas20_akum5,pager,2.82291471685983e-05
+"Megathrust Mentawai M 8,9",0,S16_batas10_akum5,klaim,0.00016379903644503
+"Megathrust Mentawai M 8,9",0,S16_batas10_akum5,aulady,0.000345278065695942
+"Megathrust Mentawai M 8,9",0,S16_batas10_akum5,pager,1.94548681953328e-05
+"Megathrust Mentawai M 8,9",0,S17_batas20_besar,klaim,0.000252732080161272
+"Megathrust Mentawai M 8,9",0,S17_batas20_besar,aulady,0.000562082771612105
+"Megathrust Mentawai M 8,9",0,S17_batas20_besar,pager,2.98866151128895e-05
+"Megathrust Mentawai M 8,9",0,S18_batas20_besar_akum10,klaim,0.000252732080161272
+"Megathrust Mentawai M 8,9",0,S18_batas20_besar_akum10,aulady,0.000562082771612105
+"Megathrust Mentawai M 8,9",0,S18_batas20_besar_akum10,pager,2.98866151114215e-05
+"Megathrust Mentawai M 8,9",0,S19_akum5,klaim,0.000317786856015555
+"Megathrust Mentawai M 8,9",0,S19_akum5,aulady,0.000739263326611454
+"Megathrust Mentawai M 8,9",0,S19_akum5,pager,3.74460351854188e-05
+"Megathrust Mentawai M 8,9",0,S20_zona_batas20,klaim,0.000308040839453704
+"Megathrust Mentawai M 8,9",0,S20_zona_batas20,aulady,0.000739263326611454
+"Megathrust Mentawai M 8,9",0,S20_zona_batas20,pager,3.7446033662531e-05
+"Megathrust Mentawai M 8,9",0,S21_zona_batas10,klaim,0.000298707247604848
+"Megathrust Mentawai M 8,9",0,S21_zona_batas10,aulady,0.000739263326611454
+"Megathrust Mentawai M 8,9",0,S21_zona_batas10,pager,3.74460321920994e-05
+"Megathrust Mentawai M 8,9",0,S22_zona_besar_batas20,klaim,0.000309793460290213
+"Megathrust Mentawai M 8,9",0,S22_zona_besar_batas20,aulady,0.000739263326611454
+"Megathrust Mentawai M 8,9",0,S22_zona_besar_batas20,pager,3.74460339375375e-05
+"Megathrust Mentawai M 8,9",0,S23_zona_batas20_akum10,klaim,0.000308040839453704
+"Megathrust Mentawai M 8,9",0,S23_zona_batas20_akum10,aulady,0.000739263326611454
+"Megathrust Mentawai M 8,9",0,S23_zona_batas20_akum10,pager,3.74460336611432e-05
+"Megathrust Mentawai M 8,9",0,S24_zona_batas10_luar_batas30,klaim,0.000263681015026248
+"Megathrust Mentawai M 8,9",0,S24_zona_batas10_luar_batas30,aulady,0.00062458156594065
+"Megathrust Mentawai M 8,9",0,S24_zona_batas10_luar_batas30,pager,3.28320139314429e-05
+"Megathrust Mentawai M 8,9",0,S25_zona_batas15,klaim,0.000304154412173772
+"Megathrust Mentawai M 8,9",0,S25_zona_batas15,aulady,0.000739263326611454
+"Megathrust Mentawai M 8,9",0,S25_zona_batas15,pager,3.7446033050734e-05
+"Megathrust Mentawai M 8,9",1,S0_dasar,klaim,0.00112162041945422
+"Megathrust Mentawai M 8,9",1,S0_dasar,aulady,0.00375075186482927
+"Megathrust Mentawai M 8,9",1,S0_dasar,pager,0.00033473660717317
+"Megathrust Mentawai M 8,9",1,S1_rs5,klaim,0.00091892195283606
+"Megathrust Mentawai M 8,9",1,S1_rs5,aulady,0.00342840214381111
+"Megathrust Mentawai M 8,9",1,S1_rs5,pager,0.000278530073633674
+"Megathrust Mentawai M 8,9",1,S2_rs10,klaim,0.000644048488822297
+"Megathrust Mentawai M 8,9",1,S2_rs10,aulady,0.00286402255713381
+"Megathrust Mentawai M 8,9",1,S2_rs10,pager,0.000199527620005012
+"Megathrust Mentawai M 8,9",1,S3_batas20,klaim,0.000841106993375591
+"Megathrust Mentawai M 8,9",1,S3_batas20,aulady,0.00197701935616254
+"Megathrust Mentawai M 8,9",1,S3_batas20,pager,0.000244460359822563
+"Megathrust Mentawai M 8,9",1,S4_batas10,klaim,0.000577533858642448
+"Megathrust Mentawai M 8,9",1,S4_batas10,aulady,0.00113770937861818
+"Megathrust Mentawai M 8,9",1,S4_batas10,pager,0.000164682257870004
+"Megathrust Mentawai M 8,9",1,S5_akumulasi10,klaim,0.000929317990755569
+"Megathrust Mentawai M 8,9",1,S5_akumulasi10,aulady,0.00375075186482927
+"Megathrust Mentawai M 8,9",1,S5_akumulasi10,pager,0.000334736601025421
+"Megathrust Mentawai M 8,9",1,S6_koas50,klaim,0.00085441210525711
+"Megathrust Mentawai M 8,9",1,S6_koas50,aulady,0.00375075186482927
+"Megathrust Mentawai M 8,9",1,S6_koas50,pager,0.000334736592520215
+"Megathrust Mentawai M 8,9",1,S7_paketA,klaim,0.000564537356926015
+"Megathrust Mentawai M 8,9",1,S7_paketA,aulady,0.00182882874034584
+"Megathrust Mentawai M 8,9",1,S7_paketA,pager,0.000201693951135949
+"Megathrust Mentawai M 8,9",1,S8_paketB,klaim,0.000460315102534876
+"Megathrust Mentawai M 8,9",1,S8_paketB,aulady,0.00182882874034584
+"Megathrust Mentawai M 8,9",1,S8_paketB,pager,0.000201693944078184
+"Megathrust Mentawai M 8,9",1,S9_batas50,klaim,0.00109327045076619
+"Megathrust Mentawai M 8,9",1,S9_batas50,aulady,0.00336267765250275
+"Megathrust Mentawai M 8,9",1,S9_batas50,pager,0.000324930050634006
+"Megathrust Mentawai M 8,9",1,S10_batas40,klaim,0.00105491770713759
+"Megathrust Mentawai M 8,9",1,S10_batas40,aulady,0.00305144826213135
+"Megathrust Mentawai M 8,9",1,S10_batas40,pager,0.000312207871433191
+"Megathrust Mentawai M 8,9",1,S11_batas30,klaim,0.000980409729129321
+"Megathrust Mentawai M 8,9",1,S11_batas30,aulady,0.00260056788956573
+"Megathrust Mentawai M 8,9",1,S11_batas30,pager,0.00028814965895678
+"Megathrust Mentawai M 8,9",1,S12_batas25,klaim,0.00092146802615886
+"Megathrust Mentawai M 8,9",1,S12_batas25,aulady,0.00231271680875426
+"Megathrust Mentawai M 8,9",1,S12_batas25,pager,0.000269498601458478
+"Megathrust Mentawai M 8,9",1,S13_batas15,klaim,0.000730962960253111
+"Megathrust Mentawai M 8,9",1,S13_batas15,aulady,0.00158778212015925
+"Megathrust Mentawai M 8,9",1,S13_batas15,pager,0.000210729032985668
+"Megathrust Mentawai M 8,9",1,S14_batas20_akum10,klaim,0.000695746319334103
+"Megathrust Mentawai M 8,9",1,S14_batas20_akum10,aulady,0.00197701935616254
+"Megathrust Mentawai M 8,9",1,S14_batas20_akum10,pager,0.000244460355168919
+"Megathrust Mentawai M 8,9",1,S15_batas20_akum5,klaim,0.000569577838186534
+"Megathrust Mentawai M 8,9",1,S15_batas20_akum5,aulady,0.00197701935616254
+"Megathrust Mentawai M 8,9",1,S15_batas20_akum5,pager,0.000244460346797308
+"Megathrust Mentawai M 8,9",1,S16_batas10_akum5,klaim,0.00039003167706231
+"Megathrust Mentawai M 8,9",1,S16_batas10_akum5,aulady,0.00113770937861818
+"Megathrust Mentawai M 8,9",1,S16_batas10_akum5,pager,0.000164682248865773
+"Megathrust Mentawai M 8,9",1,S17_batas20_besar,klaim,0.000891551569613066
+"Megathrust Mentawai M 8,9",1,S17_batas20_besar,aulady,0.00229598870465015
+"Megathrust Mentawai M 8,9",1,S17_batas20_besar,pager,0.000260694688088314
+"Megathrust Mentawai M 8,9",1,S18_batas20_besar_akum10,klaim,0.000737749385464107
+"Megathrust Mentawai M 8,9",1,S18_batas20_besar_akum10,aulady,0.00229598870465015
+"Megathrust Mentawai M 8,9",1,S18_batas20_besar_akum10,pager,0.000260694683165986
+"Megathrust Mentawai M 8,9",1,S19_akum5,klaim,0.000762393191130341
+"Megathrust Mentawai M 8,9",1,S19_akum5,aulady,0.00375075186482927
+"Megathrust Mentawai M 8,9",1,S19_akum5,pager,0.000334736589966011
+"Megathrust Mentawai M 8,9",1,S20_zona_batas20,klaim,0.000974224190258179
+"Megathrust Mentawai M 8,9",1,S20_zona_batas20,aulady,0.00374308856267236
+"Megathrust Mentawai M 8,9",1,S20_zona_batas20,pager,0.000334736075063864
+"Megathrust Mentawai M 8,9",1,S21_zona_batas10,klaim,0.000833057467238004
+"Megathrust Mentawai M 8,9",1,S21_zona_batas10,aulady,0.0037357432910124
+"Megathrust Mentawai M 8,9",1,S21_zona_batas10,pager,0.000334735563424971
+"Megathrust Mentawai M 8,9",1,S22_zona_besar_batas20,klaim,0.00100073037366885
+"Megathrust Mentawai M 8,9",1,S22_zona_besar_batas20,aulady,0.00374446665011469
+"Megathrust Mentawai M 8,9",1,S22_zona_besar_batas20,pager,0.00033473617075279
+"Megathrust Mentawai M 8,9",1,S23_zona_batas20_akum10,klaim,0.000828863516216691
+"Megathrust Mentawai M 8,9",1,S23_zona_batas20_akum10,aulady,0.00374308856267236
+"Megathrust Mentawai M 8,9",1,S23_zona_batas20_akum10,pager,0.000334736070410218
+"Megathrust Mentawai M 8,9",1,S24_zona_batas10_luar_batas30,klaim,0.000765450185058095
+"Megathrust Mentawai M 8,9",1,S24_zona_batas10_luar_batas30,aulady,0.00258938477934493
+"Megathrust Mentawai M 8,9",1,S24_zona_batas10_luar_batas30,pager,0.000288148880486282
+"Megathrust Mentawai M 8,9",1,S25_zona_batas15,klaim,0.000915444231500211
+"Megathrust Mentawai M 8,9",1,S25_zona_batas15,aulady,0.00374003056236779
+"Megathrust Mentawai M 8,9",1,S25_zona_batas15,pager,0.000334735862188169
+"Gempa dangkal dekat Timika M 7,5",0,S0_dasar,klaim,0.000653929198202732
+"Gempa dangkal dekat Timika M 7,5",0,S0_dasar,aulady,0.000846418389023776
+"Gempa dangkal dekat Timika M 7,5",0,S0_dasar,pager,5.59080170535007e-06
+"Gempa dangkal dekat Timika M 7,5",0,S1_rs5,klaim,0.000534916925580191
+"Gempa dangkal dekat Timika M 7,5",0,S1_rs5,aulady,0.000693221091946977
+"Gempa dangkal dekat Timika M 7,5",0,S1_rs5,pager,4.55405480569243e-06
+"Gempa dangkal dekat Timika M 7,5",0,S2_rs10,klaim,0.000374040035984038
+"Gempa dangkal dekat Timika M 7,5",0,S2_rs10,aulady,0.000485563426742313
+"Gempa dangkal dekat Timika M 7,5",0,S2_rs10,pager,3.16577340255595e-06
+"Gempa dangkal dekat Timika M 7,5",0,S3_batas20,klaim,0.000491725961465993
+"Gempa dangkal dekat Timika M 7,5",0,S3_batas20,aulady,0.000635227600870107
+"Gempa dangkal dekat Timika M 7,5",0,S3_batas20,pager,4.23181683670816e-06
+"Gempa dangkal dekat Timika M 7,5",0,S4_batas10,klaim,0.000338251830062729
+"Gempa dangkal dekat Timika M 7,5",0,S4_batas10,aulady,0.000436336750324622
+"Gempa dangkal dekat Timika M 7,5",0,S4_batas10,pager,2.92529085683943e-06
+"Gempa dangkal dekat Timika M 7,5",0,S5_akumulasi10,klaim,0.000522059297111243
+"Gempa dangkal dekat Timika M 7,5",0,S5_akumulasi10,aulady,0.000675731547773449
+"Gempa dangkal dekat Timika M 7,5",0,S5_akumulasi10,pager,4.46337312449921e-06
+"Gempa dangkal dekat Timika M 7,5",0,S6_koas50,klaim,0.000653929198202732
+"Gempa dangkal dekat Timika M 7,5",0,S6_koas50,aulady,0.000846418389023776
+"Gempa dangkal dekat Timika M 7,5",0,S6_koas50,pager,5.59080170535007e-06
+"Gempa dangkal dekat Timika M 7,5",0,S7_paketA,klaim,0.000317625833329864
+"Gempa dangkal dekat Timika M 7,5",0,S7_paketA,aulady,0.00041088857949347
+"Gempa dangkal dekat Timika M 7,5",0,S7_paketA,pager,2.72050615829916e-06
+"Gempa dangkal dekat Timika M 7,5",0,S8_paketB,klaim,0.000317625833329864
+"Gempa dangkal dekat Timika M 7,5",0,S8_paketB,aulady,0.00041088857949347
+"Gempa dangkal dekat Timika M 7,5",0,S8_paketB,pager,2.72050615829916e-06
+"Gempa dangkal dekat Timika M 7,5",0,S9_batas50,klaim,0.000637688235133427
+"Gempa dangkal dekat Timika M 7,5",0,S9_batas50,aulady,0.000825153010451223
+"Gempa dangkal dekat Timika M 7,5",0,S9_batas50,pager,5.45732002118533e-06
+"Gempa dangkal dekat Timika M 7,5",0,S10_batas40,klaim,0.000615593115878954
+"Gempa dangkal dekat Timika M 7,5",0,S10_batas40,aulady,0.000796316086733365
+"Gempa dangkal dekat Timika M 7,5",0,S10_batas40,pager,5.27371077226816e-06
+"Gempa dangkal dekat Timika M 7,5",0,S11_batas30,klaim,0.000572524522579016
+"Gempa dangkal dekat Timika M 7,5",0,S11_batas30,aulady,0.000740223438353174
+"Gempa dangkal dekat Timika M 7,5",0,S11_batas30,pager,4.91325522733162e-06
+"Gempa dangkal dekat Timika M 7,5",0,S12_batas25,klaim,0.000538371944069022
+"Gempa dangkal dekat Timika M 7,5",0,S12_batas25,aulady,0.000695812377364647
+"Gempa dangkal dekat Timika M 7,5",0,S12_batas25,pager,4.62589644821448e-06
+"Gempa dangkal dekat Timika M 7,5",0,S13_batas15,klaim,0.000427670706529717
+"Gempa dangkal dekat Timika M 7,5",0,S13_batas15,aulady,0.0005521416383545
+"Gempa dangkal dekat Timika M 7,5",0,S13_batas15,pager,3.68820095343436e-06
+"Gempa dangkal dekat Timika M 7,5",0,S14_batas20_akum10,klaim,0.000392565602698017
+"Gempa dangkal dekat Timika M 7,5",0,S14_batas20_akum10,aulady,0.000507129022113335
+"Gempa dangkal dekat Timika M 7,5",0,S14_batas20_akum10,pager,3.37843810820398e-06
+"Gempa dangkal dekat Timika M 7,5",0,S15_batas20_akum5,klaim,0.000196282801349008
+"Gempa dangkal dekat Timika M 7,5",0,S15_batas20_akum5,aulady,0.000253564511056668
+"Gempa dangkal dekat Timika M 7,5",0,S15_batas20_akum5,pager,1.68921905410199e-06
+"Gempa dangkal dekat Timika M 7,5",0,S16_batas10_akum5,klaim,0.000135020360869705
+"Gempa dangkal dekat Timika M 7,5",0,S16_batas10_akum5,aulady,0.000174173028062019
+"Gempa dangkal dekat Timika M 7,5",0,S16_batas10_akum5,pager,1.16769161918817e-06
+"Gempa dangkal dekat Timika M 7,5",0,S17_batas20_besar,klaim,0.000520894880957348
+"Gempa dangkal dekat Timika M 7,5",0,S17_batas20_besar,aulady,0.000673205924983135
+"Gempa dangkal dekat Timika M 7,5",0,S17_batas20_besar,pager,4.47620234356288e-06
+"Gempa dangkal dekat Timika M 7,5",0,S18_batas20_besar_akum10,klaim,0.000415852383054367
+"Gempa dangkal dekat Timika M 7,5",0,S18_batas20_besar_akum10,aulady,0.000537448722237451
+"Gempa dangkal dekat Timika M 7,5",0,S18_batas20_besar_akum10,pager,3.57354137975601e-06
+"Gempa dangkal dekat Timika M 7,5",0,S19_akum5,klaim,0.000261029648555621
+"Gempa dangkal dekat Timika M 7,5",0,S19_akum5,aulady,0.000337865773886724
+"Gempa dangkal dekat Timika M 7,5",0,S19_akum5,pager,2.23168656224961e-06
+"Gempa dangkal dekat Timika M 7,5",0,S20_zona_batas20,klaim,0.000491725961465993
+"Gempa dangkal dekat Timika M 7,5",0,S20_zona_batas20,aulady,0.000635227600870107
+"Gempa dangkal dekat Timika M 7,5",0,S20_zona_batas20,pager,4.23181683670816e-06
+"Gempa dangkal dekat Timika M 7,5",0,S21_zona_batas10,klaim,0.000338251830062729
+"Gempa dangkal dekat Timika M 7,5",0,S21_zona_batas10,aulady,0.000436336750324622
+"Gempa dangkal dekat Timika M 7,5",0,S21_zona_batas10,pager,2.92529085683943e-06
+"Gempa dangkal dekat Timika M 7,5",0,S22_zona_besar_batas20,klaim,0.000520894880957348
+"Gempa dangkal dekat Timika M 7,5",0,S22_zona_besar_batas20,aulady,0.000673205924983135
+"Gempa dangkal dekat Timika M 7,5",0,S22_zona_besar_batas20,pager,4.47620234356288e-06
+"Gempa dangkal dekat Timika M 7,5",0,S23_zona_batas20_akum10,klaim,0.000392565602698017
+"Gempa dangkal dekat Timika M 7,5",0,S23_zona_batas20_akum10,aulady,0.000507129022113335
+"Gempa dangkal dekat Timika M 7,5",0,S23_zona_batas20_akum10,pager,3.37843810820398e-06
+"Gempa dangkal dekat Timika M 7,5",0,S24_zona_batas10_luar_batas30,klaim,0.000338251830062729
+"Gempa dangkal dekat Timika M 7,5",0,S24_zona_batas10_luar_batas30,aulady,0.000436336750324622
+"Gempa dangkal dekat Timika M 7,5",0,S24_zona_batas10_luar_batas30,pager,2.92529085683943e-06
+"Gempa dangkal dekat Timika M 7,5",0,S25_zona_batas15,klaim,0.000427670706529717
+"Gempa dangkal dekat Timika M 7,5",0,S25_zona_batas15,aulady,0.0005521416383545
+"Gempa dangkal dekat Timika M 7,5",0,S25_zona_batas15,pager,3.68820095343436e-06
+"Gempa dangkal dekat Timika M 7,5",1,S0_dasar,klaim,0.00122045242653703
+"Gempa dangkal dekat Timika M 7,5",1,S0_dasar,aulady,0.00389262967222466
+"Gempa dangkal dekat Timika M 7,5",1,S0_dasar,pager,0.000149340525964502
+"Gempa dangkal dekat Timika M 7,5",1,S1_rs5,klaim,0.00100189509696955
+"Gempa dangkal dekat Timika M 7,5",1,S1_rs5,aulady,0.00324516851838043
+"Gempa dangkal dekat Timika M 7,5",1,S1_rs5,pager,0.000121762647060461
+"Gempa dangkal dekat Timika M 7,5",1,S2_rs10,klaim,0.000704074851911521
+"Gempa dangkal dekat Timika M 7,5",1,S2_rs10,aulady,0.00233102310568187
+"Gempa dangkal dekat Timika M 7,5",1,S2_rs10,pager,8.47555815798185e-05
+"Gempa dangkal dekat Timika M 7,5",1,S3_batas20,klaim,0.000912473863651562
+"Gempa dangkal dekat Timika M 7,5",1,S3_batas20,aulady,0.00283289906828122
+"Gempa dangkal dekat Timika M 7,5",1,S3_batas20,pager,0.000112874325821141
+"Gempa dangkal dekat Timika M 7,5",1,S4_batas10,klaim,0.00062504142401835
+"Gempa dangkal dekat Timika M 7,5",1,S4_batas10,aulady,0.00190373831555515
+"Gempa dangkal dekat Timika M 7,5",1,S4_batas10,pager,7.79404390122648e-05
+"Gempa dangkal dekat Timika M 7,5",1,S5_akumulasi10,klaim,0.000974338716954035
+"Gempa dangkal dekat Timika M 7,5",1,S5_akumulasi10,aulady,0.00310765066949336
+"Gempa dangkal dekat Timika M 7,5",1,S5_akumulasi10,pager,0.000119224849157264
+"Gempa dangkal dekat Timika M 7,5",1,S6_koas50,klaim,0.00122045242653703
+"Gempa dangkal dekat Timika M 7,5",1,S6_koas50,aulady,0.00389262967222466
+"Gempa dangkal dekat Timika M 7,5",1,S6_koas50,pager,0.000149340525964502
+"Gempa dangkal dekat Timika M 7,5",1,S7_paketA,klaim,0.000591790265062301
+"Gempa dangkal dekat Timika M 7,5",1,S7_paketA,aulady,0.0018700942977748
+"Gempa dangkal dekat Timika M 7,5",1,S7_paketA,pager,7.26412101726382e-05
+"Gempa dangkal dekat Timika M 7,5",1,S8_paketB,klaim,0.000591790265062301
+"Gempa dangkal dekat Timika M 7,5",1,S8_paketB,aulady,0.0018700942977748
+"Gempa dangkal dekat Timika M 7,5",1,S8_paketB,pager,7.26412101726382e-05
+"Gempa dangkal dekat Timika M 7,5",1,S9_batas50,klaim,0.00118910331695363
+"Gempa dangkal dekat Timika M 7,5",1,S9_batas50,aulady,0.00377645175644054
+"Gempa dangkal dekat Timika M 7,5",1,S9_batas50,pager,0.000145743329903485
+"Gempa dangkal dekat Timika M 7,5",1,S10_batas40,klaim,0.00114685754249372
+"Gempa dangkal dekat Timika M 7,5",1,S10_batas40,aulady,0.00362654438465178
+"Gempa dangkal dekat Timika M 7,5",1,S10_batas40,pager,0.000140807406199172
+"Gempa dangkal dekat Timika M 7,5",1,S11_batas30,klaim,0.00106501233594088
+"Gempa dangkal dekat Timika M 7,5",1,S11_batas30,aulady,0.00334403517561455
+"Gempa dangkal dekat Timika M 7,5",1,S11_batas30,pager,0.000131132779296197
+"Gempa dangkal dekat Timika M 7,5",1,S12_batas25,klaim,0.00100040619938695
+"Gempa dangkal dekat Timika M 7,5",1,S12_batas25,aulady,0.00312558416483637
+"Gempa dangkal dekat Timika M 7,5",1,S12_batas25,pager,0.000123429234695005
+"Gempa dangkal dekat Timika M 7,5",1,S13_batas15,klaim,0.000792190922193906
+"Gempa dangkal dekat Timika M 7,5",1,S13_batas15,aulady,0.002439456641751
+"Gempa dangkal dekat Timika M 7,5",1,S13_batas15,pager,9.83290345377913e-05
+"Gempa dangkal dekat Timika M 7,5",1,S14_batas20_akum10,klaim,0.000728466422969893
+"Gempa dangkal dekat Timika M 7,5",1,S14_batas20_akum10,aulady,0.0022616229714757
+"Gempa dangkal dekat Timika M 7,5",1,S14_batas20_akum10,pager,9.01123414615011e-05
+"Gempa dangkal dekat Timika M 7,5",1,S15_batas20_akum5,klaim,0.000364233211484946
+"Gempa dangkal dekat Timika M 7,5",1,S15_batas20_akum5,aulady,0.00113081148573785
+"Gempa dangkal dekat Timika M 7,5",1,S15_batas20_akum5,pager,4.50561707307506e-05
+"Gempa dangkal dekat Timika M 7,5",1,S16_batas10_akum5,klaim,0.0002494984834637
+"Gempa dangkal dekat Timika M 7,5",1,S16_batas10_akum5,aulady,0.000759917350099989
+"Gempa dangkal dekat Timika M 7,5",1,S16_batas10_akum5,pager,3.11115721083538e-05
+"Gempa dangkal dekat Timika M 7,5",1,S17_batas20_besar,klaim,0.000967857480443683
+"Gempa dangkal dekat Timika M 7,5",1,S17_batas20_besar,aulady,0.00302346984412289
+"Gempa dangkal dekat Timika M 7,5",1,S17_batas20_besar,pager,0.000119432022680568
+"Gempa dangkal dekat Timika M 7,5",1,S18_batas20_besar_akum10,klaim,0.000772681503338592
+"Gempa dangkal dekat Timika M 7,5",1,S18_batas20_besar_akum10,aulady,0.00241376367043713
+"Gempa dangkal dekat Timika M 7,5",1,S18_batas20_besar_akum10,pager,9.53476278235569e-05
+"Gempa dangkal dekat Timika M 7,5",1,S19_akum5,klaim,0.000487169358477017
+"Gempa dangkal dekat Timika M 7,5",1,S19_akum5,aulady,0.00155382533474668
+"Gempa dangkal dekat Timika M 7,5",1,S19_akum5,pager,5.96124245786321e-05
+"Gempa dangkal dekat Timika M 7,5",1,S20_zona_batas20,klaim,0.000912473863651562
+"Gempa dangkal dekat Timika M 7,5",1,S20_zona_batas20,aulady,0.00283289906828122
+"Gempa dangkal dekat Timika M 7,5",1,S20_zona_batas20,pager,0.000112874325821141
+"Gempa dangkal dekat Timika M 7,5",1,S21_zona_batas10,klaim,0.00062504142401835
+"Gempa dangkal dekat Timika M 7,5",1,S21_zona_batas10,aulady,0.00190373831555515
+"Gempa dangkal dekat Timika M 7,5",1,S21_zona_batas10,pager,7.79404390122648e-05
+"Gempa dangkal dekat Timika M 7,5",1,S22_zona_besar_batas20,klaim,0.000967857480443683
+"Gempa dangkal dekat Timika M 7,5",1,S22_zona_besar_batas20,aulady,0.00302346984412289
+"Gempa dangkal dekat Timika M 7,5",1,S22_zona_besar_batas20,pager,0.000119432022680568
+"Gempa dangkal dekat Timika M 7,5",1,S23_zona_batas20_akum10,klaim,0.000728466422969893
+"Gempa dangkal dekat Timika M 7,5",1,S23_zona_batas20_akum10,aulady,0.0022616229714757
+"Gempa dangkal dekat Timika M 7,5",1,S23_zona_batas20_akum10,pager,9.01123414615011e-05
+"Gempa dangkal dekat Timika M 7,5",1,S24_zona_batas10_luar_batas30,klaim,0.00062504142401835
+"Gempa dangkal dekat Timika M 7,5",1,S24_zona_batas10_luar_batas30,aulady,0.00190373831555515
+"Gempa dangkal dekat Timika M 7,5",1,S24_zona_batas10_luar_batas30,pager,7.79404390122648e-05
+"Gempa dangkal dekat Timika M 7,5",1,S25_zona_batas15,klaim,0.000792190922193906
+"Gempa dangkal dekat Timika M 7,5",1,S25_zona_batas15,aulady,0.002439456641751
+"Gempa dangkal dekat Timika M 7,5",1,S25_zona_batas15,pager,9.83290345377913e-05

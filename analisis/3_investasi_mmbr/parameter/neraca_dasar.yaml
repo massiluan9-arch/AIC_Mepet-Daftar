@@ -1,0 +1,90 @@
+# Neraca dasar PT Aktu Proteksi per 100 premi dicatat.
+# Perusahaan ini fiktif dan brief tidak memberi laporan keuangan, jadi tiap butir memakai rasio industri
+# atau asumsi yang ditandai. status: data = dihitung dari publikasi resmi; asumsi = pilihan penulis.
+# Premis kasus: tanpa reasuransi, sehingga seluruh cadangan adalah retensi sendiri (aset reasuransi = 0).
+# kode/uji.py menghitung ulang butir berstatus data dari berkas sumbernya.
+
+meta:
+  satuan: "per 100 premi dicatat penutupan langsung setahun"
+  sumber:
+    T2_10_4: "OJK, Statistik Perasuransian 2024, Tabel 2.10.4 (lini harta benda, kolom pos langsung); data/industri_asuransi/ojk_statistik_2024/2.10 Rekapitulasi Premi, Klaim dan Komisi Tahun 2024.xlsx, lembar '4 REKAP'"
+    FP_IS_2025: "OJK, Statistik Asuransi Juli 2025, lembar FP-General Insurance dan IS-General Insurance; data/industri_asuransi/ojk_statistik_2025/OJK_Statistik_Asuransi_Juli_2025.xlsx. Pos laba rugi tujuh bulan disetahunkan (x 12/7)."
+  penyebut_industri_juta_rp:
+    premi_langsung_harta_benda_2024: 26938117
+    premi_langsung_asuransi_umum_juli_2025_disetahunkan: 117703252
+
+liabilitas:
+  capybmp:
+    nilai: 32.71
+    status: data
+    sumber: T2_10_4
+    turunan: "CAPYBMP tahun berjalan 8.812.021 / premi dicatat 26.938.117"
+    sensitivitas: [50.0]
+    catatan: "Nilai 50 adalah pendekatan setengah tahun untuk polis tahunan yang terbit merata."
+  cadangan_klaim:
+    nilai: 40.52
+    status: data
+    sumber: T2_10_4
+    turunan: "Klaim outstanding tahun berjalan 10.916.169 / premi dicatat 26.938.117"
+    catatan: "Proksi cadangan klaim bruto. Angka industri memuat klaim besar yang direasuransikan; tanpa reasuransi seluruhnya menjadi beban sendiri."
+  cadangan_bencana:
+    nilai: 0.10
+    status: data
+    sumber: FP_IS_2025
+    turunan: "Cadangan atas risiko bencana 111.845 / premi langsung disetahunkan 117.703.252"
+    sensitivitas: [5.0]
+    catatan: "Praktik industri saat ini. Pasal 28 ayat (7) POJK 26/2025 meminta nilainya dihitung dari risiko bencana retensi sendiri; akan diganti keluaran model kerugian bencana (ditahan)."
+  utang_klaim:
+    nilai: 2.08
+    status: data
+    sumber: FP_IS_2025
+    turunan: "Utang klaim 2.446.091 / 117.703.252"
+  utang_lain:
+    nilai: 19.46
+    status: data
+    sumber: FP_IS_2025
+    turunan: "(Utang komisi 2.427.259 + utang pajak 1.093.667 + biaya masih harus dibayar 3.092.880 + utang lain 16.290.082) / 117.703.252"
+    catatan: "Utang reasuransi dan koasuransi dikeluarkan karena perusahaan tidak mereasuransikan risikonya."
+
+aset_bukan_investasi:
+  kas_dan_bank:
+    nilai: 7.27
+    status: data
+    sumber: FP_IS_2025
+    turunan: "Kas dan bank 8.552.242 / 117.703.252"
+  tagihan_premi:
+    nilai: 16.67
+    status: asumsi
+    turunan: "Dua bulan premi = 100 x 2/12"
+    catatan: "Batas umur tagihan yang diakui AYD (Pasal 25 ayat 2 huruf b POJK 26/2025). Angka industri 20,76 memuat tagihan berumur lebih dari dua bulan yang tidak diakui."
+    pembanding_industri: 20.76
+
+beban_dan_dac:
+  bua_dikurangi_bpl:
+    nilai: 13.38
+    status: data
+    sumber: FP_IS_2025
+    turunan: "(Beban pegawai dan pengurus 5.292.538 + beban umum dan administrasi lainnya 3.895.513) x 12/7 / 117.703.252"
+    catatan: "Beban pendidikan dan pelatihan sudah dikeluarkan; beban pemasaran bukan bagian BUA."
+  dac:
+    nilai: 0.46
+    status: data
+    sumber: FP_IS_2025
+    turunan: "Biaya akuisisi yang ditangguhkan 546.190 / 117.703.252"
+    catatan: "Masuk rumus risiko operasional, tetapi bukan AYD bagi perusahaan tanpa PAYDI."
+
+# Pola jatuh tempo liabilitas untuk risiko likuiditas (SEOJK 24/2017 Lampiran II angka 2).
+# Urutan kelompok: <1, 1-3, 3-5, 5-10, >=10 tahun.
+pola_jatuh_tempo:
+  capybmp: {porsi: [1.0, 0.0, 0.0, 0.0, 0.0], status: asumsi, catatan: "Polis tahunan."}
+  cadangan_klaim: {porsi: [0.70, 0.25, 0.05, 0.0, 0.0], status: asumsi, catatan: "Lini berekor pendek. Uji banding: seluruhnya di bawah 1 tahun."}
+  cadangan_bencana: {porsi: [1.0, 0.0, 0.0, 0.0, 0.0], status: asumsi, catatan: "Ditempatkan di kelompok terpendek agar tidak menurunkan beban."}
+  utang_klaim: {porsi: [1.0, 0.0, 0.0, 0.0, 0.0], status: asumsi}
+  utang_lain: {porsi: [1.0, 0.0, 0.0, 0.0, 0.0], status: asumsi}
+
+# Butir yang sengaja tidak dimodelkan, beserta alasannya.
+tidak_dimodelkan:
+  tagihan_hasil_investasi: "Sekitar 0,76% investasi pada neraca industri; beban kreditnya 2% x 0,76% = 0,015% investasi."
+  properti_pakai_sendiri: "Bergantung keputusan kantor; faktor 4% atas 3,65 per 100 premi (rasio industri) = 0,15."
+  aset_tidak_diperkenankan_lain: "Aset tetap dan aset lain dibiayai ekuitas dan tidak mengubah Tingkat Solvabilitas."
+  selisih_valuta: "Seluruh aset dan liabilitas diasumsikan rupiah."

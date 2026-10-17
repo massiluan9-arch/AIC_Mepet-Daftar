@@ -1,0 +1,17 @@
+{
+  "bobot_kurva": {
+    "klaim": 0.19797414,
+    "aulady": 0.76100742,
+    "pager": 0.04101844
+  },
+  "pengalaman_21_tahun_permil": 0.09824941,
+  "pengalaman_5_tahun_permil": 0.0219,
+  "pertumbuhan_eksposur_hitung_mundur": 0.1451,
+  "benih_cabang": 506,
+  "gpd": {
+    "ambang": 0.0005172,
+    "skala": 0.0003892,
+    "bentuk": 0.88449478,
+    "ks_p": 0.56773822
+  }
+}

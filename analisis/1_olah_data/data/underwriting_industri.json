@@ -1,0 +1,49 @@
+{
+ "sumber": "OJK, Statistik Perasuransian 2024 (Tabel 2.10.4 dan Key Indicator); OJK, Statistik Asuransi Juli 2025",
+ "rasio_klaim_harta_benda_neto_persen": {
+  "2011": 35.497808236944465,
+  "2012": 47.2941534488361,
+  "2013": 58.389379951802646,
+  "2014": 53.41,
+  "2015": 45.046174933670684,
+  "2016": 45.54192399053743,
+  "2017": 42.070455119442805,
+  "2018": 42.04784923188525,
+  "2019": 40.771337528434145,
+  "2020": 45.48979008317834,
+  "2021": 43.74591784365178,
+  "2022": 48.62244159528264,
+  "2023": 43.001222899460956,
+  "2024": 39.176503800796844
+ },
+ "rasio_klaim_rata": 0.4500749704742315,
+ "rasio_klaim_simpangan": 0.05777112279258866,
+ "rasio_klaim_terendah": 0.35497808236944467,
+ "rasio_klaim_tertinggi": 0.5838937995180264,
+ "rasio_klaim_langsung_bruto_2024": 0.2950263786286385,
+ "komisi_langsung_2024": 0.07999418708443207,
+ "beban_usaha_per_premi_langsung_2025": 0.16972353504671595,
+ "komisi_semua_lini_2025": 0.09683299752657214,
+ "klaim_bruto_semua_lini_per_premi_langsung_2025": 0.41785644987552234,
+ "rasio_beban_manajemen_per_premi_bruto": {
+  "2011": 0.1440257884461535,
+  "2012": 0.1252303036510967,
+  "2013": 0.1533255724643942,
+  "2014": 0.1595525955191931,
+  "2015": 0.1637859369589708,
+  "2016": 0.16729179931358912,
+  "2017": 0.17175692617802363,
+  "2018": 0.17281460047823147,
+  "2019": 0.16195347053134507,
+  "2020": 0.1539012213045768,
+  "2021": 0.16566583605807042,
+  "2022": 0.16493673504377468,
+  "2023": 0.16346138018570106,
+  "2024": 0.1629484080677263
+ },
+ "simpangan_rasio_beban": 0.007982521003313751,
+ "catatan": {
+  "rasio_klaim": "Deret 2011-2024 adalah rasio klaim neto (setelah reasuransi) dan satu-satunya deret panjang yang diterbitkan. Rasio pos langsung bruto hanya tersedia untuk 2024.",
+  "beban": "Beban usaha = pemasaran, pegawai dan pengurus, pendidikan, umum dan administrasi; tujuh bulan 2025; pembilang dan penyebut sama-sama tujuh bulan."
+ }
+}
